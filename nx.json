@@ -37,26 +37,11 @@
         "ciTargetName": "e2e-ci"
       }
     },
-    {
-      "plugin": "@nx/eslint/plugin",
-      "options": {
-        "targetName": "lint"
-      }
-    },
-    {
-      "plugin": "@nx/jest/plugin",
-      "options": {
-        "targetName": "test"
-      }
-    }
+    { "plugin": "@nx/eslint/plugin", "options": { "targetName": "lint" } },
+    { "plugin": "@nx/jest/plugin", "options": { "targetName": "test" } }
   ],
   "generators": {
-    "@nx/next": {
-      "application": {
-        "style": "tailwind",
-        "linter": "eslint"
-      }
-    }
+    "@nx/next": { "application": { "style": "tailwind", "linter": "eslint" } }
   },
-  "nxCloudAccessToken": "ZDk5N2UzZGYtMWI5ZS00OWZjLWExMjEtYjNjZjlmYzhhZjljfHJlYWQtd3JpdGU="
+  "nxCloudAccessToken": "MTdkZTYwNGEtMzI5ZC00ZWRhLWI2OWItNDQ3ZjM2ODdmODMyfHJlYWQtd3JpdGU="
 }
