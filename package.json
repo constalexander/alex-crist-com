@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "dev": "npx nx dev portfolio"
+    "dev": "npx nx dev portfolio",
+    "build": "npx nx build portfolio"
   },
   "private": true,
   "dependencies": {
