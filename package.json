@@ -4,7 +4,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "npx nx dev portfolio",
-    "build": "npx nx build portfolio"
+    "build": "npx nx build portfolio",
+    "start": "npx nx start portfolio"
   },
   "private": true,
   "dependencies": {
