@@ -1,3 +1,5 @@
+import { UI } from '@/libs/ui/src';
+import { Button } from '@/libs/ui/src/atoms/button';
 import './global.scss';
 
 export const metadata = {
@@ -12,6 +14,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <UI></UI>
+      <Button variant="outline">Butt on</Button>
       <body>{children}</body>
     </html>
   );
