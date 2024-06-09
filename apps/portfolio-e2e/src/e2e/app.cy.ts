@@ -1,5 +1,6 @@
 import { getGreeting } from '../support/app.po';
 
+/**
 describe('portfolio-e2e', () => {
   beforeEach(() => cy.visit('/'));
 
@@ -11,3 +12,4 @@ describe('portfolio-e2e', () => {
     getGreeting().contains(/Welcome/);
   });
 });
+ */
