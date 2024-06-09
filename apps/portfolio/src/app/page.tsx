@@ -1,3 +1,4 @@
+import { Button } from '@/libs/ui/src/atoms/button';
 import styles from './page.module.scss';
 
 export default function Index() {
@@ -15,6 +16,9 @@ export default function Index() {
               <span> Hello there, </span>
               Welcome portfolio 👋
             </h1>
+            <Button variant="outline" className="mt-5">
+              Make something great
+            </Button>
           </div>
 
           <div id="hero" className="rounded">
