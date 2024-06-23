@@ -1,11 +1,1 @@
 Read the CONSTITUTION.md in .opendevin folder.
-
-Create new folders and put a .gitkeep in each. The folders shall be:
-
-- libs/contexts
-- libs/guards
-- libs/hooks
-- libs/models
-- libs/providers
-- libs/services
-- libs/stores
