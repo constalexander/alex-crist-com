@@ -1,4 +1,4 @@
-import { Button } from '@/libs/ui/src/atoms/button';
+import { Button } from '@alex/ui/atoms/button';
 import styles from './page.module.scss';
 
 export default function Index() {
