@@ -15,8 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"],
+      "@alex/contexts": ["libs/contexts/src/index.ts"],
+      "@alex/contexts/server": ["libs/contexts/src/server.ts"],
       "@alex/ui": ["libs/ui/src/index.ts"],
+      "@alex/ui/*": ["libs/ui/src/*"],
       "@alex/ui/server": ["libs/ui/src/server.ts"]
     }
   },
