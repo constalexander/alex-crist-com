@@ -17,6 +17,18 @@
     "paths": {
       "@alex/contexts": ["libs/contexts/src/index.ts"],
       "@alex/contexts/server": ["libs/contexts/src/server.ts"],
+      "@alex/guards": ["libs/guards/src/index.ts"],
+      "@alex/guards/server": ["libs/guards/src/server.ts"],
+      "@alex/hooks": ["libs/hooks/src/index.ts"],
+      "@alex/hooks/server": ["libs/hooks/src/server.ts"],
+      "@alex/models": ["libs/models/src/index.ts"],
+      "@alex/models/server": ["libs/models/src/server.ts"],
+      "@alex/providers": ["libs/providers/src/index.ts"],
+      "@alex/providers/server": ["libs/providers/src/server.ts"],
+      "@alex/services": ["libs/services/src/index.ts"],
+      "@alex/services/server": ["libs/services/src/server.ts"],
+      "@alex/stores": ["libs/stores/src/index.ts"],
+      "@alex/stores/server": ["libs/stores/src/server.ts"],
       "@alex/ui": ["libs/ui/src/index.ts"],
       "@alex/ui/*": ["libs/ui/src/*"],
       "@alex/ui/server": ["libs/ui/src/server.ts"]
