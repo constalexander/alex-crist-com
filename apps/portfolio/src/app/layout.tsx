@@ -19,7 +19,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       </head>
-      <body className="w-screen min-h-screen overflow-x-hidden overflow-y-auto">
+      <body className="bg-zinc-950 w-screen min-h-screen overflow-x-hidden overflow-y-auto">
         {children}
       </body>
     </html>
