@@ -1,6 +1,7 @@
 import './global.scss';
 import { Sarabun as FontSans } from 'next/font/google';
 import { cn } from '@alex/ui/utils';
+import { Header } from '@alex/ui';
 
 export const metadata = {
   title: 'Alex Crist',
@@ -33,6 +34,7 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
+        <Header />
         {children}
       </body>
     </html>
