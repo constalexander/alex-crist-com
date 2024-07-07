@@ -1,5 +1,6 @@
 const { createGlobPatternsForDependencies } = require('@nx/react/tailwind');
 const { join } = require('path');
+const colors = require('tailwindcss/colors');
 const { fontFamily } = require('tailwindcss/defaultTheme');
 
 /** @type {import('tailwindcss').Config} */
@@ -14,11 +15,21 @@ module.exports = {
   ],
   theme: {
     screens: {
-      sm: '360px',
-      md: '540px',
-      lg: '1080px',
-      xl: '1480px',
-      xxl: '1980px',
+      xs: '376px',
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      '2xl': '1536px',
+    },
+    colors: {
+      stone: colors.stone,
+      teal: colors.teal,
+      emerald: colors.emerald,
+      zinc: colors.zinc,
+    },
+    fontFamily: {
+      sans: ['var(--font-sans)', ...fontFamily.sans],
     },
     extend: {
       animation: {
@@ -71,9 +82,6 @@ module.exports = {
           foreground: 'var(--secondary-foreground)',
         },
         white: 'var(--white)',
-      },
-      fontFamily: {
-        sans: ['var(--font-sans)', ...fontFamily.sans],
       },
       keyframes: {
         'accordion-down': {
