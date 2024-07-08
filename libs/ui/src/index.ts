@@ -1,3 +1,4 @@
-// Use this file to export React client components (e.g. those with 'use client' directive) or other non-server utilities
-
-export * from './lib/ui';
+export * from './atoms/button';
+export * from './molecules/dropdown';
+export * from './organisms/header';
+export * from './templates/home.template';
