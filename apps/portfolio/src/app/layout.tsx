@@ -4,8 +4,8 @@ import { cn } from '@alex/ui/utils';
 import { Header } from '@alex/ui';
 
 export const metadata = {
-  title: 'Alex Crist',
-  description: 'Software engineer in North Texas',
+  title: 'Alex Crist | Frontend Engineer',
+  description: 'Frontend engineer in North Texas',
 };
 
 const fontSans = FontSans({
@@ -23,7 +23,6 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <meta charSet="utf-8" />
-        <title>Alex Crist | Software Engineer</title>
         <base href="/" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />

@@ -1,4 +1,7 @@
+'use client';
+
 import { Button } from '@alex/ui/atoms/button';
+import HomeTemplate from '@alex/ui/templates/home.template';
 
 export default function Page() {
   return (
@@ -7,6 +10,9 @@ export default function Page() {
         ALEX CRIST
       </h1>
       <Button className="mt-5">Send it</Button>
+      <HomeTemplate>
+        <div>asdf</div>
+      </HomeTemplate>
     </div>
   );
 }
