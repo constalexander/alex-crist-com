@@ -37,7 +37,11 @@ export function Header(props: HeaderProps) {
 
   return (
     <div className={'flex justify-between items-center w-full p-2'}>
-      <div className="text-stone-400 tracking-widest">ALEX CRIST</div>
+      <div>
+        <div className="text-emerald-400 tracking-wide">ALEX CRIST</div>
+        <div className="text-stone-400">Frontend Engineer</div>
+        <div className="text-stone-500">North Texas</div>
+      </div>
 
       <div className="text-stone-400">
         <DropdownMenu open={isMenuOpen} onOpenChange={(e) => menuOpenChange(e)}>

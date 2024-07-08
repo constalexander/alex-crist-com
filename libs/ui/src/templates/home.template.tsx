@@ -5,5 +5,5 @@ export default function HomeTemplate({
 }: {
   children: React.ReactNode;
 }) {
-  return <div>yooooooo{children}</div>;
+  return <div className="bg-stone-900 text-stone-400 p-2">{children}</div>;
 }
