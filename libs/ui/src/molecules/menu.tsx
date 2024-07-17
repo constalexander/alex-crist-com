@@ -42,9 +42,9 @@ export function Menu(props: MenuProps) {
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent
-          className="fixed top-0 left-0 right-0 w-[400px] h-[100vh] transform -translate-x-full transition duration-300 ease-in-out"
+          className="fixed top-0 left-0 right-0 w-[94vw] h-[100vh] transform -translate-x-full transition duration-300 ease-in-out"
           hideWhenDetached
-          align="end"
+          align="center"
         >
           <DropdownMenuItem
             onSelect={(e) => {
