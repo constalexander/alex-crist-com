@@ -1,7 +1,7 @@
 import './global.scss';
 import { Sarabun as FontSans } from 'next/font/google';
 import { cn } from '@alex/ui/utils';
-import { Header } from '@alex/ui';
+import { Header } from '@alex/ui/organisms/header';
 
 export const metadata = {
   title: 'Alex Crist | Frontend Engineer',
@@ -34,7 +34,7 @@ export default function RootLayout({
         )}
       >
         <Header />
-        <main className="w-[50%] m-auto"> {children}</main>
+        <main className="w-[80%] m-auto"> {children}</main>
       </body>
     </html>
   );
