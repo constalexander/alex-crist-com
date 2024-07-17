@@ -56,7 +56,7 @@ module.exports = {
         black: 'var(--black)',
         border: 'var(--border)',
         card: {
-          DEFAULT: 'var(--card)',
+          DEFAULT: colors.stone[500],
           foreground: 'var(--card-foreground)',
         },
         destructive: {
