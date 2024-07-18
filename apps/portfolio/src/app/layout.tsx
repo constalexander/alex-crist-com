@@ -34,7 +34,7 @@ export default function RootLayout({
         )}
       >
         <Header />
-        <main className="w-[80%] m-auto"> {children}</main>
+        <main className="w-full p-4"> {children}</main>
       </body>
     </html>
   );

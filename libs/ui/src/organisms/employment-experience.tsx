@@ -22,10 +22,10 @@ export interface EmploymentExperienceProps {}
 
 export function EmploymentExperience(props: EmploymentExperienceProps) {
   return (
-    <>
+    <div className="px-[40px]">
       <h1
         className={cn(
-          'font-serif text-[4vw] text-stone-400 tracking-widest',
+          'font-serif text-xl text-stone-400 tracking-wide text-center',
           fontSerif.variable
         )}
       >
@@ -51,7 +51,7 @@ export function EmploymentExperience(props: EmploymentExperienceProps) {
         <CarouselPrevious />
         <CarouselNext />
       </Carousel>
-    </>
+    </div>
   );
 }
 
