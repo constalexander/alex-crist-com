@@ -19,14 +19,14 @@ export function Header(props: HeaderProps) {
       <div>
         <div
           className={cn(
-            'text-3xl text-emerald-400 tracking-wide font-serif',
+            'text-2xl text-emerald-500 tracking-wide font-serif font-bold',
             fontSerif.variable
           )}
         >
-          ALEX CRIST
+          Alex Crist
         </div>
-        <div className="text-xl text-stone-400 tracking-wide">
-          FRONTEND ENGINEER
+        <div className="text-base text-stone-500 font-bold tracking-wide">
+          Frontend Engineer
         </div>
       </div>
       <Menu />

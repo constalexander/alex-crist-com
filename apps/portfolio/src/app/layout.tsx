@@ -29,7 +29,7 @@ export default function RootLayout({
       </head>
       <body
         className={cn(
-          'bg-stone-700 w-screen min-h-screen overflow-x-hidden overflow-y-auto font-sans antialiased',
+          'bg-stone-800 w-screen min-h-screen overflow-x-hidden overflow-y-auto font-sans antialiased',
           fontSans.variable
         )}
       >
