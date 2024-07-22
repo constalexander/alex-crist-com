@@ -1,5 +1,3 @@
-'use client';
-
 import { Hahmlet as FontSerif } from 'next/font/google';
 import { cn } from '../utils';
 import { Card, CardContent } from '../atoms/card';
@@ -10,6 +8,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '../molecules/carousel';
+import EmploymentCard from '../molecules/employment-card';
 
 const fontSerif = FontSerif({
   weight: '400',
@@ -20,7 +19,11 @@ const fontSerif = FontSerif({
 /* eslint-disable-next-line */
 export interface EmploymentExperienceProps {}
 
-export function EmploymentExperience(props: EmploymentExperienceProps) {
+export async function EmploymentExperience(props: EmploymentExperienceProps) {
+  const response = await fetch(
+    'https://jsonplaceholder.typicode.com/todos/1'
+  ).then((response) => response.json());
+
   return (
     <div className="px-[40px]">
       <h1
@@ -31,6 +34,7 @@ export function EmploymentExperience(props: EmploymentExperienceProps) {
       >
         EMPLOYMENT EXPERIENCE
       </h1>
+
       <Carousel className="w-full max-w-sm">
         <CarouselContent className="-ml-1">
           {Array.from({ length: 5 }).map((_, index) => (
@@ -41,7 +45,8 @@ export function EmploymentExperience(props: EmploymentExperienceProps) {
               <div className="p-1 text-stone-200">
                 <Card>
                   <CardContent className="flex aspect-square items-center justify-center p-6">
-                    <span className="text-2xl font-semibold">{index + 1}</span>
+                    <EmploymentCard index={index} />
+                    {response && <div>{response.title}</div>}
                   </CardContent>
                 </Card>
               </div>
