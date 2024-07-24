@@ -29,6 +29,12 @@ export function Menu(props: MenuProps) {
 
   return (
     <div className="text-stone-400">
+      <Button variant="ghost" size="icon" className="text-2xl text-stone-400">
+        <span className="sr-only">Toggle theme</span>
+
+        {isMenuOpen ? <X size={32} /> : <MenuIcon size={32} />}
+      </Button>
+      {/** 
       <DropdownMenu open={isMenuOpen} onOpenChange={(e) => menuOpenChange(e)}>
         <DropdownMenuTrigger asChild>
           <Button
@@ -42,7 +48,7 @@ export function Menu(props: MenuProps) {
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent
-          className="fixed top-0 left-0 right-0 w-[94vw] h-[100vh] transform -translate-x-full transition duration-300 ease-in-out"
+          className="fixed top-0 left-0 right-0 w-[90vw] h-[100vh] transform -translate-y-full transition duration-300 ease-in-out"
           hideWhenDetached
           align="center"
         >
@@ -56,6 +62,7 @@ export function Menu(props: MenuProps) {
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
+      */}
     </div>
   );
 }

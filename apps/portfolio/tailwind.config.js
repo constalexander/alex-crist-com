@@ -70,7 +70,7 @@ module.exports = {
           foreground: 'var(--muted-foreground)',
         },
         popover: {
-          DEFAULT: 'var(--popover)',
+          DEFAULT: colors.zinc[800],
           foreground: 'var(--popover-foreground)',
         },
         primary: {
