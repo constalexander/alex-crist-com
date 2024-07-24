@@ -15,7 +15,7 @@ export interface HeaderProps {}
 
 export function Header(props: HeaderProps) {
   return (
-    <div className={'flex justify-between items-center w-full p-4'}>
+    <div className={'flex justify-between items-center w-full p-4 bg-zinc-800'}>
       <div>
         <div
           className={cn(

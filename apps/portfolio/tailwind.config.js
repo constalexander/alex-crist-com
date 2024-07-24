@@ -54,10 +54,10 @@ module.exports = {
         background: 'var(--background)',
         'background-transparent': 'var(--background-transparent)',
         black: 'var(--black)',
-        border: 'var(--border)',
+        border: colors.stone[500],
         card: {
-          DEFAULT: colors.stone[500],
-          foreground: 'var(--card-foreground)',
+          DEFAULT: colors.zinc[800],
+          foreground: colors.zinc[300],
         },
         destructive: {
           DEFAULT: 'var(--destructive)',
@@ -70,7 +70,7 @@ module.exports = {
           foreground: 'var(--muted-foreground)',
         },
         popover: {
-          DEFAULT: 'var(--popover)',
+          DEFAULT: colors.zinc[800],
           foreground: 'var(--popover-foreground)',
         },
         primary: {
