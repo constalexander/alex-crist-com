@@ -30,8 +30,7 @@ export function Menu(props: MenuProps) {
   return (
     <div className="text-stone-400">
       <Button variant="ghost" size="icon" className="text-2xl text-stone-400">
-        <span className="sr-only">Toggle theme</span>
-
+        <span className="sr-only">Menu</span>
         {isMenuOpen ? <X size={32} /> : <MenuIcon size={32} />}
       </Button>
       {/** 
