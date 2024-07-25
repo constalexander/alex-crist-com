@@ -1,7 +1,13 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '../molecules/dropdown';
 import { Button } from '../atoms/button';
 import { Menu as MenuIcon, X } from 'lucide-react';
 
@@ -10,10 +16,9 @@ export interface MenuProps {}
 
 export function Menu(props: MenuProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const menuRef = useRef<HTMLDivElement>(null);
 
-  const menuOpenChange = () => {
-    setIsMenuOpen(!isMenuOpen);
+  const menuOpenChange = (e: boolean) => {
+    setIsMenuOpen(e);
   };
 
   const router = useRouter();
@@ -22,60 +27,41 @@ export function Menu(props: MenuProps) {
     setIsMenuOpen(false);
   };
 
-  const handleClickOutside = (event: MouseEvent) => {
-    if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
-      setIsMenuOpen(false);
-    }
-  };
-
-  useEffect(() => {
-    if (isMenuOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
-    } else {
-      document.removeEventListener('mousedown', handleClickOutside);
-    }
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, [isMenuOpen]);
-
   return (
     <div className="text-stone-400">
-      <Button
-        variant="ghost"
-        size="icon"
-        className="text-2xl text-stone-400"
-        onClick={menuOpenChange}
-      >
+      <Button variant="ghost" size="icon" className="text-2xl text-stone-400">
         <span className="sr-only">Menu</span>
         {isMenuOpen ? <X size={32} /> : <MenuIcon size={32} />}
       </Button>
-      {isMenuOpen && (
-        <div
-          ref={menuRef}
-          className="fixed top-[80px] left-0 right-0 w-full h-[50vh] bg-zinc-800 text-white transform transition-transform duration-500 ease-in-out translate-y-0 z-50"
+      {/** 
+      <DropdownMenu open={isMenuOpen} onOpenChange={(e) => menuOpenChange(e)}>
+        <DropdownMenuTrigger asChild>
+          <Button
+            variant="ghost"
+            size="icon"
+            className="text-2xl text-stone-400"
+          >
+            <span className="sr-only">Toggle theme</span>
+
+            {isMenuOpen ? <X size={32} /> : <MenuIcon size={32} />}
+          </Button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent
+          className="fixed top-0 left-0 right-0 w-[90vw] h-[100vh] transform -translate-y-full transition duration-300 ease-in-out"
+          hideWhenDetached
+          align="center"
         >
-          <div className="p-4">
-            <ul>
-              <li>
-                <Button variant="ghost" onClick={() => nav('/about')}>
-                  About
-                </Button>
-              </li>
-              <li>
-                <Button variant="ghost" onClick={() => nav('/services')}>
-                  Services
-                </Button>
-              </li>
-              <li>
-                <Button variant="ghost" onClick={() => nav('/contact')}>
-                  Contact
-                </Button>
-              </li>
-            </ul>
-          </div>
-        </div>
-      )}
+          <DropdownMenuItem
+            onSelect={(e) => {
+              e.preventDefault();
+              nav('/about');
+            }}
+          >
+            About
+          </DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenu>
+      */}
     </div>
   );
 }
