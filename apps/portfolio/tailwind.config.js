@@ -71,7 +71,7 @@ module.exports = {
         },
         popover: {
           DEFAULT: colors.zinc[800],
-          foreground: 'var(--popover-foreground)',
+          foreground: colors.zinc[400],
         },
         primary: {
           DEFAULT: 'var(--primary)',
