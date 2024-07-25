@@ -48,8 +48,8 @@ module.exports = {
       },
       colors: {
         accent: {
-          DEFAULT: 'var(--accent)',
-          foreground: 'var(--accent-foreground)',
+          DEFAULT: colors.emerald[370],
+          foreground: colors.emerald[300],
         },
         background: 'var(--background)',
         'background-transparent': 'var(--background-transparent)',

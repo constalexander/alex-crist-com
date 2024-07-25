@@ -17,7 +17,7 @@ docker run -it \
     -e WORKSPACE_MOUNT_PATH=$WORKSPACE_BASE \
     -v $WORKSPACE_BASE:/opt/workspace_base \
     -v /var/run/docker.sock:/var/run/docker.sock \
-    -p 3000:3000 \
+    -p 3333:3000 \
     --add-host host.docker.internal:host-gateway \
     --name $CONTAINER_NAME \
     ghcr.io/opendevin/opendevin
