@@ -53,13 +53,13 @@ export function Menu(props: MenuProps) {
         </DropdownMenuTrigger>
 
         <DropdownMenuContent
-          className="fixed top-[-23px] left-[10vw] w-[90vw] h-[100vh] bg-emerald-900 border-emerald-950 transform -translate-x-full transition duration-300 ease-in-out"
+          className="fixed top-[-23px] left-[36px] right-[0px] w-[90vw] max-w-[400px] h-[100vh] bg-emerald-900 border-emerald-950 transform -translate-x-full transition duration-300 ease-in-out"
           sideOffset={-40}
           hideWhenDetached
           align="center"
         >
           <DropdownMenuItem
-            className="flex w-full justify-between border-b-2 border-emerald-800"
+            className="flex w-full justify-between h-[84px] rounded-none border-b-2 border-emerald-800 py-0 my-0"
             onSelect={(e) => {
               e.preventDefault();
             }}
