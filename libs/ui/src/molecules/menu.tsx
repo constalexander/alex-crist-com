@@ -131,7 +131,7 @@ export function Menu(props: MenuProps) {
           >
             <Button
               variant="ghost"
-              className="inline-block text-xl text-stone-400"
+              className="w-full text-left inline-block text-xl text-stone-400"
             >
               <span className="sr-only">Home page</span>
               Home
@@ -148,21 +148,34 @@ export function Menu(props: MenuProps) {
           >
             <Button
               variant="ghost"
-              className="inline-block text-xl text-stone-400"
+              className="w-full text-left inline-block text-xl text-stone-400"
             >
               <span className="sr-only">About page</span>
               About
             </Button>
           </DropdownMenuItem>
 
-          <h2
+          <DropdownMenuItem
             className={cn(
-              'text-xl text-emerald-400 font-serif font-bold p-2 border-t-2 border-emerald-800 text-right px-6',
-              fontSerif.variable
+              isMenuItemActive ? 'bg-emerald-800' : '',
+              'justify-end border-t-0 border-emerald-800'
             )}
+            onSelect={(e) => {
+              e.preventDefault();
+              nav('/projects/tachistoscope');
+            }}
           >
-            Projects
-          </h2>
+            <Button
+              variant="ghost"
+              className={cn(
+                'w-full justify-end text-xl text-emerald-500 font-serif font-bold p-2 px-6',
+                fontSerif.variable
+              )}
+            >
+              <span className="sr-only">Projects page</span>
+              Projects
+            </Button>
+          </DropdownMenuItem>
 
           <DropdownMenuItem
             className={cn(
@@ -176,10 +189,29 @@ export function Menu(props: MenuProps) {
           >
             <Button
               variant="ghost"
-              className="inline-block text-lg text-stone-400"
+              className="w-full text-right inline-block text-lg text-stone-400"
             >
               <span className="sr-only">Tachistoscope project</span>
               Tachistoscope
+            </Button>
+          </DropdownMenuItem>
+
+          <DropdownMenuItem
+            className={cn(
+              isMenuItemActive ? 'bg-emerald-800' : '',
+              'justify-end'
+            )}
+            onSelect={(e) => {
+              e.preventDefault();
+              nav('/projects/rng');
+            }}
+          >
+            <Button
+              variant="ghost"
+              className="w-full text-right inline-block text-lg text-stone-400"
+            >
+              <span className="sr-only">Random Number Generator project</span>
+              Random Number Generator
             </Button>
           </DropdownMenuItem>
         </DropdownMenuContent>
