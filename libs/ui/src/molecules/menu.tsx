@@ -54,24 +54,17 @@ export function Menu(props: MenuProps) {
           hideWhenDetached
           align="center"
         >
-          <DropdownMenuItem
-            onSelect={(e) => {
-              e.preventDefault();
-            }}
-          >
-            <DropdownMenuTrigger asChild>
-              asdf
-              {/* <Button
-                variant="ghost"
-                size="icon"
-                className="text-2xl text-stone-400 float-right"
-              >
-                <span className="sr-only">Close menu</span>
+          <DropdownMenuTrigger asChild>
+            <Button
+              variant="ghost"
+              size="icon"
+              className="text-2xl text-stone-400 float-right"
+            >
+              <span className="sr-only">Close menu</span>
 
-                {isMenuOpen ? <X size={32} /> : <MenuIcon size={32} />}
-              </Button>  */}
-            </DropdownMenuTrigger>
-          </DropdownMenuItem>
+              {isMenuOpen ? <X size={32} /> : <MenuIcon size={32} />}
+            </Button>
+          </DropdownMenuTrigger>
 
           <DropdownMenuItem
             onSelect={(e) => {
