@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { Hahmlet as FontSerif } from 'next/font/google';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -10,6 +11,13 @@ import {
 } from '../molecules/dropdown';
 import { Button } from '../atoms/button';
 import { Menu as MenuIcon, X } from 'lucide-react';
+import { cn } from '../utils';
+
+const fontSerif = FontSerif({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-serif',
+});
 
 /* eslint-disable-next-line */
 export interface MenuProps {}
@@ -29,12 +37,6 @@ export function Menu(props: MenuProps) {
 
   return (
     <div className="text-stone-400">
-      {/** 
-      <Button variant="ghost" size="icon" className="text-2xl text-stone-400">
-        <span className="sr-only">Menu</span>
-        {isMenuOpen ? <X size={32} /> : <MenuIcon size={32} />}
-      </Button>
-    */}
       <DropdownMenu open={isMenuOpen} onOpenChange={(e) => menuOpenChange(e)}>
         <DropdownMenuTrigger asChild>
           <Button
@@ -42,24 +44,60 @@ export function Menu(props: MenuProps) {
             size="icon"
             className="text-2xl text-stone-400"
           >
-            <span className="sr-only">Toggle theme</span>
-
-            {isMenuOpen ? <X size={32} /> : <MenuIcon size={32} />}
+            <span className="sr-only">Open menu</span>
+            <MenuIcon size={32} />
           </Button>
         </DropdownMenuTrigger>
+
         <DropdownMenuContent
-          className="fixed top-0 left-[8vw] right-0 w-[90vw] h-[100vh] transform -translate-x-full transition duration-300 ease-in-out"
+          className="fixed top-[-23px] left-[10vw] w-[90vw] h-[100vh] bg-emerald-900 border-emerald-950 transform -translate-x-full transition duration-300 ease-in-out"
+          sideOffset={-40}
           hideWhenDetached
           align="center"
         >
           <DropdownMenuItem
+            className="w-full justify-end"
+            onSelect={(e) => {
+              e.preventDefault();
+            }}
+          >
+            <Button
+              variant="ghost"
+              size="icon"
+              className="inline-block text-2xl text-stone-400 m-[12px]"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <span className="sr-only">Close menu</span>
+              <X size={32} />
+            </Button>
+          </DropdownMenuItem>
+
+          <DropdownMenuItem
+            className="text-3xl"
             onSelect={(e) => {
               e.preventDefault();
               nav('/about');
             }}
           >
-            About
+            <Button
+              variant="ghost"
+              size="icon"
+              className="inline-block text-2xl text-stone-400"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <span className="sr-only">About page</span>
+              About
+            </Button>
           </DropdownMenuItem>
+
+          <h2
+            className={cn(
+              'text-3xl text-emerald-400 font-serif font-bold',
+              fontSerif.variable
+            )}
+          >
+            Projects
+          </h2>
         </DropdownMenuContent>
       </DropdownMenu>
     </div>
