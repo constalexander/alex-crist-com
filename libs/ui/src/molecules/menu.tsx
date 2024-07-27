@@ -56,11 +56,23 @@ export function Menu(props: MenuProps) {
           align="center"
         >
           <DropdownMenuItem
-            className="w-full justify-end"
+            className="flex w-full justify-between"
             onSelect={(e) => {
               e.preventDefault();
             }}
           >
+            <div>
+              {' '}
+              <Button
+                variant="ghost"
+                size="icon"
+                className="inline-block text-2xl text-stone-400 m-[12px]"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <span className="sr-only">GitHub</span>
+                INSERT GITHUB ICON HERE HOPEFULLY FROM LUCIDE-REACT
+              </Button>
+            </div>
             <Button
               variant="ghost"
               size="icon"
