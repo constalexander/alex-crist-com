@@ -3,15 +3,17 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Hahmlet as FontSerif } from 'next/font/google';
+import { FileText, Menu as MenuIcon, Send, X } from 'lucide-react';
+import { Button } from '../atoms/button';
+import GithubIcon from '../atoms/icons/github';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '../molecules/dropdown';
-import { Button } from '../atoms/button';
-import { Menu as MenuIcon, X } from 'lucide-react';
 import { cn } from '../utils';
+import LinkedinIcon from '../atoms/icons/linkedin';
 
 const fontSerif = FontSerif({
   weight: '400',
@@ -24,6 +26,7 @@ export interface MenuProps {}
 
 export function Menu(props: MenuProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuItemActive, setIsMenuItemActive] = useState(false);
 
   const menuOpenChange = (e: boolean) => {
     setIsMenuOpen(e);
@@ -56,21 +59,55 @@ export function Menu(props: MenuProps) {
           align="center"
         >
           <DropdownMenuItem
-            className="flex w-full justify-between"
+            className="flex w-full justify-between border-b-2 border-emerald-800"
             onSelect={(e) => {
               e.preventDefault();
             }}
           >
-            <div>
-              {' '}
+            <div className="basis-full flex px-3">
               <Button
                 variant="ghost"
                 size="icon"
-                className="inline-block text-2xl text-stone-400 m-[12px]"
-                onClick={() => setIsMenuOpen(false)}
+                className="inline-block"
+                onClick={() =>
+                  window.open('https://github.com/constalexander', '_blank')
+                }
               >
-                <span className="sr-only">GitHub</span>
-                INSERT GITHUB ICON HERE HOPEFULLY FROM LUCIDE-REACT
+                <GithubIcon />
+              </Button>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="inline-block"
+                onClick={() =>
+                  window.open('https://github.com/constalexander', '_blank')
+                }
+              >
+                <LinkedinIcon />
+              </Button>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="inline-block text-stone-400"
+                onClick={() =>
+                  window.open('https://github.com/constalexander', '_blank')
+                }
+              >
+                <span title="Resume">
+                  <FileText />
+                </span>
+              </Button>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="inline-block text-stone-400"
+                onClick={() =>
+                  window.open('https://github.com/constalexander', '_blank')
+                }
+              >
+                <span title="Email">
+                  <Send />
+                </span>
               </Button>
             </div>
             <Button
@@ -85,17 +122,33 @@ export function Menu(props: MenuProps) {
           </DropdownMenuItem>
 
           <DropdownMenuItem
-            className="text-3xl"
+            className={isMenuItemActive ? 'bg-emerald-800' : ''}
             onSelect={(e) => {
               e.preventDefault();
-              nav('/about');
+              nav('/');
+              setIsMenuOpen(false);
             }}
           >
             <Button
               variant="ghost"
-              size="icon"
-              className="inline-block text-2xl text-stone-400"
-              onClick={() => setIsMenuOpen(false)}
+              className="inline-block text-xl text-stone-400"
+            >
+              <span className="sr-only">Home page</span>
+              Home
+            </Button>
+          </DropdownMenuItem>
+
+          <DropdownMenuItem
+            className={isMenuItemActive ? 'bg-emerald-800' : ''}
+            onSelect={(e) => {
+              e.preventDefault();
+              nav('/about');
+              setIsMenuOpen(false);
+            }}
+          >
+            <Button
+              variant="ghost"
+              className="inline-block text-xl text-stone-400"
             >
               <span className="sr-only">About page</span>
               About
@@ -104,12 +157,31 @@ export function Menu(props: MenuProps) {
 
           <h2
             className={cn(
-              'text-3xl text-emerald-400 font-serif font-bold',
+              'text-xl text-emerald-400 font-serif font-bold p-2 border-t-2 border-emerald-800 text-right px-6',
               fontSerif.variable
             )}
           >
             Projects
           </h2>
+
+          <DropdownMenuItem
+            className={cn(
+              isMenuItemActive ? 'bg-emerald-800' : '',
+              'justify-end'
+            )}
+            onSelect={(e) => {
+              e.preventDefault();
+              nav('/projects/tachistoscope');
+            }}
+          >
+            <Button
+              variant="ghost"
+              className="inline-block text-lg text-stone-400"
+            >
+              <span className="sr-only">Tachistoscope project</span>
+              Tachistoscope
+            </Button>
+          </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
     </div>
