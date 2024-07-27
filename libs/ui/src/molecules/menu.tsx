@@ -42,16 +42,37 @@ export function Menu(props: MenuProps) {
             size="icon"
             className="text-2xl text-stone-400"
           >
-            <span className="sr-only">Toggle theme</span>
+            <span className="sr-only">Open menu</span>
 
             {isMenuOpen ? <X size={32} /> : <MenuIcon size={32} />}
           </Button>
         </DropdownMenuTrigger>
+
         <DropdownMenuContent
-          className="fixed top-0 left-[8vw] right-0 w-[90vw] h-[100vh] transform -translate-x-full transition duration-300 ease-in-out"
+          className="fixed top-[-23px] left-[8vw] w-[90vw] h-[100vh] bg-emerald-900 border-emerald-950 transform -translate-x-full transition duration-300 ease-in-out"
+          sideOffset={-40}
           hideWhenDetached
           align="center"
         >
+          <DropdownMenuItem
+            onSelect={(e) => {
+              e.preventDefault();
+            }}
+          >
+            <DropdownMenuTrigger asChild>
+              asdf
+              {/* <Button
+                variant="ghost"
+                size="icon"
+                className="text-2xl text-stone-400 float-right"
+              >
+                <span className="sr-only">Close menu</span>
+
+                {isMenuOpen ? <X size={32} /> : <MenuIcon size={32} />}
+              </Button>  */}
+            </DropdownMenuTrigger>
+          </DropdownMenuItem>
+
           <DropdownMenuItem
             onSelect={(e) => {
               e.preventDefault();
