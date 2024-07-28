@@ -3,7 +3,13 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Hahmlet as FontSerif } from 'next/font/google';
-import { FileText, Menu as MenuIcon, Send, X } from 'lucide-react';
+import {
+  ExternalLink,
+  FileText,
+  Menu as MenuIcon,
+  Send,
+  X,
+} from 'lucide-react';
 import { Button } from '../atoms/button';
 import GithubIcon from '../atoms/icons/github';
 import {
@@ -162,7 +168,7 @@ export function Menu(props: MenuProps) {
             )}
             onSelect={(e) => {
               e.preventDefault();
-              nav('/projects/tachistoscope');
+              nav('/projects');
             }}
           >
             <Button
@@ -174,6 +180,26 @@ export function Menu(props: MenuProps) {
             >
               <span className="sr-only">Projects page</span>
               Projects
+            </Button>
+          </DropdownMenuItem>
+
+          <DropdownMenuItem
+            className={cn(
+              isMenuItemActive ? 'bg-emerald-800' : '',
+              'justify-end'
+            )}
+            onSelect={(e) => {
+              e.preventDefault();
+              window.open('https://boodi.ai', '_blank');
+            }}
+          >
+            <Button
+              variant="ghost"
+              className="w-full text-right inline-block text-lg text-stone-400"
+            >
+              <span className="sr-only">Boodi project</span>
+              Boodi.ai{' '}
+              <ExternalLink className="inline w-[16px] relative top-[-3px] left-[3px]" />
             </Button>
           </DropdownMenuItem>
 
