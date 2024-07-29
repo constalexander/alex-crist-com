@@ -1,16 +1,20 @@
 /* eslint-disable-next-line */
 export interface EmploymentCardProps {
-  index: number;
+  companyName: string;
+  dateStarted: string;
+  dateEnded: string;
+  position: string;
 }
 
-export async function EmploymentCard(props: EmploymentCardProps) {
+export function EmploymentCard({ companyName, dateStarted, dateEnded, position }: EmploymentCardProps) {
   return (
     <div>
-      <span className="text-2xl font-semibold cursor-default select-none">
-        {props.index}
-      </span>
+      <h2 className="text-xl font-bold">{companyName}</h2>
+      <p>{position}</p>
+      <p>{dateStarted} - {dateEnded}</p>
     </div>
   );
 }
 
 export default EmploymentCard;
+

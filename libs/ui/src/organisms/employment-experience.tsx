@@ -17,12 +17,20 @@ const fontSerif = FontSerif({
 });
 
 /* eslint-disable-next-line */
-export interface EmploymentExperienceProps {}
+export interface EmploymentExperienceProps {
+  employmentData: Array<{
+    companyName: string;
+    dateStarted: string;
+    dateEnded: string;
+    position: string;
+  }>;
+}
 
-export async function EmploymentExperience(props: EmploymentExperienceProps) {
+export async function EmploymentExperience() {
   const response = await fetch(
-    'https://jsonplaceholder.typicode.com/todos/1'
-  ).then((response) => response.json());
+    'http://localhost:3000/api/employment-experience'
+  );
+  const employmentData = await response.json();
 
   return (
     <div className="px-[40px]">
@@ -37,7 +45,7 @@ export async function EmploymentExperience(props: EmploymentExperienceProps) {
 
       <Carousel className="w-full max-w-sm">
         <CarouselContent className="-ml-1">
-          {Array.from({ length: 5 }).map((_, index) => (
+          {employmentData.map((item: any, index: number) => (
             <CarouselItem
               key={index}
               className="pl-1 md:basis-1/2 lg:basis-1/3"
@@ -45,8 +53,12 @@ export async function EmploymentExperience(props: EmploymentExperienceProps) {
               <div className="p-1 text-stone-200">
                 <Card>
                   <CardContent className="flex aspect-square items-center justify-center p-6">
-                    <EmploymentCard index={index} />
-                    {response && <div>{response.title}</div>}
+                    <EmploymentCard
+                      companyName={item.companyName}
+                      dateStarted={item.dateStarted}
+                      dateEnded={item.dateEnded}
+                      position={item.position}
+                    />
                   </CardContent>
                 </Card>
               </div>
