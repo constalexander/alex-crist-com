@@ -1,4 +1,5 @@
 import { Hahmlet as FontSerif } from 'next/font/google';
+import { EmploymentExperienceDTO } from '@alex/models/lib/dto/employment-experience.dto';
 import { cn } from '../utils';
 import { Card, CardContent } from '../atoms/card';
 import {
@@ -18,17 +19,12 @@ const fontSerif = FontSerif({
 
 /* eslint-disable-next-line */
 export interface EmploymentExperienceProps {
-  employmentData: Array<{
-    companyName: string;
-    dateStarted: string;
-    dateEnded: string;
-    position: string;
-  }>;
+  employmentData: EmploymentExperienceDTO[];
 }
 
 export async function EmploymentExperience() {
   const response = await fetch(
-    'http://localhost:3000/api/employment-experience'
+    `${process.env.PORTFOLIO_PUBLIC_API_BASE}/api/employment-experience`
   );
   const employmentData = await response.json();
 

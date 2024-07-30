@@ -1,21 +1,21 @@
 import { NextResponse } from 'next/server';
+import { EmploymentExperienceDTO } from '@alex/models/lib/dto/employment-experience.dto';
 
 export async function GET() {
-  const employmentData = [
+  const employmentData: EmploymentExperienceDTO[] = [
     {
-      companyName: 'Company A',
-      dateStarted: '2020-01-01',
-      dateEnded: '2021-01-01',
-      position: 'Software Engineer'
+      companyName: 'LPL Financial',
+      position: 'Sr. Software Engineer',
+      dateStarted: 'Nov 2021',
+      dateEnded: 'present',
     },
     {
-      companyName: 'Company B',
-      dateStarted: '2019-01-01',
-      dateEnded: '2020-01-01',
-      position: 'Junior Developer'
-    }
+      companyName: 'Credit Union of Texas',
+      position: 'Web Developer',
+      dateStarted: 'Nov 2020',
+      dateEnded: 'Sept 2021',
+    },
   ];
 
   return NextResponse.json(employmentData);
 }
-
