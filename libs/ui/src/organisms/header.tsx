@@ -27,7 +27,7 @@ export function Header(props: HeaderProps) {
         <Button
           variant="ghost"
           className={cn(
-            'text-2xl text-emerald-500 tracking-wide font-serif font-bold',
+            'text-[1.625rem] text-emerald-500 tracking-wide font-serif font-bold',
             fontSerif.variable
           )}
           onClick={() => nav('/')}

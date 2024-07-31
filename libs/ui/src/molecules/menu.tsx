@@ -240,6 +240,25 @@ export function Menu(props: MenuProps) {
               Random Number Generator
             </Button>
           </DropdownMenuItem>
+
+          <DropdownMenuItem
+            className={cn(
+              isMenuItemActive ? 'bg-emerald-800' : '',
+              'justify-end'
+            )}
+            onSelect={(e) => {
+              e.preventDefault();
+              window.open('https://growzone.surge.sh/', '_blank');
+            }}
+          >
+            <Button
+              variant="ghost"
+              className="w-full text-right inline-block text-lg text-stone-400"
+            >
+              <span className="sr-only">Growing Zone Finder project</span>
+              Growing Zone Finder
+            </Button>
+          </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
     </div>
