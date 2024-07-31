@@ -1,20 +1,29 @@
 /* eslint-disable-next-line */
 export interface EmploymentCardProps {
+  index: number;
   companyName: string;
   dateStarted: string;
   dateEnded: string;
   position: string;
 }
 
-export function EmploymentCard({ companyName, dateStarted, dateEnded, position }: EmploymentCardProps) {
+export function EmploymentCard({
+  index,
+  companyName,
+  dateStarted,
+  dateEnded,
+  position,
+}: EmploymentCardProps) {
   return (
     <div>
-      <h2 className="text-xl font-bold">{companyName}</h2>
-      <p>{position}</p>
-      <p>{dateStarted} - {dateEnded}</p>
+      <p className="select-none">{index + 1}</p>
+      <h2 className="text-xl font-bold select-none">{companyName}</h2>
+      <p className="select-none">{position}</p>
+      <p className="select-none">
+        {dateStarted} - {dateEnded}
+      </p>
     </div>
   );
 }
 
 export default EmploymentCard;
-

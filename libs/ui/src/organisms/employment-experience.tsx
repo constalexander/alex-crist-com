@@ -18,15 +18,16 @@ const fontSerif = FontSerif({
 });
 
 /* eslint-disable-next-line */
-export interface EmploymentExperienceProps {
-  employmentData: EmploymentExperienceDTO[];
+export interface EmploymentExperienceProps {}
+
+async function fetchEmploymentData() {
+  const url = `${process.env.PORTFOLIO_PUBLIC_API_BASE}/api/employment-experience`;
+  const response = await fetch(url, { method: 'GET', cache: 'no-store' });
+  return response.json();
 }
 
 export async function EmploymentExperience() {
-  const response = await fetch(
-    `${process.env.PORTFOLIO_PUBLIC_API_BASE}/api/employment-experience`
-  );
-  const employmentData = await response.json();
+  const employmentData = await fetchEmploymentData();
 
   return (
     <div className="px-[40px]">
@@ -41,25 +42,28 @@ export async function EmploymentExperience() {
 
       <Carousel className="w-full max-w-sm">
         <CarouselContent className="-ml-1">
-          {employmentData.map((item: any, index: number) => (
-            <CarouselItem
-              key={index}
-              className="pl-1 md:basis-1/2 lg:basis-1/3"
-            >
-              <div className="p-1 text-stone-200">
-                <Card>
-                  <CardContent className="flex aspect-square items-center justify-center p-6">
-                    <EmploymentCard
-                      companyName={item.companyName}
-                      dateStarted={item.dateStarted}
-                      dateEnded={item.dateEnded}
-                      position={item.position}
-                    />
-                  </CardContent>
-                </Card>
-              </div>
-            </CarouselItem>
-          ))}
+          {employmentData.map(
+            (item: EmploymentExperienceDTO, index: number) => (
+              <CarouselItem
+                key={index}
+                className="pl-1 md:basis-1/2 lg:basis-1/3"
+              >
+                <div className="p-1 text-stone-200">
+                  <Card>
+                    <CardContent className="flex aspect-square items-center justify-center p-6">
+                      <EmploymentCard
+                        index={index}
+                        companyName={item.companyName}
+                        dateStarted={item.dateStarted}
+                        dateEnded={item.dateEnded}
+                        position={item.position}
+                      />
+                    </CardContent>
+                  </Card>
+                </div>
+              </CarouselItem>
+            )
+          )}
         </CarouselContent>
         <CarouselPrevious />
         <CarouselNext />
