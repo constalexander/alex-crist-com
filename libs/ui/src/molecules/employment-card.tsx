@@ -17,8 +17,8 @@ export function EmploymentCard({
   return (
     <div>
       <p className="select-none">{index + 1}</p>
-      <h2 className="text-xl font-bold select-none">{companyName}</h2>
-      <p className="select-none">{position}</p>
+      <p className="text-xl font-bold select-none">{companyName}</p>
+      <span className="select-none">{position}</span>
       <p className="select-none">
         {dateStarted} - {dateEnded}
       </p>
