@@ -10,16 +10,16 @@ import {
   Send,
   X,
 } from 'lucide-react';
-import { Button } from '../atoms/button';
-import GithubIcon from '../atoms/icons/github';
+import { Button } from '../atoms/Button';
+import GithubIcon from '../atoms/icons/Github';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '../molecules/dropdown';
+} from './Dropdown';
 import { cn } from '../utils';
-import LinkedinIcon from '../atoms/icons/linkedin';
+import LinkedinIcon from '../atoms/icons/Linkedin';
 
 const fontSerif = FontSerif({
   weight: '400',

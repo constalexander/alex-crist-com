@@ -1,15 +1,15 @@
 import { Hahmlet as FontSerif } from 'next/font/google';
 import { EmploymentExperienceDTO } from '@alex/models/lib/dto/employment-experience.dto';
 import { cn } from '../utils';
-import { Card, CardContent } from '../atoms/card';
+import { Card, CardContent } from '../atoms/Card';
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from '../molecules/carousel';
-import EmploymentCard from '../molecules/employment-card';
+} from '../molecules/Carousel';
+import EmploymentCard from '../molecules/EmploymentCard';
 
 const fontSerif = FontSerif({
   weight: '400',

@@ -2,9 +2,9 @@
 
 import { Hahmlet as FontSerif } from 'next/font/google';
 import { useRouter } from 'next/navigation';
-import Menu from '../molecules/menu';
+import Menu from '../molecules/Menu';
 import { cn } from '../utils';
-import { Button } from '../atoms/button';
+import { Button } from '../atoms/Button';
 
 const fontSerif = FontSerif({
   weight: '400',

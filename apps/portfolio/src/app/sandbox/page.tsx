@@ -1,4 +1,4 @@
-import { Button } from '@alex/ui/atoms/button';
+import { Button } from '@alex/ui/atoms/Button';
 import styles from './page.module.scss';
 
 /* eslint-disable-next-line */
