@@ -29,12 +29,14 @@ export default function RootLayout({
       </head>
       <body
         className={cn(
-          'bg-stone-700 w-screen min-h-screen overflow-x-hidden overflow-y-auto font-sans antialiased',
+          'grid grid-rows-[auto_1fr] w-screen min-h-screen overflow-x-hidden overflow-y-auto bg-stone-700 font-sans antialiased',
           fontSans.variable
         )}
       >
         <Header />
-        <main className="w-full min-h-full p-4"> {children}</main>
+        <main className="grid grid-rows-[1fr] w-full min-h-full p-4">
+          {children}
+        </main>
       </body>
     </html>
   );
