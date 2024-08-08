@@ -162,6 +162,23 @@ export function Menu(props: MenuProps) {
           </DropdownMenuItem>
 
           <DropdownMenuItem
+            className={isMenuItemActive ? 'bg-emerald-800' : ''}
+            onSelect={(e) => {
+              e.preventDefault();
+              nav('/log');
+              setIsMenuOpen(false);
+            }}
+          >
+            <Button
+              variant="ghost"
+              className="w-full text-left inline-block text-xl text-stone-400"
+            >
+              <span className="sr-only">Log page</span>
+              Log
+            </Button>
+          </DropdownMenuItem>
+
+          <DropdownMenuItem
             className={cn(
               isMenuItemActive ? 'bg-emerald-800' : '',
               'justify-end border-t-0 border-emerald-800'
@@ -198,7 +215,7 @@ export function Menu(props: MenuProps) {
               className="w-full text-right inline-block text-lg text-stone-400"
             >
               <span className="sr-only">Boodi project</span>
-              Boodi.ai{' '}
+              Boodi.ai
               <ExternalLink className="inline w-[16px] relative top-[-3px] left-[3px]" />
             </Button>
           </DropdownMenuItem>
