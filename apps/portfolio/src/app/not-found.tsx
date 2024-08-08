@@ -7,7 +7,7 @@ export default function Page() {
   const router = useRouter();
 
   return (
-    <div className="flex flex-col items-center justify-center h-full">
+    <div className="flex flex-col items-center justify-center h-full -mt-[48px]">
       <h1 className="text-4xl text-stone-400 tracking-wide">404 NOT FOUND</h1>
       <h2 className="text-lg text-stone-500 tracking-wide mt-4 mb-2">
         The trail led to nowhere
