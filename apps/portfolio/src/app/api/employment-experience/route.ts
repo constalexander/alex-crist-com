@@ -9,9 +9,7 @@ export async function GET() {
       dateStarted: 'Nov 2021',
       dateEnded: 'present',
       responsibilities: [
-        'Developed and maintained a suite of financial applications',
-        'Collaborated with business stakeholders to gather requirements',
-        'Mentored junior developers',
+        'Built pixel-perfect Angular components for client-facing investment modeling software with a 107% say/do ratio to help deliver on the company’s fintech platform modernization initiative.',
       ],
     },
     {

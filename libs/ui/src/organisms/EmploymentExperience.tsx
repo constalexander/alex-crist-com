@@ -40,7 +40,7 @@ export async function EmploymentExperience() {
         EMPLOYMENT EXPERIENCE
       </h1>
 
-      <Carousel className="w-full max-w-sm">
+      <Carousel className="w-full max-w-sm mx-auto">
         <CarouselContent className="-ml-1">
           {employmentData.map(
             (item: EmploymentExperienceDTO, index: number) => (
@@ -50,7 +50,7 @@ export async function EmploymentExperience() {
               >
                 <div className="p-1 text-stone-200">
                   <Card>
-                    <CardContent className="flex aspect-square items-center justify-center p-0">
+                    <CardContent className="flex items-center justify-center p-0">
                       <EmploymentCard
                         index={index}
                         companyName={item.companyName}
