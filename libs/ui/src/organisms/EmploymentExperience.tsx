@@ -33,14 +33,14 @@ export async function EmploymentExperience() {
     <div className="px-[40px]">
       <h1
         className={cn(
-          'font-serif text-xl text-stone-400 tracking-wide text-center',
+          'font-serif text-xl text-stone-400 tracking-wide text-center mb-5',
           fontSerif.variable
         )}
       >
         EMPLOYMENT EXPERIENCE
       </h1>
 
-      <Carousel className="w-full max-w-sm">
+      <Carousel className="w-full max-w-sm h-full mx-auto">
         <CarouselContent className="-ml-1">
           {employmentData.map(
             (item: EmploymentExperienceDTO, index: number) => (
@@ -50,13 +50,15 @@ export async function EmploymentExperience() {
               >
                 <div className="p-1 text-stone-200">
                   <Card>
-                    <CardContent className="flex aspect-square items-center justify-center p-6">
+                    <CardContent className="flex items-center h-full justify-center p-0">
                       <EmploymentCard
                         index={index}
                         companyName={item.companyName}
+                        companyUrl={item.companyUrl}
                         dateStarted={item.dateStarted}
                         dateEnded={item.dateEnded}
                         position={item.position}
+                        responsibilities={item.responsibilities}
                       />
                     </CardContent>
                   </Card>
