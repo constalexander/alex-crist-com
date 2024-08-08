@@ -1,7 +1,7 @@
 import './global.scss';
 import { Sarabun as FontSans } from 'next/font/google';
 import { cn } from '@alex/ui/utils';
-import { Header } from '@alex/ui/organisms/header';
+import { Header } from '@alex/ui/organisms/Header';
 
 export const metadata = {
   title: 'Alex Crist | Frontend Engineer',

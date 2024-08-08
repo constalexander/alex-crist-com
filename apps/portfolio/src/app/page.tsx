@@ -1,5 +1,5 @@
-import { EmploymentExperience } from '@alex/ui/organisms/employment-experience';
-import { JobTitleRandomizer } from '@alex/ui/organisms/job-title-randomizer';
+import { EmploymentExperience } from '@alex/ui/organisms/EmploymentExperience';
+import { JobTitleRandomizer } from '@alex/ui/organisms/JobTitleRandomizer';
 
 export default function Page() {
   return (

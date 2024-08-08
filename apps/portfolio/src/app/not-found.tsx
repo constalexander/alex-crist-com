@@ -1,7 +1,7 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { Button } from '@alex/ui/atoms/button';
+import { Button } from '@alex/ui/atoms/Button';
 
 export default function Page() {
   const router = useRouter();
