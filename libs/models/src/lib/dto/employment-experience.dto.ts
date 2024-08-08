@@ -3,4 +3,5 @@ export interface EmploymentExperienceDTO {
   position: string;
   dateStarted: string;
   dateEnded: string;
+  responsibilities: string[];
 }

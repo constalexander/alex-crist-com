@@ -50,13 +50,14 @@ export async function EmploymentExperience() {
               >
                 <div className="p-1 text-stone-200">
                   <Card>
-                    <CardContent className="flex aspect-square items-center justify-center p-6">
+                    <CardContent className="flex aspect-square items-center justify-center p-0">
                       <EmploymentCard
                         index={index}
                         companyName={item.companyName}
                         dateStarted={item.dateStarted}
                         dateEnded={item.dateEnded}
                         position={item.position}
+                        responsibilities={item.responsibilities}
                       />
                     </CardContent>
                   </Card>

@@ -8,24 +8,32 @@ export async function GET() {
       position: 'Sr. Software Engineer',
       dateStarted: 'Nov 2021',
       dateEnded: 'present',
+      responsibilities: [
+        'Developed and maintained a suite of financial applications',
+        'Collaborated with business stakeholders to gather requirements',
+        'Mentored junior developers',
+      ],
     },
     {
       companyName: 'Credit Union of Texas',
       position: 'Web Developer',
       dateStarted: 'Nov 2020',
       dateEnded: 'Sept 2021',
+      responsibilities: [],
     },
     {
       companyName: 'Zilis',
       position: 'Frontend Developer',
       dateStarted: 'April 2020',
       dateEnded: 'Nov 2020',
+      responsibilities: [],
     },
     {
       companyName: 'Self-employed',
       position: 'Freelance Fullstack Developer',
       dateStarted: 'Jan 2018',
       dateEnded: 'April 2020',
+      responsibilities: [],
     },
   ];
 
