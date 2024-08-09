@@ -46,6 +46,9 @@ export function Menu(props: MenuProps) {
 
   return (
     <div className="text-stone-400">
+      {isMenuOpen && (
+        <div className="fixed inset-0 bg-stone-800 bg-opacity-50 backdrop-blur-sm"></div>
+      )}
       <DropdownMenu open={isMenuOpen} onOpenChange={(e) => menuOpenChange(e)}>
         <DropdownMenuTrigger asChild>
           <Button
@@ -59,7 +62,7 @@ export function Menu(props: MenuProps) {
         </DropdownMenuTrigger>
 
         <DropdownMenuContent
-          className="fixed top-[-23px] left-[36px] right-[0px] w-[90vw] max-w-[400px] h-[100vh] bg-emerald-900 border-emerald-950 transform -translate-x-full transition duration-300 ease-in-out shadow-2xl shadow-stone-400/40"
+          className="fixed top-[-23px] left-[36px] right-[0px] w-[90vw] max-w-[400px] h-[100vh] bg-emerald-900 border-emerald-950 transform -translate-x-full transition duration-300 ease-in-out shadow-2xl shadow-stone-400/40 z-20"
           sideOffset={-40}
           hideWhenDetached
           align="center"
