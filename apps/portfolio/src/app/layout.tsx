@@ -1,4 +1,5 @@
 import './global.scss';
+import Script from 'next/script';
 import { Sarabun as FontSans } from 'next/font/google';
 import { cn } from '@alex/ui/utils';
 import { Header } from '@alex/ui/organisms/Header';
@@ -27,6 +28,7 @@ export default function RootLayout({
         <base href="/" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <Script src="/GoSquared-snippet.js" strategy="beforeInteractive" />
       </head>
       <body
         className={cn(
