@@ -34,7 +34,7 @@ export default function RootLayout({
         )}
       >
         <Header />
-        <main className="grid grid-rows-[1fr] w-full min-h-full p-4">
+        <main className="grid grid-rows-[1fr] w-full min-h-full p-4 mt-[96px]">
           {children}
         </main>
       </body>

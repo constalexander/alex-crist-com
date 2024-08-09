@@ -22,7 +22,11 @@ export function Header(props: HeaderProps) {
   };
 
   return (
-    <div className={'flex justify-between items-center w-full p-4 bg-zinc-800'}>
+    <div
+      className={
+        'fixed flex justify-between items-center w-full p-4 bg-zinc-800 shadow-xl shadow-stone-600/60'
+      }
+    >
       <div>
         <Button
           variant="ghost"

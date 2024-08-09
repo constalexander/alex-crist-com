@@ -59,6 +59,7 @@ export async function EmploymentExperience() {
                         dateEnded={item.dateEnded}
                         position={item.position}
                         responsibilities={item.responsibilities}
+                        technologies={item.technologies}
                       />
                     </CardContent>
                   </Card>
