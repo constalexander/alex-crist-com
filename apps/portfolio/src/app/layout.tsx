@@ -2,6 +2,7 @@ import './global.scss';
 import { Sarabun as FontSans } from 'next/font/google';
 import { cn } from '@alex/ui/utils';
 import { Header } from '@alex/ui/organisms/Header';
+import { Footer } from '@alex/ui/organisms/Footer';
 
 export const metadata = {
   title: 'Alex Crist | Frontend Engineer',
@@ -34,9 +35,10 @@ export default function RootLayout({
         )}
       >
         <Header />
-        <main className="grid grid-rows-[1fr] w-full min-h-full p-4 mt-[96px]">
+        <main className="grid grid-rows-[1fr] w-full min-h-full p-0 mt-[96px]">
           {children}
         </main>
+        <Footer />
       </body>
     </html>
   );
