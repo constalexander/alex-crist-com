@@ -12,6 +12,7 @@ export async function GET() {
       responsibilities: [
         'Built an Angular app called Model Hub, part of the Clientworks platform.',
       ],
+      technologies: ['Angular 17', 'RxJS', 'NgRx', 'Jest', 'Cypress'],
     },
     {
       companyName: 'Credit Union of Texas',
@@ -19,7 +20,8 @@ export async function GET() {
       position: 'Web Developer',
       dateStarted: 'Nov 2020',
       dateEnded: 'Sept 2021',
-      responsibilities: [],
+      responsibilities: ['responsibility'],
+      technologies: ['tech'],
     },
     {
       companyName: 'Zilis',
@@ -28,6 +30,7 @@ export async function GET() {
       dateStarted: 'April 2020',
       dateEnded: 'Nov 2020',
       responsibilities: [],
+      technologies: [],
     },
     {
       companyName: 'Self-employed',
@@ -36,6 +39,7 @@ export async function GET() {
       dateStarted: 'Jan 2018',
       dateEnded: 'April 2020',
       responsibilities: [],
+      technologies: [],
     },
   ];
 

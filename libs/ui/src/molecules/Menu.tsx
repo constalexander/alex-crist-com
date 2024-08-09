@@ -59,7 +59,7 @@ export function Menu(props: MenuProps) {
         </DropdownMenuTrigger>
 
         <DropdownMenuContent
-          className="fixed top-[-23px] left-[36px] right-[0px] w-[90vw] max-w-[400px] h-[100vh] bg-emerald-900 border-emerald-950 transform -translate-x-full transition duration-300 ease-in-out"
+          className="fixed top-[-23px] left-[36px] right-[0px] w-[90vw] max-w-[400px] h-[100vh] bg-emerald-900 border-emerald-950 transform -translate-x-full transition duration-300 ease-in-out shadow-2xl shadow-stone-400/40"
           sideOffset={-40}
           hideWhenDetached
           align="center"
@@ -86,7 +86,10 @@ export function Menu(props: MenuProps) {
                 size="icon"
                 className="inline-block"
                 onClick={() =>
-                  window.open('https://github.com/constalexander', '_blank')
+                  window.open(
+                    'https://www.linkedin.com/in/alexcristdeveloper',
+                    '_blank'
+                  )
                 }
               >
                 <LinkedinIcon />
@@ -96,7 +99,7 @@ export function Menu(props: MenuProps) {
                 size="icon"
                 className="inline-block text-stone-400"
                 onClick={() =>
-                  window.open('https://github.com/constalexander', '_blank')
+                  window.open('https://alex-crist.com/resume.pdf', '_blank')
                 }
               >
                 <span title="Resume">
@@ -108,7 +111,7 @@ export function Menu(props: MenuProps) {
                 size="icon"
                 className="inline-block text-stone-400"
                 onClick={() =>
-                  window.open('https://github.com/constalexander', '_blank')
+                  window.open('mailto:alex@alex-crist.com', '_blank')
                 }
               >
                 <span title="Email">
