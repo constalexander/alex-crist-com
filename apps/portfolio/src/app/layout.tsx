@@ -1,7 +1,9 @@
 import './global.scss';
+import Script from 'next/script';
 import { Sarabun as FontSans } from 'next/font/google';
 import { cn } from '@alex/ui/utils';
 import { Header } from '@alex/ui/organisms/Header';
+import { Footer } from '@alex/ui/organisms/Footer';
 
 export const metadata = {
   title: 'Alex Crist | Frontend Engineer',
@@ -26,6 +28,7 @@ export default function RootLayout({
         <base href="/" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <Script src="/GoSquared-snippet.js" strategy="beforeInteractive" />
       </head>
       <body
         className={cn(
@@ -34,9 +37,10 @@ export default function RootLayout({
         )}
       >
         <Header />
-        <main className="grid grid-rows-[1fr] w-full min-h-full p-4 mt-[96px]">
+        <main className="grid grid-rows-[1fr] w-full min-h-full p-0 mt-[96px]">
           {children}
         </main>
+        <Footer />
       </body>
     </html>
   );

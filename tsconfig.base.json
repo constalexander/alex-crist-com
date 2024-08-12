@@ -15,6 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@alex/analytics": ["libs/analytics/src/index.ts"],
+      "@alex/analytics/server": ["libs/analytics/src/server.ts"],
       "@alex/contexts": ["libs/contexts/src/index.ts"],
       "@alex/contexts/*": ["libs/contexts/src/*"],
       "@alex/contexts/server": ["libs/contexts/src/server.ts"],

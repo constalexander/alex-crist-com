@@ -23,8 +23,9 @@ export function Header(props: HeaderProps) {
 
   return (
     <div
+      id="Header"
       className={
-        'fixed flex justify-between items-center w-full p-4 bg-zinc-800 shadow-xl shadow-stone-600/60'
+        'fixed flex justify-between items-center w-full p-4 bg-zinc-900 shadow-xl shadow-stone-600/60'
       }
     >
       <div>
@@ -38,7 +39,7 @@ export function Header(props: HeaderProps) {
         >
           <span title="Alex Crist Home page">Alex Crist</span>
         </Button>
-        <div className="text-base text-stone-500 font-bold tracking-wide pl-4">
+        <div className="text-base text-stone-400 font-bold tracking-wide pl-4">
           Frontend Engineer
         </div>
       </div>

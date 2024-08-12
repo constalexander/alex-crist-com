@@ -14,7 +14,7 @@ export function JobTitleRandomizer(props: JobTitleRandomizerProps) {
   ];
   const [currentTitle, setCurrentTitle] = useState(jobTitles[0]);
   const [opacity, setOpacity] = useState(100);
-  const changeInterval = 5000;
+  const changeInterval = 999999;
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -27,7 +27,7 @@ export function JobTitleRandomizer(props: JobTitleRandomizerProps) {
           return jobTitles[nextIndex];
         });
         setOpacity(100);
-      }, 300);
+      }, 50);
     }, changeInterval);
 
     return () => clearInterval(intervalId);
@@ -35,7 +35,7 @@ export function JobTitleRandomizer(props: JobTitleRandomizerProps) {
 
   return (
     <span
-      className={`text-base text-stone-700 font-bold bg-stone-400 px-2 pb-1 leading-[32px] transition-opacity duration-300 ${
+      className={`text-base text-stone-900 font-bold bg-stone-500 px-2 pb-1 leading-[36px] transition-opacity duration-300 ${
         opacity === 100 ? 'opacity-100' : 'opacity-0'
       }`}
     >
