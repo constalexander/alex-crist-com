@@ -14,8 +14,11 @@ export function Footer(props: FooterProps) {
   };
 
   return (
-    <div id="Footer" className="bg-zinc-900 text-stone-300 min-h-[200px]">
-      <span className="text-stone-400">
+    <div
+      id="Footer"
+      className="flex justify-center items-end bg-zinc-900 text-stone-300 text-center min-h-[100px]"
+    >
+      <div className="block text-stone-400">
         &copy; 2024 &nbsp;
         <a href="mailto://alex@alex-crist.com">
           <Button variant="ghost" className="p-0 text-base">
@@ -23,7 +26,7 @@ export function Footer(props: FooterProps) {
           </Button>
         </a>
         . All rights reserved.
-      </span>
+      </div>
     </div>
   );
 }
