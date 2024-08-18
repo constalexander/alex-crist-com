@@ -8,7 +8,7 @@ export function LinkedinIcon(props: LinkedinIconProps) {
     <>
       <span className="sr-only">GitHub</span>
       <svg
-        className="w-[24px] fill-stone-400 hover:fill-emerald-400"
+        className="w-[24px] fill-stone-300 hover:fill-emerald-400"
         role="img"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"

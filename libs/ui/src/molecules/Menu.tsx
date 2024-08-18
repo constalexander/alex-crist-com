@@ -45,7 +45,7 @@ export function Menu(props: MenuProps) {
   };
 
   return (
-    <div className="text-stone-400">
+    <div>
       {isMenuOpen && (
         <div className="fixed inset-0 bg-stone-800 bg-opacity-50 backdrop-blur-sm"></div>
       )}
@@ -54,7 +54,7 @@ export function Menu(props: MenuProps) {
           <Button
             variant="ghost"
             size="icon"
-            className="text-2xl text-stone-400"
+            className="text-2xl text-stone-300"
           >
             <span className="sr-only">Open menu</span>
             <MenuIcon size={32} />
@@ -62,13 +62,13 @@ export function Menu(props: MenuProps) {
         </DropdownMenuTrigger>
 
         <DropdownMenuContent
-          className="fixed top-[-23px] left-[36px] right-[0px] w-[90vw] max-w-[400px] h-[100vh] bg-emerald-900 border-emerald-950 transform -translate-x-full transition duration-300 ease-in-out shadow-2xl shadow-stone-400/40 z-20"
+          className="fixed top-[-23px] left-[36px] right-[0px] w-[90vw] max-w-[400px] h-[100vh] bg-emerald-800 border-emerald-950 transform -translate-x-full transition duration-300 ease-in-out shadow-2xl shadow-stone-400/40 z-20"
           sideOffset={-40}
           hideWhenDetached
           align="center"
         >
           <DropdownMenuItem
-            className="flex w-full justify-between h-[84px] rounded-none border-b-2 border-emerald-800 py-0 my-0"
+            className="flex w-full justify-between h-[84px] rounded-none border-b-2 border-emerald-600 py-0 my-0"
             onSelect={(e) => {
               e.preventDefault();
             }}
@@ -100,7 +100,7 @@ export function Menu(props: MenuProps) {
               <Button
                 variant="ghost"
                 size="icon"
-                className="inline-block text-stone-400"
+                className="inline-block text-stone-300"
                 onClick={() =>
                   window.open('https://alex-crist.com/resume.pdf', '_blank')
                 }
@@ -112,7 +112,7 @@ export function Menu(props: MenuProps) {
               <Button
                 variant="ghost"
                 size="icon"
-                className="inline-block text-stone-400"
+                className="inline-block text-stone-300"
                 onClick={() =>
                   window.open('mailto:alex@alex-crist.com', '_blank')
                 }
@@ -125,7 +125,7 @@ export function Menu(props: MenuProps) {
             <Button
               variant="ghost"
               size="icon"
-              className="inline-block text-2xl text-stone-400 m-[12px]"
+              className="inline-block text-2xl text-stone-300 m-[12px]"
               onClick={() => setIsMenuOpen(false)}
             >
               <span className="sr-only">Close menu</span>
@@ -134,7 +134,7 @@ export function Menu(props: MenuProps) {
           </DropdownMenuItem>
 
           <DropdownMenuItem
-            className={isMenuItemActive ? 'bg-emerald-800' : ''}
+            className={isMenuItemActive ? 'bg-emerald-900' : ''}
             onSelect={(e) => {
               e.preventDefault();
               nav('/');
@@ -143,7 +143,7 @@ export function Menu(props: MenuProps) {
           >
             <Button
               variant="ghost"
-              className="w-full text-left inline-block text-xl text-stone-400"
+              className="w-full text-left inline-block text-xl text-stone-300"
             >
               <span className="sr-only">Home page</span>
               Home
@@ -160,7 +160,7 @@ export function Menu(props: MenuProps) {
           >
             <Button
               variant="ghost"
-              className="w-full text-left inline-block text-xl text-stone-400"
+              className="w-full text-left inline-block text-xl text-stone-300"
             >
               <span className="sr-only">About page</span>
               About
@@ -177,7 +177,7 @@ export function Menu(props: MenuProps) {
           >
             <Button
               variant="ghost"
-              className="w-full text-left inline-block text-xl text-stone-400"
+              className="w-full text-left inline-block text-xl text-stone-300"
             >
               <span className="sr-only">Log page</span>
               Log
@@ -218,7 +218,7 @@ export function Menu(props: MenuProps) {
           >
             <Button
               variant="ghost"
-              className="w-full text-right inline-block text-lg text-stone-400"
+              className="w-full text-right inline-block text-lg text-stone-300"
             >
               <span className="sr-only">Boodi project</span>
               Boodi.ai
@@ -229,7 +229,7 @@ export function Menu(props: MenuProps) {
           <DropdownMenuItem
             className={cn(
               isMenuItemActive ? 'bg-emerald-800' : '',
-              'justify-end'
+              'justify-end hidden'
             )}
             onSelect={(e) => {
               e.preventDefault();
@@ -238,7 +238,7 @@ export function Menu(props: MenuProps) {
           >
             <Button
               variant="ghost"
-              className="w-full text-right inline-block text-lg text-stone-400"
+              className="w-full text-right inline-block text-lg text-stone-300"
             >
               <span className="sr-only">Tachistoscope project</span>
               Tachistoscope
@@ -248,7 +248,7 @@ export function Menu(props: MenuProps) {
           <DropdownMenuItem
             className={cn(
               isMenuItemActive ? 'bg-emerald-800' : '',
-              'justify-end'
+              'justify-end hidden'
             )}
             onSelect={(e) => {
               e.preventDefault();
@@ -257,7 +257,7 @@ export function Menu(props: MenuProps) {
           >
             <Button
               variant="ghost"
-              className="w-full text-right inline-block text-lg text-stone-400"
+              className="w-full text-right inline-block text-lg text-stone-300"
             >
               <span className="sr-only">Random Number Generator project</span>
               Random Number Generator
@@ -267,7 +267,7 @@ export function Menu(props: MenuProps) {
           <DropdownMenuItem
             className={cn(
               isMenuItemActive ? 'bg-emerald-800' : '',
-              'justify-end'
+              'justify-end hidden'
             )}
             onSelect={(e) => {
               e.preventDefault();
@@ -276,7 +276,7 @@ export function Menu(props: MenuProps) {
           >
             <Button
               variant="ghost"
-              className="w-full text-right inline-block text-lg text-stone-400"
+              className="w-full text-right inline-block text-lg text-stone-300"
             >
               <span className="sr-only">Growing Zone Finder project</span>
               Growing Zone Finder
