@@ -168,7 +168,7 @@ export function Menu(props: MenuProps) {
           </DropdownMenuItem>
 
           <DropdownMenuItem
-            className={isMenuItemActive ? 'bg-emerald-800' : ''}
+            className={isMenuItemActive ? 'bg-emerald-800' : 'hidden'}
             onSelect={(e) => {
               e.preventDefault();
               nav('/log');
