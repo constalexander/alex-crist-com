@@ -1,3 +1,5 @@
+'use client';
+
 import { Hahmlet as FontSerif } from 'next/font/google';
 import { Button } from '@alex/ui/atoms/Button';
 import { cn } from '@alex/ui/utils';
@@ -22,6 +24,9 @@ export default function About(props: AboutProps) {
       >
         ABOUT
       </h1>
+      <div className="max-w-[400px] w-full mx-auto flex flex-col">
+        <p>Hi, I'm Alex &ndash; and I currently work as a software engineer.</p>
+      </div>
     </div>
   );
 }

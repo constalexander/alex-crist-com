@@ -68,7 +68,7 @@ export function Menu(props: MenuProps) {
           align="center"
         >
           <DropdownMenuItem
-            className="flex w-full justify-between h-[84px] rounded-none border-b-2 border-emerald-600 py-0 my-0"
+            className="flex w-full justify-between h-[84px] rounded-none border-b-2 border-emerald-600 py-0 my-0 focus:bg-transparent"
             onSelect={(e) => {
               e.preventDefault();
             }}
@@ -134,7 +134,9 @@ export function Menu(props: MenuProps) {
           </DropdownMenuItem>
 
           <DropdownMenuItem
-            className={isMenuItemActive ? 'bg-emerald-900' : ''}
+            className={
+              isMenuItemActive ? 'bg-emerald-900' : 'focus:bg-transparent'
+            }
             onSelect={(e) => {
               e.preventDefault();
               nav('/');
@@ -151,7 +153,9 @@ export function Menu(props: MenuProps) {
           </DropdownMenuItem>
 
           <DropdownMenuItem
-            className={isMenuItemActive ? 'bg-emerald-800' : ''}
+            className={
+              isMenuItemActive ? 'bg-emerald-800' : 'focus:bg-transparent'
+            }
             onSelect={(e) => {
               e.preventDefault();
               nav('/about');
@@ -168,7 +172,11 @@ export function Menu(props: MenuProps) {
           </DropdownMenuItem>
 
           <DropdownMenuItem
-            className={isMenuItemActive ? 'bg-emerald-800' : ''}
+            className={
+              isMenuItemActive
+                ? 'bg-emerald-800'
+                : 'focus:bg-transparent hidden'
+            }
             onSelect={(e) => {
               e.preventDefault();
               nav('/log');
@@ -187,7 +195,7 @@ export function Menu(props: MenuProps) {
           <DropdownMenuItem
             className={cn(
               isMenuItemActive ? 'bg-emerald-800' : '',
-              'justify-end border-t-0 border-emerald-800'
+              'focus:bg-transparent justify-end border-t-0 border-emerald-800'
             )}
             onSelect={(e) => {
               e.preventDefault();
@@ -209,7 +217,7 @@ export function Menu(props: MenuProps) {
           <DropdownMenuItem
             className={cn(
               isMenuItemActive ? 'bg-emerald-800' : '',
-              'justify-end'
+              'focus:bg-transparent justify-end'
             )}
             onSelect={(e) => {
               e.preventDefault();
@@ -229,7 +237,7 @@ export function Menu(props: MenuProps) {
           <DropdownMenuItem
             className={cn(
               isMenuItemActive ? 'bg-emerald-800' : '',
-              'justify-end hidden'
+              'focus:bg-transparent justify-end hidden'
             )}
             onSelect={(e) => {
               e.preventDefault();
@@ -248,7 +256,7 @@ export function Menu(props: MenuProps) {
           <DropdownMenuItem
             className={cn(
               isMenuItemActive ? 'bg-emerald-800' : '',
-              'justify-end hidden'
+              'focus:bg-transparent justify-end hidden'
             )}
             onSelect={(e) => {
               e.preventDefault();
@@ -267,7 +275,7 @@ export function Menu(props: MenuProps) {
           <DropdownMenuItem
             className={cn(
               isMenuItemActive ? 'bg-emerald-800' : '',
-              'justify-end hidden'
+              'focus:bg-transparent justify-end hidden'
             )}
             onSelect={(e) => {
               e.preventDefault();
