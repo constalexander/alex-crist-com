@@ -3,6 +3,7 @@ import { Hahmlet as FontSerif } from 'next/font/google';
 import { EmploymentExperienceDTO } from '@alex/models/lib/dto/employment-experience.dto';
 import { cn } from '../utils';
 import { Card, CardContent } from '../atoms/Card';
+import { SpinnerIcon } from '../atoms/icons/Spinner';
 import {
   Carousel,
   CarouselContent,
@@ -53,7 +54,9 @@ export function EmploymentExperience() {
             <CarouselItem key={0} className="pl-1 md:basis-1/2 lg:basis-1/3">
               <div className="p-1 text-stone-200">
                 <Card>
-                  <CardContent className="flex items-center h-[300px] justify-center p-0"></CardContent>
+                  <CardContent className="flex items-center h-[300px] justify-center p-0">
+                    <SpinnerIcon />
+                  </CardContent>
                 </Card>
               </div>
             </CarouselItem>
