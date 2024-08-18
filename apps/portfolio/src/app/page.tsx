@@ -1,6 +1,7 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
+import { ArrowRight } from 'lucide-react';
 import { Button } from '@alex/ui/atoms/Button';
 import { EmploymentExperience } from '@alex/ui/organisms/EmploymentExperience';
 import { JobTitleRandomizer } from '@alex/ui/organisms/JobTitleRandomizer';
@@ -25,7 +26,7 @@ export default function Page() {
           }}
         >
           <span className="sr-only">About page</span>
-          Learn more about me
+          Learn more about me <ArrowRight className="inline-block ml-1" />
         </Button>
       </p>
 
