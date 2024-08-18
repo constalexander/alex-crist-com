@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { Hahmlet as FontSerif } from 'next/font/google';
 import { EmploymentExperienceDTO } from '@alex/models/lib/dto/employment-experience.dto';
 import { cn } from '../utils';
@@ -20,14 +21,20 @@ const fontSerif = FontSerif({
 /* eslint-disable-next-line */
 export interface EmploymentExperienceProps {}
 
-async function fetchEmploymentData() {
-  const url = `${process.env.PORTFOLIO_PUBLIC_API_BASE}/api/employment-experience`;
-  const response = await fetch(url, { method: 'GET', cache: 'no-store' });
-  return response.json();
-}
+export function EmploymentExperience() {
+  const [employmentData, setEmploymentData] = useState<
+    EmploymentExperienceDTO[]
+  >([]);
 
-export async function EmploymentExperience() {
-  const employmentData = await fetchEmploymentData();
+  useEffect(() => {
+    async function fetchEmploymentData() {
+      const url = '/api/employment-experience';
+      const response = await fetch(url, { method: 'GET', cache: 'no-store' });
+      const res = await response.json();
+      setEmploymentData(res);
+    }
+    fetchEmploymentData();
+  }, []);
 
   return (
     <div className="p-0">

@@ -20,13 +20,14 @@ export default function Page() {
         and best practices.
         <Button
           variant="ghost"
-          className="block mx-auto text-base"
+          className="block mx-auto text-base text-emerald-400"
           onClick={() => {
             nav('/about');
           }}
         >
           <span className="sr-only">About page</span>
-          Learn more about me <ArrowRight className="inline-block ml-1" />
+          <span className="">Learn more about me</span>
+          <ArrowRight className="h-[18px] inline-block" />
         </Button>
       </p>
 

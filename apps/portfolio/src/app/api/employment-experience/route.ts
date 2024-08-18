@@ -12,7 +12,7 @@ export async function GET() {
       responsibilities: [
         'Built an Angular app called Model Hub, part of the Clientworks platform.',
       ],
-      technologies: ['Angular 17', 'RxJS', 'NgRx', 'Jest', 'Cypress'],
+      technologies: ['Angular', 'RxJS', 'NgRx', 'Jest', 'Cypress'],
     },
     {
       companyName: 'Credit Union of Texas',

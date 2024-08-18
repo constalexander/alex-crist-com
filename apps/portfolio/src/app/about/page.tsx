@@ -1,3 +1,5 @@
+'use client';
+
 import { Hahmlet as FontSerif } from 'next/font/google';
 import { Button } from '@alex/ui/atoms/Button';
 import { cn } from '@alex/ui/utils';
