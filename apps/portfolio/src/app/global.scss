@@ -22,19 +22,12 @@
 
     // Linear gradients
     --gradlin-1: linear-gradient(
-      90deg,
-      hsla(328, 77%, 65%) 0%,
-      hsla(245, 89%, 72%) 50%,
-      hsla(178, 77%, 60%) 100%
-    );
-
-    --gradlin-2: linear-gradient(
-      150deg,
-      hsla(246, 66%, 70%) 0%,
-      hsla(320, 90%, 61%) 33%,
-      hsla(28, 91%, 58%) 66%,
-      hsl(39, 99%, 61%) 100%
-    );
+        to bottom,
+        rgba(79, 62, 30, 0.831),
+        rgba(192, 163, 105, 0.534),
+        rgba(61, 51, 29, 0.837)
+      ),
+      url('/img/bg1.jpg');
 
     // Radial gradients
     --gradrad-1: radial-gradient(
@@ -48,30 +41,6 @@
         hsla(303, 69%, 37%, 0.5) 0%,
         hsla(342, 35%, 20%, 0.5) 25%,
         hsla(354, 57%, 10%, 0.5) 50%
-      );
-    --gradrad-2: radial-gradient(
-        circle at 0% 0%,
-        hsla(197, 57%, 22%, 0.5) 0%,
-        hsla(199, 61%, 11%, 0.5) 25%,
-        hsla(198, 56%, 4%, 0.5) 50%
-      ),
-      radial-gradient(
-        circle at 100% 100%,
-        hsla(303, 69%, 37%, 0.5) 0%,
-        hsla(342, 35%, 20%, 0.5) 25%,
-        hsla(354, 57%, 10%, 0.5) 50%
-      );
-    --gradrad-3: radial-gradient(
-        circle at 0% 0%,
-        hsla(195, 11%, 7%, 0.5) 0%,
-        hsla(199, 45%, 22%, 0.5) 25%,
-        hsla(201, 42%, 42%, 0.5) 50%
-      ),
-      radial-gradient(
-        circle at 100% 100%,
-        hsla(263, 77%, 12%, 0.5) 0%,
-        hsla(268, 76%, 13%, 0.5) 25%,
-        hsla(271, 67%, 40%, 0.1) 50%
       );
   }
 

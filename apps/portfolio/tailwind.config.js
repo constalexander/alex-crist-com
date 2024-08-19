@@ -39,7 +39,6 @@ module.exports = {
       },
       backgroundImage: {
         'gradlin-1': 'var(--gradlin-1)',
-        'gradrad-1': 'var(--gradrad-1)',
       },
       borderRadius: {
         lg: `var(--radius)`,
