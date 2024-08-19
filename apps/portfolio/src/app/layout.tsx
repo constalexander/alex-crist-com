@@ -32,7 +32,7 @@ export default function RootLayout({
       </head>
       <body
         className={cn(
-          'grid grid-rows-[auto_1fr] w-screen min-h-screen overflow-x-hidden overflow-y-auto bg-stone-600 font-sans antialiased',
+          'grid grid-rows-[auto_1fr] w-screen min-h-screen overflow-x-hidden overflow-y-auto bg-background text-foreground font-sans antialiased',
           fontSans.variable
         )}
       >
