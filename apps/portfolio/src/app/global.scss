@@ -81,19 +81,4 @@
     @apply border-border;
     box-sizing: border-box;
   }
-  html {
-    width: 100%;
-    height: 100%;
-  }
-  body {
-    font-feature-settings: 'rlig' 1, 'calt' 1;
-    @apply bg-cover bg-fixed;
-    background-image: linear-gradient(
-        to bottom,
-        rgba(79, 62, 30, 0.831),
-        rgba(192, 163, 105, 0.534),
-        rgba(61, 51, 29, 0.837)
-      ),
-      url('/img/bg1.jpg');
-  }
 }
