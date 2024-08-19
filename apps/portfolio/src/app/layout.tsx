@@ -22,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className="w-full h-full">
       <head>
         <meta charSet="utf-8" />
         <base href="/" />
@@ -30,11 +30,17 @@ export default function RootLayout({
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <Script src="/GoSquared-snippet.js" strategy="beforeInteractive" />
       </head>
+      {/* prettier-ignore */}
       <body
-        className={cn(
-          'grid grid-rows-[auto_1fr] w-screen min-h-screen overflow-x-hidden overflow-y-auto bg-stone-600 font-sans antialiased',
-          fontSans.variable
+        className={cn(`
+          grid grid-rows-[auto_1fr] 
+          w-screen min-h-screen 
+          overflow-x-hidden overflow-y-auto 
+          bg-cover bg-fixed bg-gradlin-1
+          text-foreground font-sans antialiased
+          `, fontSans.variable
         )}
+        style={{ fontFeatureSettings: "'rlig' 1, 'calt' 1" }}
       >
         <Header />
         <main className="grid grid-rows-[1fr] w-full min-h-full p-0 mt-[96px]">

@@ -39,7 +39,6 @@ module.exports = {
       },
       backgroundImage: {
         'gradlin-1': 'var(--gradlin-1)',
-        'gradrad-1': 'var(--gradrad-1)',
       },
       borderRadius: {
         lg: `var(--radius)`,
@@ -51,7 +50,7 @@ module.exports = {
           DEFAULT: colors.emerald[300],
           foreground: colors.emerald[300],
         },
-        background: 'var(--background)',
+        background: colors.stone[600],
         'background-transparent': 'var(--background-transparent)',
         black: 'var(--black)',
         border: colors.stone[500],
