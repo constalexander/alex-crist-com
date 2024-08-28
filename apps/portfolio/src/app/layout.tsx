@@ -36,7 +36,8 @@ export default function RootLayout({
           grid grid-rows-[auto_1fr] 
           w-screen min-h-screen 
           overflow-x-hidden overflow-y-auto 
-          bg-cover bg-fixed bg-gradlin-1
+          bg-cover bg-fixed bg-gradlin-x
+          bg-stone-500
           text-foreground font-sans antialiased
           `, fontSans.variable
         )}
