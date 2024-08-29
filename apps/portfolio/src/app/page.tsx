@@ -3,10 +3,15 @@
 import { useRouter } from 'next/navigation';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@alex/ui/atoms/Button';
-import { EmploymentExperience } from '@alex/ui/organisms/EmploymentExperience';
+import EmploymentExperience2 from '@alex/ui/organisms/EmploymentExperience/EmploymentExperience2';
 import { JobTitleRandomizer } from '@alex/ui/organisms/JobTitleRandomizer';
+import { EmblaOptionsType } from 'embla-carousel';
 
 export default function Page() {
+  const OPTIONS: EmblaOptionsType = { loop: true };
+  const SLIDE_COUNT = 5;
+  const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
+
   const router = useRouter();
   const nav = (route: string) => {
     router.push(route);
@@ -31,7 +36,7 @@ export default function Page() {
         </Button>
       </p>
 
-      <EmploymentExperience />
+      <EmploymentExperience2 slides={SLIDES} options={OPTIONS} />
     </div>
   );
 }
