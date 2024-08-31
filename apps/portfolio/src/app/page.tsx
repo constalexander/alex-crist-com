@@ -6,6 +6,7 @@ import { Button } from '@alex/ui/atoms/Button';
 import EmploymentExperience2 from '@alex/ui/organisms/EmploymentExperience/EmploymentExperience2';
 import { JobTitleRandomizer } from '@alex/ui/organisms/JobTitleRandomizer';
 import { EmblaOptionsType } from 'embla-carousel';
+import CarouselIndicatorExample from '@alex/ui/organisms/EmploymentExperience';
 
 export default function Page() {
   const OPTIONS: EmblaOptionsType = { loop: true };
@@ -36,7 +37,8 @@ export default function Page() {
         </Button>
       </p>
 
-      <EmploymentExperience2 slides={SLIDES} options={OPTIONS} />
+      {/* <EmploymentExperience2 slides={SLIDES} options={OPTIONS} /> */}
+      <CarouselIndicatorExample />
     </div>
   );
 }
