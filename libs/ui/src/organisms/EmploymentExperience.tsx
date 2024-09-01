@@ -39,8 +39,7 @@ const CarouselIndicatorExample = () => {
           {Array.from({ length: 5 }).map((_, index) => (
             <SliderMainItem key={index} className="bg-transparent">
               <div className="outline outline-1 outline-border size-full flex items-center justify-center rounded-xl bg-background">
-                Slide {index + 1}
-                {employmentData.map(
+                {employmentData?.map(
                   (item: EmploymentExperienceDTO, index: number) => (
                     <div key={index} className="p-1 text-stone-200">
                       <Card>
