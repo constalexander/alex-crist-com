@@ -1,28 +1,21 @@
 import { useEffect, useState } from 'react';
-import { Hahmlet as FontSerif } from 'next/font/google';
-import { EmploymentExperienceDTO } from '@alex/models/lib/dto/employment-experience.dto';
-import { cn } from '../utils';
 import { Card, CardContent } from '../atoms/Card';
-import { SpinnerIcon } from '../atoms/icons/Spinner';
 import {
   Carousel,
-  CarouselContent,
-  CarouselItem,
+  CarouselIndicator,
+  CarouselMainContainer,
   CarouselNext,
   CarouselPrevious,
-} from '../molecules/Carousel';
+  CarouselThumbsContainer,
+  SliderMainItem,
+} from './../molecules/EmploymentCarousel';
 import EmploymentCard from '../molecules/EmploymentCard';
 
-const fontSerif = FontSerif({
-  weight: '400',
-  subsets: ['latin'],
-  variable: '--font-serif',
-});
+import { EmploymentExperienceDTO } from '@alex/models/lib/dto/employment-experience.dto';
+import { cn } from '../utils';
+import { SpinnerIcon } from '../atoms/icons/Spinner';
 
-/* eslint-disable-next-line */
-export interface EmploymentExperienceProps {}
-
-export function EmploymentExperience() {
+const CarouselIndicatorExample = () => {
   const [employmentData, setEmploymentData] = useState<
     EmploymentExperienceDTO[]
   >([]);
@@ -38,61 +31,50 @@ export function EmploymentExperience() {
   }, []);
 
   return (
-    <div className="p-0">
-      <h2
-        className={cn(
-          'font-serif font-bold text-2xl text-stone-400 tracking-widest bg-stone-600 text-center mb-5',
-          fontSerif.variable
-        )}
-      >
-        EMPLOYMENT EXPERIENCE
-      </h2>
-
-      <Carousel className="w-[75%] max-w-sm h-full mx-auto">
-        <CarouselContent className="-ml-1">
-          {employmentData.length === 0 ? (
-            <CarouselItem key={0} className="pl-1 md:basis-1/2 lg:basis-1/3">
-              <div className="p-1 text-stone-200">
-                <Card>
-                  <CardContent className="flex items-center h-[300px] justify-center p-0">
-                    <SpinnerIcon />
-                  </CardContent>
-                </Card>
+    <Carousel className="my-5">
+      <CarouselNext />
+      <CarouselPrevious />
+      <div className="relative ">
+        <CarouselMainContainer className="h-60">
+          {Array.from({ length: 5 }).map((_, index) => (
+            <SliderMainItem key={index} className="bg-transparent">
+              <div className="outline outline-1 outline-border size-full flex items-center justify-center rounded-xl bg-background">
+                {employmentData &&
+                  employmentData.map(
+                    (item: EmploymentExperienceDTO, index: number) => (
+                      <div key={index} className="p-1 text-stone-200">
+                        <Card>
+                          <CardContent className="flex items-center h-full justify-center p-0">
+                            {item.companyName}
+                            {/* <EmploymentCard
+                              index={index}
+                              companyName={item.companyName}
+                              companyUrl={item.companyUrl}
+                              dateStarted={item.dateStarted}
+                              dateEnded={item.dateEnded}
+                              position={item.position}
+                              responsibilities={item.responsibilities}
+                              technologies={item.technologies}
+                            /> */}
+                          </CardContent>
+                        </Card>
+                      </div>
+                    )
+                  )}
               </div>
-            </CarouselItem>
-          ) : (
-            employmentData.map(
-              (item: EmploymentExperienceDTO, index: number) => (
-                <CarouselItem
-                  key={index}
-                  className="pl-1 md:basis-1/2 lg:basis-1/3"
-                >
-                  <div className="p-1 text-stone-200">
-                    <Card>
-                      <CardContent className="flex items-center h-full justify-center p-0">
-                        <EmploymentCard
-                          index={index}
-                          companyName={item.companyName}
-                          companyUrl={item.companyUrl}
-                          dateStarted={item.dateStarted}
-                          dateEnded={item.dateEnded}
-                          position={item.position}
-                          responsibilities={item.responsibilities}
-                          technologies={item.technologies}
-                        />
-                      </CardContent>
-                    </Card>
-                  </div>
-                </CarouselItem>
-              )
-            )
-          )}
-        </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
-      </Carousel>
-    </div>
+            </SliderMainItem>
+          ))}
+        </CarouselMainContainer>
+        <div className="absolute -bottom-2 left-1/2 -translate-x-1/2">
+          <CarouselThumbsContainer className="gap-x-1 ">
+            {Array.from({ length: 5 }).map((_, index) => (
+              <CarouselIndicator key={index} index={index} />
+            ))}
+          </CarouselThumbsContainer>
+        </div>
+      </div>
+    </Carousel>
   );
-}
+};
 
-export default EmploymentExperience;
+export default CarouselIndicatorExample;
