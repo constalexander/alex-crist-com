@@ -39,26 +39,28 @@ const CarouselIndicatorExample = () => {
           {Array.from({ length: 5 }).map((_, index) => (
             <SliderMainItem key={index} className="bg-transparent">
               <div className="outline outline-1 outline-border size-full flex items-center justify-center rounded-xl bg-background">
-                {employmentData?.map(
-                  (item: EmploymentExperienceDTO, index: number) => (
-                    <div key={index} className="p-1 text-stone-200">
-                      <Card>
-                        <CardContent className="flex items-center h-full justify-center p-0">
-                          <EmploymentCard
-                            index={index}
-                            companyName={item.companyName}
-                            companyUrl={item.companyUrl}
-                            dateStarted={item.dateStarted}
-                            dateEnded={item.dateEnded}
-                            position={item.position}
-                            responsibilities={item.responsibilities}
-                            technologies={item.technologies}
-                          />
-                        </CardContent>
-                      </Card>
-                    </div>
-                  )
-                )}
+                {employmentData &&
+                  employmentData.map(
+                    (item: EmploymentExperienceDTO, index: number) => (
+                      <div key={index} className="p-1 text-stone-200">
+                        <Card>
+                          <CardContent className="flex items-center h-full justify-center p-0">
+                            {item.companyName}
+                            {/* <EmploymentCard
+                              index={index}
+                              companyName={item.companyName}
+                              companyUrl={item.companyUrl}
+                              dateStarted={item.dateStarted}
+                              dateEnded={item.dateEnded}
+                              position={item.position}
+                              responsibilities={item.responsibilities}
+                              technologies={item.technologies}
+                            /> */}
+                          </CardContent>
+                        </Card>
+                      </div>
+                    )
+                  )}
               </div>
             </SliderMainItem>
           ))}

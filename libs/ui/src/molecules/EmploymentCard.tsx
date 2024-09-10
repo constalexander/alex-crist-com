@@ -26,9 +26,19 @@ export function EmploymentCard({
   responsibilities,
   technologies,
 }: EmploymentCardProps) {
+  // console.log('Rendering EmploymentCard:', {
+  //   index,
+  //   companyName,
+  //   companyUrl,
+  //   dateStarted,
+  //   dateEnded,
+  //   position,
+  //   responsibilities,
+  //   technologies,
+  // });
   return (
     <div className="text-center min-w-[300px] w-full min-h-[300px] h-full p-5 select-none">
-      <span className="float-right relative -top-[20px] left-[40px] hidden">
+      {/* <span className="float-right relative -top-[20px] left-[40px] hidden">
         {index + 1}
       </span>
       <span className="text-lg text-stone-400 font-bold tracking-wider">
@@ -63,7 +73,7 @@ export function EmploymentCard({
         {technologies.map((technology, idx) => (
           <Badge key={idx}>{technology}</Badge>
         ))}
-      </span>
+      </span> */}
     </div>
   );
 }
