@@ -38,15 +38,16 @@ const CarouselIndicatorExample = () => {
         <CarouselMainContainer className="h-60">
           {Array.from({ length: 5 }).map((_, index) => (
             <SliderMainItem key={index} className="bg-transparent">
-              <div className="outline outline-1 outline-border size-full flex items-center justify-center rounded-xl bg-background">
+              <div className="outline outline-1 outline-border size-full flex items-center justify-center rounded-xl bg-background w-[100vw]">
                 {employmentData &&
                   employmentData.map(
                     (item: EmploymentExperienceDTO, index: number) => (
                       <div key={index} className="p-1 text-stone-200">
-                        <Card>
+                        {item.companyName}
+                        {/*    <Card>
                           <CardContent className="flex items-center h-full justify-center p-0">
                             {item.companyName}
-                            {/* <EmploymentCard
+                        <EmploymentCard
                               index={index}
                               companyName={item.companyName}
                               companyUrl={item.companyUrl}
@@ -55,9 +56,9 @@ const CarouselIndicatorExample = () => {
                               position={item.position}
                               responsibilities={item.responsibilities}
                               technologies={item.technologies}
-                            /> */}
+                            /> 
                           </CardContent>
-                        </Card>
+                        </Card>*/}
                       </div>
                     )
                   )}
