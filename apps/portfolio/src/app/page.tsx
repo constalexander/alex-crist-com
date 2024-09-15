@@ -37,8 +37,8 @@ export default function Page() {
         </Button>
       </p>
 
-      {/* <EmploymentExperience2 slides={SLIDES} options={OPTIONS} /> */}
-      <CarouselIndicatorExample />
+      <EmploymentExperience2 slides={SLIDES} options={OPTIONS} />
+      {/* <CarouselIndicatorExample /> */}
     </div>
   );
 }
