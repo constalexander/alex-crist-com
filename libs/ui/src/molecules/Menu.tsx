@@ -102,7 +102,10 @@ export function Menu(props: MenuProps) {
                 size="icon"
                 className="inline-block text-stone-300"
                 onClick={() =>
-                  window.open('https://alex-crist.com/resume.pdf', '_blank')
+                  window.open(
+                    'https://alex-crist.com/Alex Crist - Frontend Engineer resume web.docx',
+                    '_blank'
+                  )
                 }
               >
                 <span title="Resume">
