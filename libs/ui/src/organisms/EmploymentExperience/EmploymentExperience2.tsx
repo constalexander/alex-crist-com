@@ -7,7 +7,7 @@ import { PrevButton, NextButton, usePrevNextButtons } from './ArrowButtons';
 import './EmploymentExperience.scss';
 
 type PropType = {
-  slides: number[];
+  slides: any[];
   options?: EmblaOptionsType;
 };
 
@@ -29,9 +29,12 @@ const EmploymentExperience2: React.FC<PropType> = (props) => {
     <section className="embla">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
-          {slides.map((index) => (
-            <div className="embla__slide" key={index}>
-              <div className="embla__slide__number">{index + 1}</div>
+          {slides.map((slide) => (
+            <div className="embla__slide" key={slide.ordinal - 1}>
+              <div className="embla__slide__content">
+                {' '}
+                <div>{slide.companyName}</div>
+              </div>
             </div>
           ))}
         </div>
