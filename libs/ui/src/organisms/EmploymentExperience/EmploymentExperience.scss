@@ -4,10 +4,28 @@
   --slide-height: 19rem;
   --slide-spacing: 1rem;
   --slide-size: 50%;
-  --detail-medium-contrast: rgb(255 255 255 / 10%);
+  --detail-medium-contrast: rgba(152, 180, 162, 0.515);
 }
 .embla__viewport {
   overflow: hidden;
+  padding: 1rem 0;
+  // @apply bg-cover bg-fixed bg-gradlin-1;
+}
+.embla__viewport:afterx {
+  display: none;
+  position: absolute;
+  display: block;
+  margin-top: -404px;
+  content: '';
+  width: 100%;
+  height: 404px;
+  background: linear-gradient(
+    to right,
+    rgba(47, 46, 44, 0.8) 0%,
+    rgba(0, 0, 0, 0) 20%,
+    rgba(0, 0, 0, 0) 80%,
+    rgba(47, 46, 44, 0.8) 100%
+  );
 }
 .embla__container {
   display: flex;
@@ -21,7 +39,6 @@
   padding-left: var(--slide-spacing);
 }
 .embla__slide__content {
-  box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
   border-radius: 1.8rem;
   font-size: 1rem;
   font-weight: 600;
@@ -30,7 +47,10 @@
   justify-content: center;
   height: var(--slide-height);
   user-select: none;
-  @apply bg-stone-600;
+  @apply bg-stone-700 overflow-hidden;
+
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06),
+    0 0 10px rgba(255, 255, 255, 0.5);
 }
 .embla__controls {
   display: grid;
@@ -102,7 +122,7 @@
   border-radius: 50%;
 }
 .embla__dot:after {
-  box-shadow: inset 0 0 0 1rem #57534e;
+  box-shadow: inset 0 0 0 1rem #302e2b;
   width: 1.4rem;
   height: 1.4rem;
   border-radius: 50%;
