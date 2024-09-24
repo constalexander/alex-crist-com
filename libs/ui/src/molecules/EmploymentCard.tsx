@@ -26,18 +26,8 @@ export function EmploymentCard({
   responsibilities,
   technologies,
 }: EmploymentCardProps) {
-  // console.log('Rendering EmploymentCard:', {
-  //   index,
-  //   companyName,
-  //   companyUrl,
-  //   dateStarted,
-  //   dateEnded,
-  //   position,
-  //   responsibilities,
-  //   technologies,
-  // });
   return (
-    <div className="text-center min-w-[300px] w-full min-h-[300px] h-full p-5 select-none">
+    <div className="text-center w-[50px] min-h-[300px] h-full p-0 select-none">
       <span className="float-right relative -top-[20px] left-[40px] hidden">
         {index + 1}
       </span>
