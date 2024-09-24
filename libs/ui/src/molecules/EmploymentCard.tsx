@@ -27,7 +27,7 @@ export function EmploymentCard({
   technologies,
 }: EmploymentCardProps) {
   return (
-    <div className="text-center w-[50px] min-h-[300px] h-full p-0 select-none">
+    <div className="text-center w-[140px] min-h-[300px] h-full p-0 select-none">
       <span className="float-right relative -top-[20px] left-[40px] hidden">
         {index + 1}
       </span>
