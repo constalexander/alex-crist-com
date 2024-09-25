@@ -23,7 +23,10 @@ module.exports = {
       '2xl': '1536px',
     },
     colors: {
-      stone: colors.stone,
+      stone: {
+        ...colors.stone,
+        750: '#3f3f46',
+      },
       teal: colors.teal,
       emerald: colors.emerald,
       zinc: colors.zinc,

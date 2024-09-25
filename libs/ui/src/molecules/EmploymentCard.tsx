@@ -27,11 +27,11 @@ export function EmploymentCard({
   technologies,
 }: EmploymentCardProps) {
   return (
-    <div className="text-center text-stone-300 w-[140px] min-h-[300px] h-full p-0 select-none">
+    <div className="text-center text-stone-400 w-[140px] min-h-[300px] h-full p-0 select-none">
       <span className="float-right relative -top-[20px] left-[40px] hidden">
         {index + 1}
       </span>
-      <span className="text-md sm:text-lg text-emerald-400 font-bold tracking-wider">
+      <span className="text-md sm:text-lg text-stone-200 font-bold tracking-wider">
         {companyName}
         <a href={companyUrl} target="_blank" rel="noopener noreferrer">
           <Button

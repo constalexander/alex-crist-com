@@ -37,7 +37,7 @@ export default function RootLayout({
           w-screen min-h-screen 
           overflow-x-hidden overflow-y-auto 
           bg-cover bg-fixed bg-gradlin-x
-          bg-stone-600
+          bg-stone-700
           text-foreground font-sans antialiased
           `, fontSans.variable
         )}
