@@ -25,7 +25,7 @@ module.exports = {
     colors: {
       stone: {
         ...colors.stone,
-        750: '#3f3f46',
+        750: '#363230',
       },
       teal: colors.teal,
       emerald: colors.emerald,
