@@ -1,69 +1,30 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@alex/ui/atoms/Button';
 import EmploymentExperience2 from '@alex/ui/organisms/EmploymentExperience/EmploymentExperience2';
 import { JobTitleRandomizer } from '@alex/ui/organisms/JobTitleRandomizer';
+import { EmploymentExperienceDTO } from '@alex/models/lib/dto/employment-experience.dto';
 import { EmblaOptionsType } from 'embla-carousel';
-import CarouselIndicatorExample from '@alex/ui/organisms/EmploymentExperience';
 
 export default function Page() {
-  const OPTIONS: EmblaOptionsType = { loop: true };
-  const SLIDE_COUNT = 5;
-  // const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
-  const SLIDES = [
-    {
-      ordinal: 1,
-      companyName: 'Company 1',
-      companyUrl: 'https://www.company1.com',
-      dateStarted: 'Jan 2020',
-      dateEnded: 'Dec 2020',
-      position: 'Frontend Developer',
-      responsibilities: ['Developed the frontend', 'Implemented new features'],
-      technologies: ['React', 'TypeScript', 'Tailwind CSS'],
-    },
-    {
-      ordinal: 2,
-      companyName: 'Company 2',
-      companyUrl: 'https://www.company2.com',
-      dateStarted: 'Jan 2021',
-      dateEnded: 'Dec 2021',
-      position: 'Frontend Developer',
-      responsibilities: ['Developed the frontend', 'Implemented new features'],
-      technologies: ['React', 'TypeScript', 'Tailwind CSS'],
-    },
-    {
-      ordinal: 3,
-      companyName: 'Company 3',
-      companyUrl: 'https://www.company3.com',
-      dateStarted: 'Jan 2022',
-      dateEnded: 'Dec 2022',
-      position: 'Frontend Developer',
-      responsibilities: ['Developed the frontend', 'Implemented new features'],
-      technologies: ['React', 'TypeScript', 'Tailwind CSS'],
-    },
-    {
-      ordinal: 4,
-      companyName: 'Company 4',
-      companyUrl: 'https://www.company4.com',
-      dateStarted: 'Jan 2023',
-      dateEnded: 'Dec 2023',
-      position: 'Frontend Developer',
-      responsibilities: ['Developed the frontend', 'Implemented new features'],
-      technologies: ['React', 'TypeScript', 'Tailwind CSS'],
-    },
-    {
-      ordinal: 5,
-      companyName: 'Company 5',
-      companyUrl: 'https://www.company5.com',
-      dateStarted: 'Jan 2024',
-      dateEnded: 'Dec 2024',
-      position: 'Frontend Developer',
-      responsibilities: ['Developed the frontend', 'Implemented new features'],
-      technologies: ['React', 'TypeScript', 'Tailwind CSS'],
-    },
-  ];
+  const carouselOptions: EmblaOptionsType = { loop: true };
+
+  const [employmentData, setEmploymentData] = useState<
+    EmploymentExperienceDTO[]
+  >([]);
+
+  useEffect(() => {
+    async function fetchEmploymentData() {
+      const url = '/api/employment-experience';
+      const response = await fetch(url, { method: 'GET', cache: 'no-store' });
+      const res = await response.json();
+      setEmploymentData(res);
+    }
+    fetchEmploymentData();
+  }, []);
 
   const router = useRouter();
   const nav = (route: string) => {
@@ -89,8 +50,10 @@ export default function Page() {
         </Button>
       </p>
 
-      <EmploymentExperience2 slides={SLIDES} options={OPTIONS} />
-      {/* <CarouselIndicatorExample /> */}
+      <EmploymentExperience2
+        slides={employmentData}
+        options={carouselOptions}
+      />
     </div>
   );
 }

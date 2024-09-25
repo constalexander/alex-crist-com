@@ -3,6 +3,7 @@ import { EmblaOptionsType } from 'embla-carousel';
 import useEmblaCarousel from 'embla-carousel-react';
 import { DotButton, useDotButton } from './DotButton';
 import { PrevButton, NextButton, usePrevNextButtons } from './ArrowButtons';
+import EmploymentCard from '../../molecules/EmploymentCard';
 
 import './EmploymentExperience.scss';
 
@@ -32,8 +33,16 @@ const EmploymentExperience2: React.FC<PropType> = (props) => {
           {slides.map((slide) => (
             <div className="embla__slide" key={slide.ordinal - 1}>
               <div className="embla__slide__content">
-                {' '}
-                <div>{slide.companyName}</div>
+                <EmploymentCard
+                  index={Number(0)}
+                  companyName={slide.companyName}
+                  companyUrl={slide.companyUrl}
+                  dateStarted={slide.dateStarted}
+                  dateEnded={slide.dateEnded}
+                  position={slide.position}
+                  responsibilities={slide.responsibilities}
+                  technologies={slide.technologies}
+                />
               </div>
             </div>
           ))}
