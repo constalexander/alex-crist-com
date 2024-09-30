@@ -27,7 +27,7 @@ export function EmploymentCard({
   technologies,
 }: EmploymentCardProps) {
   return (
-    <div className="text-center text-stone-400 w-[140px] min-h-[300px] h-full p-0 select-none">
+    <div className="text-center text-stone-400 w-[140px] h-full p-0 select-none">
       <span className="float-right relative -top-[20px] left-[40px] hidden">
         {index + 1}
       </span>
@@ -47,7 +47,7 @@ export function EmploymentCard({
       <span className="text-sm mt-1">
         {dateStarted} - {dateEnded}
       </span>
-      <span>
+      <span class="hidden">
         <ul className="list-disc list-inside text-left mt-4">
           {responsibilities.map((responsibility, idx) => (
             <li key={idx} className=" ">
@@ -57,7 +57,7 @@ export function EmploymentCard({
         </ul>
       </span>
 
-      <span className="block my-5">
+      <span className="hidden block my-5">
         Technologies:
         <br />
         {technologies.map((technology, idx) => (
