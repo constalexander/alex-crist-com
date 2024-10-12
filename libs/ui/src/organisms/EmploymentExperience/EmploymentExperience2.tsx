@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { EmblaOptionsType } from 'embla-carousel';
 import useEmblaCarousel from 'embla-carousel-react';
 import { DotButton, useDotButton } from './DotButton';
@@ -16,6 +16,12 @@ const EmploymentExperience2: React.FC<PropType> = (props) => {
   const { slides, options } = props;
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
 
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  const handleFlip = () => {
+    setIsFlipped(!isFlipped);
+  };
+
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
     useDotButton(emblaApi);
 
@@ -31,7 +37,10 @@ const EmploymentExperience2: React.FC<PropType> = (props) => {
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
           {slides.map((slide) => (
-            <div className="embla__slide" key={slide.ordinal - 1}>
+            <div
+              className={`embla__slide ${isFlipped ? 'flipped' : ''}`}
+              key={slide.ordinal - 1}
+            >
               <div className="embla__slide__content">
                 <EmploymentCard
                   index={Number(0)}
@@ -43,6 +52,9 @@ const EmploymentExperience2: React.FC<PropType> = (props) => {
                   responsibilities={slide.responsibilities}
                   technologies={slide.technologies}
                 />
+                {/* <button onClick={handleFlip} className="flip-button text-white">
+                  Flip
+                </button> */}
               </div>
             </div>
           ))}

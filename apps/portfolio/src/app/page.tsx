@@ -3,11 +3,12 @@
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { ArrowRight } from 'lucide-react';
+import { EmblaOptionsType } from 'embla-carousel';
 import { Button } from '@alex/ui/atoms/Button';
 import EmploymentExperience2 from '@alex/ui/organisms/EmploymentExperience/EmploymentExperience2';
+import CoolCards from '@alex/ui/molecules/CoolCards';
 import { JobTitleRandomizer } from '@alex/ui/organisms/JobTitleRandomizer';
 import { EmploymentExperienceDTO } from '@alex/models/lib/dto/employment-experience.dto';
-import { EmblaOptionsType } from 'embla-carousel';
 
 export default function Page() {
   const carouselOptions: EmblaOptionsType = { loop: true };
@@ -33,7 +34,7 @@ export default function Page() {
 
   return (
     <div className="">
-      <p className="text-stone-200 text-center text-base leading-5 pt-8 pb-12">
+      <p className="text-stone-200 text-center text-base leading-5 pt-8 pb-12 bg-emerald-800">
         Versatile and innovative <br /> <JobTitleRandomizer /> <br /> creating
         bespoke user interfaces <br /> using modern technologies <br />
         and best practices.
@@ -54,6 +55,8 @@ export default function Page() {
         slides={employmentData}
         options={carouselOptions}
       />
+
+      <CoolCards />
     </div>
   );
 }
