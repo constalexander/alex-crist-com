@@ -35,7 +35,7 @@ export function JobTitleRandomizer(props: JobTitleRandomizerProps) {
 
   return (
     <span
-      className={`text-base text-stone-900 font-bold bg-stone-500 px-2 pb-1 leading-[36px] transition-opacity duration-300 ${
+      className={`text-base text-emerald-900 font-bold bg-emerald-500 px-2 pb-1 leading-[36px] transition-opacity duration-300 ${
         opacity === 100 ? 'opacity-100' : 'opacity-0'
       }`}
     >

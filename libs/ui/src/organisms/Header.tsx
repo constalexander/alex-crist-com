@@ -25,7 +25,7 @@ export function Header(props: HeaderProps) {
     <div
       id="Header"
       className={
-        'fixed flex justify-between items-center w-full p-4 bg-zinc-900 shadow-xl shadow-stone-600/60'
+        'fixed flex justify-between items-center w-full p-4 bg-stone-950 shadow-lg shadow-stone-700/60'
       }
     >
       <div>
