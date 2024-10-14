@@ -33,7 +33,7 @@ const EmploymentExperience2: React.FC<PropType> = (props) => {
   } = usePrevNextButtons(emblaApi);
 
   return (
-    <section className="embla">
+    <section className="embla py-8">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
           {slides.map((slide) => (

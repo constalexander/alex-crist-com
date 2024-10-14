@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader } from '../atoms/Card';
 
 export function CoolCards() {
   return (
-    <div className="flex gap-4 p-4">
+    <section className="cool-cards flex gap-4 p-4">
       <Card>
         <CardHeader>NEAT</CardHeader>
         <CardContent>asdf</CardContent>
@@ -13,7 +13,7 @@ export function CoolCards() {
         <CardHeader>COOL</CardHeader>
         <CardContent>asdf</CardContent>
       </Card>
-    </div>
+    </section>
   );
 }
 
