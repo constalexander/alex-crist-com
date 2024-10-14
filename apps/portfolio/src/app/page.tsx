@@ -25,13 +25,13 @@ export default function Page() {
   }, []);
 
   return (
-    <>
+    <div className="">
       <Leader />
       <EmploymentExperience2
         slides={employmentData}
         options={carouselOptions}
       />
       <CoolCards />
-    </>
+    </div>
   );
 }

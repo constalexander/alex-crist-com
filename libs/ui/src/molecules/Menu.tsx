@@ -62,7 +62,7 @@ export function Menu(props: MenuProps) {
         </DropdownMenuTrigger>
 
         <DropdownMenuContent
-          className="fixed top-[-23px] left-[36px] right-[0px] w-[90vw] max-w-[400px] h-[100vh] bg-emerald-900 border-emerald-950 transform -translate-x-full transition duration-300 ease-in-out shadow-2xl shadow-stone-400/40 z-20"
+          className="fixed top-[-23px] left-[36px] right-[0px] w-[90vw] max-w-[400px] h-[100vh] bg-emerald-900 border-emerald-950 transform -translate-x-full transition duration-300 ease-in-out shadow-2xl shadow-stone-400/40 z-50"
           sideOffset={-40}
           hideWhenDetached
           align="center"

@@ -25,21 +25,21 @@ export function Header(props: HeaderProps) {
     <div
       id="Header"
       className={
-        'fixed flex justify-between items-center w-full p-4 bg-stone-950 shadow-lg shadow-stone-700/60'
+        'fixed flex justify-between items-center w-full p-4 bg-stone-950 z-40'
       }
     >
       <div>
         <Button
           variant="ghost"
           className={cn(
-            'text-[1.625rem] text-emerald-500 tracking-wide font-serif font-bold',
+            'text-[1.625rem] text-emerald-500 tracking-normal font-serif font-bold py-0',
             fontSerif.variable
           )}
           onClick={() => nav('/')}
         >
           <span title="Alex Crist Home page">Alex Crist</span>
         </Button>
-        <div className="text-base text-stone-400 font-bold tracking-wide pl-4">
+        <div className="text-[1rem] text-stone-300 tracking-normal pl-4 relative -top-[8px]">
           Frontend Engineer
         </div>
       </div>
