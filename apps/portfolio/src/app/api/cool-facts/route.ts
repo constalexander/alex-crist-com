@@ -6,6 +6,12 @@ export async function GET() {
     {
       title: 'Longest Hike',
       description: 'Trampas Lakes',
+      linkout:
+        'https://www.alltrails.com/trail/us/new-mexico/trampas-lakes-trail',
+    },
+    {
+      title: 'Interesting Thing',
+      description: 'More details here',
     },
   ];
 
