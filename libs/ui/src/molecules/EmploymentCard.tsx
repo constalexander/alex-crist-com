@@ -43,11 +43,13 @@ export function EmploymentCard({
           </Button>
         </a>
       </span>
-      <span className="text-base italic block -mt-1">{position}</span>
-      <span className="text-sm mt-1">
+      <span className="text-base font-normal italic block -mt-1">
+        {position}
+      </span>
+      <span className="text-sm font-normal mt-1">
         {dateStarted} - {dateEnded}
       </span>
-      <span class="hidden">
+      <span className="hidden">
         <ul className="list-disc list-inside text-left mt-4">
           {responsibilities.map((responsibility, idx) => (
             <li key={idx} className=" ">

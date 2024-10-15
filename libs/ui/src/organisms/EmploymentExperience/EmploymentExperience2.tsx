@@ -6,9 +6,10 @@ import { PrevButton, NextButton, usePrevNextButtons } from './ArrowButtons';
 import EmploymentCard from '../../molecules/EmploymentCard';
 
 import './EmploymentExperience.scss';
+import { EmploymentExperienceDTO } from '@alex/models/lib/dto/employment-experience.dto';
 
 type PropType = {
-  slides: any[];
+  slides: EmploymentExperienceDTO[];
   options?: EmblaOptionsType;
 };
 
@@ -33,13 +34,13 @@ const EmploymentExperience2: React.FC<PropType> = (props) => {
   } = usePrevNextButtons(emblaApi);
 
   return (
-    <section className="embla py-8">
+    <section className="embla h-[calc(100vh-96px)] py-8">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
           {slides.map((slide) => (
             <div
               className={`embla__slide ${isFlipped ? 'flipped' : ''}`}
-              key={slide.ordinal - 1}
+              key={Number(0)}
             >
               <div className="embla__slide__content">
                 <EmploymentCard
