@@ -25,7 +25,6 @@ export function Footer(props: FooterProps) {
             Alex Crist
           </Button>
         </a>
-        . All rights reserved.
       </div>
     </div>
   );
