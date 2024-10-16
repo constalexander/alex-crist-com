@@ -34,7 +34,13 @@ const EmploymentExperience2: React.FC<PropType> = (props) => {
   } = usePrevNextButtons(emblaApi);
 
   return (
-    <section className="embla h-[calc(100vh-96px)] py-8">
+    <section className="employment-experience embla h-[calc(100vh-192px)] py-8">
+      <div className="text-2xl text-center text-stone-400 text-end pe-6">
+        Employment experience
+      </div>
+      <div className="text-sm text-end text-stone-400 italic relative -left-[28px] top-[2px]">
+        (so far)
+      </div>
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
           {slides.map((slide) => (

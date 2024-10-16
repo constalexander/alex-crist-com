@@ -33,10 +33,9 @@ export default function RootLayout({
       {/* prettier-ignore */}
       <body
         className={cn(`
-          grid grid-rows-[auto_1fr] 
+          grid 
           w-screen min-h-screen 
           overflow-x-hidden overflow-y-auto 
-          bg-cover bg-fixed bg-gradlin-x
           bg-stone-800
           text-foreground font-sans antialiased
           `, fontSans.variable
@@ -44,7 +43,7 @@ export default function RootLayout({
         style={{ fontFeatureSettings: "'rlig' 1, 'calt' 1" }}
       >
         <Header />
-        <main className="grid grid-rows-[1fr] w-full min-h-full p-0 mt-[96px]">
+        <main className="grid w-full min-h-full p-0 mt-[96px]">
           {children}
         </main>
         <Footer />

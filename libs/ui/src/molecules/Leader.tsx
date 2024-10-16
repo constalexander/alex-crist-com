@@ -12,8 +12,8 @@ export function Leader() {
   };
 
   return (
-    <section className="leader h-[calc(100vh-96px)] py-8 bg-emerald-950">
-      <p className="text-base text-center text-stone-200 leading-5">
+    <section className="leader h-[calc(100vh-192px)] py-8 bg-emerald-950">
+      <p className="text-base text-center text-stone-200 leading-5 mt-[6rem]">
         Versatile and innovative <br /> <JobTitleRandomizer /> <br /> creating
         bespoke user interfaces <br /> using modern technologies <br />
         and best practices.
