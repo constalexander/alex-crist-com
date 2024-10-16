@@ -4,13 +4,25 @@ import { CoolFactsDTO } from '@alex/models/lib/dto/cool-facts.dto';
 export async function GET() {
   const coolFactsData: CoolFactsDTO[] = [
     {
-      title: 'Longest Hike',
+      title: 'Best Hike',
       description: 'Trampas Lakes',
       linkout:
         'https://www.alltrails.com/trail/us/new-mexico/trampas-lakes-trail',
     },
     {
-      title: 'Interesting Thing',
+      title: 'Favorite Kayak Trip',
+      description: 'More details here',
+    },
+    {
+      title: 'Garden',
+      description: 'More details here',
+    },
+    {
+      title: 'Self-Taught',
+      description: 'More details here',
+    },
+    {
+      title: 'GPT Engineer, OpenHands, Cursor',
       description: 'More details here',
     },
   ];

@@ -40,7 +40,10 @@ const CoolFacts: React.FC<PropType> = (props) => {
   } = usePrevNextButtons(emblaApi);
 
   return (
-    <section className="embla py-8">
+    <section className="cool-facts embla h-[calc(100vh-192px)] py-8">
+      <div className="text-2xl text-start text-stone-400 ps-6">
+        Get to know me
+      </div>
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
           {slides.map((slide) => (
