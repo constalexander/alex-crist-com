@@ -44,4 +44,4 @@ Thumbs.db
 .next
 out
 
-.env.local
+apps/portfolio/.env.local
