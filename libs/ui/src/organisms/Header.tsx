@@ -13,7 +13,9 @@ const fontSerif = FontSerif({
 });
 
 /* eslint-disable-next-line */
-export interface HeaderProps {}
+export interface HeaderProps {
+  className?: string;
+}
 
 export function Header(props: HeaderProps) {
   const router = useRouter();
@@ -24,9 +26,13 @@ export function Header(props: HeaderProps) {
   return (
     <div
       id="Header"
-      className={
-        'fixed flex justify-between items-center w-full p-4 bg-stone-950 z-40'
-      }
+      className={cn(
+        `
+        flex justify-between items-center 
+        w-full h-full p-4 z-40
+        bg-stone-950`,
+        props.className
+      )}
     >
       <div>
         <Button

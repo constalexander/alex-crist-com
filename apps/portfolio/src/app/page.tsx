@@ -37,7 +37,7 @@ export default function Page() {
   }, []);
 
   return (
-    <div className="">
+    <>
       <Leader />
       <EmploymentExperience2
         slides={employmentData}
@@ -45,6 +45,6 @@ export default function Page() {
       />
       {/* <CoolCards /> */}
       <CoolFacts slides={coolFactsData} options={carouselOptions} />
-    </div>
+    </>
   );
 }

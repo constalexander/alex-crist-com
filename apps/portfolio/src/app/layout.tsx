@@ -34,16 +34,21 @@ export default function RootLayout({
       <body
         className={cn(`
           grid 
+          grid-cols-[1fr] 
+          grid-rows-[100px_1fr] 
           w-screen min-h-screen 
-          overflow-x-hidden overflow-y-auto 
+          overflow-hidden
+          text-foreground font-sans antialiased  
           bg-stone-800
-          text-foreground font-sans antialiased
           `, fontSans.variable
         )}
         style={{ fontFeatureSettings: "'rlig' 1, 'calt' 1" }}
       >
-        <Header />
-        <main className="grid w-full min-h-full p-0 mt-[96px]">
+        <Header className="" />
+        <main className={`
+          overflow-x-hidden overflow-y-scroll
+          w-full min-h-full 
+          p-0 m-0`}>
           {children}
         </main>
         <Footer />
