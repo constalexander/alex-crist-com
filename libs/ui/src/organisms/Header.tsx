@@ -26,19 +26,13 @@ export function Header(props: HeaderProps) {
   return (
     <div
       id="Header"
-      className={cn(
-        `
-        flex justify-between items-center 
-        w-full h-full p-4 z-40
-        bg-stone-950`,
-        props.className
-      )}
+      className="flex justify-between items-center w-full h-full p-4 z-40 bg-stone-950"
     >
       <div>
         <Button
           variant="ghost"
           className={cn(
-            'text-[1.625rem] text-emerald-500 tracking-normal font-serif font-bold py-0',
+            'text-[1.625rem] text-emerald-500 hover:text-emerald-600 tracking-normal font-serif font-bold py-0',
             fontSerif.variable
           )}
           onClick={() => nav('/')}

@@ -36,22 +36,23 @@ export default function RootLayout({
           grid 
           grid-cols-[1fr] 
           grid-rows-[100px_1fr] 
-          w-screen min-h-screen 
-          overflow-hidden
+          w-full h-full
+          overflow-auto
           text-foreground font-sans antialiased  
           bg-stone-800
           `, fontSans.variable
         )}
         style={{ fontFeatureSettings: "'rlig' 1, 'calt' 1" }}
       >
-        <Header className="" />
+        <Header />
         <main className={`
-          overflow-x-hidden overflow-y-scroll
+          overflow-x-hidden overflow-y-auto
           w-full min-h-full 
           p-0 m-0`}>
           {children}
+          <Footer />
         </main>
-        <Footer />
+       
       </body>
     </html>
   );
