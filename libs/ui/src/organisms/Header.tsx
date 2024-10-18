@@ -28,6 +28,12 @@ export function Header(props: HeaderProps) {
       id="Header"
       className="flex justify-between items-center w-full h-full p-4 z-40 bg-stone-950"
     >
+      <img
+        src="img/headshot3.jpg"
+        alt="Alex Crist logo"
+        className="w-[38px] h-[44px] rounded-full opacity-90 relative -top-[3px] left-[4px]"
+      />
+
       <div>
         <Button
           variant="ghost"
@@ -43,6 +49,7 @@ export function Header(props: HeaderProps) {
           Frontend Engineer
         </div>
       </div>
+      <div className="w-full">asdf</div>
       <Menu />
     </div>
   );
