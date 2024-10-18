@@ -13,7 +13,9 @@ const fontSerif = FontSerif({
 });
 
 /* eslint-disable-next-line */
-export interface HeaderProps {}
+export interface HeaderProps {
+  className?: string;
+}
 
 export function Header(props: HeaderProps) {
   const router = useRouter();
@@ -24,15 +26,19 @@ export function Header(props: HeaderProps) {
   return (
     <div
       id="Header"
-      className={
-        'fixed flex justify-between items-center w-full p-4 bg-stone-950 z-40'
-      }
+      className="flex justify-between items-center w-full h-full p-4 z-40 bg-stone-950"
     >
+      <img
+        src="img/headshot3.jpg"
+        alt="Alex Crist logo"
+        className="w-[38px] h-[44px] rounded-full opacity-90 relative -top-[3px] left-[4px]"
+      />
+
       <div>
         <Button
           variant="ghost"
           className={cn(
-            'text-[1.625rem] text-emerald-500 tracking-normal font-serif font-bold py-0',
+            'text-[1.625rem] text-emerald-500 hover:text-emerald-600 tracking-normal font-serif font-bold py-0',
             fontSerif.variable
           )}
           onClick={() => nav('/')}
@@ -43,6 +49,7 @@ export function Header(props: HeaderProps) {
           Frontend Engineer
         </div>
       </div>
+      <div className="w-full">asdf</div>
       <Menu />
     </div>
   );

@@ -16,7 +16,7 @@ export function Footer(props: FooterProps) {
   return (
     <div
       id="Footer"
-      className="flex justify-center items-end bg-zinc-900 text-stone-300 text-center text-sm min-h-[100px]"
+      className="flex justify-center items-end w-full h-[40px] bg-zinc-900 text-stone-300 text-center text-sm"
     >
       <div className="block text-stone-400">
         &copy; 2024 &nbsp;

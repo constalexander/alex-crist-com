@@ -5,7 +5,6 @@ import { EmblaOptionsType } from 'embla-carousel';
 import { Leader } from '@alex/ui/molecules/Leader';
 import EmploymentExperience2 from '@alex/ui/organisms/EmploymentExperience/EmploymentExperience2';
 import { EmploymentExperienceDTO } from '@alex/models/lib/dto/employment-experience.dto';
-import CoolCards from '@alex/ui/molecules/CoolCards';
 import CoolFacts from '@alex/ui/organisms/CoolFacts/CoolFacts';
 import { CoolFactsDTO } from '@alex/models/lib/dto/cool-facts.dto';
 
@@ -37,14 +36,13 @@ export default function Page() {
   }, []);
 
   return (
-    <div className="">
+    <>
       <Leader />
       <EmploymentExperience2
         slides={employmentData}
         options={carouselOptions}
       />
-      {/* <CoolCards /> */}
       <CoolFacts slides={coolFactsData} options={carouselOptions} />
-    </div>
+    </>
   );
 }
