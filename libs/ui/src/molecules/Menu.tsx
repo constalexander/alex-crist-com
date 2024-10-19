@@ -176,6 +176,28 @@ export function Menu(props: MenuProps) {
 
           <DropdownMenuItem
             className={
+              isMenuItemActive ? 'bg-emerald-800' : 'focus:bg-transparent'
+            }
+            onSelect={(e) => {
+              e.preventDefault();
+              window.open(
+                'Alex Crist - Frontend Engineer resume web.docx',
+                '_blank'
+              );
+              setIsMenuOpen(false);
+            }}
+          >
+            <Button
+              variant="ghost"
+              className="w-full text-left inline-block text-xl text-stone-300"
+            >
+              <span className="sr-only">Resume of Alex Crist</span>
+              Resume
+            </Button>
+          </DropdownMenuItem>
+
+          <DropdownMenuItem
+            className={
               isMenuItemActive
                 ? 'bg-emerald-800'
                 : 'focus:bg-transparent hidden'

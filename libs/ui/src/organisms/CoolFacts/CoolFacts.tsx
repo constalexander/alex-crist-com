@@ -9,7 +9,8 @@ import {
 } from '../EmploymentExperience/ArrowButtons';
 import EmploymentCard from '../../molecules/EmploymentCard';
 
-import './CoolFacts.scss';
+//import './CoolFacts.scss';
+import '../EmploymentExperience/EmploymentExperience.scss';
 import { CoolFactsDTO } from '@alex/models/lib/dto/cool-facts.dto';
 import { Button } from '@alex/ui/atoms/Button';
 import { ExternalLink } from 'lucide-react';

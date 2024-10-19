@@ -26,7 +26,7 @@ export function Header(props: HeaderProps) {
   return (
     <div
       id="Header"
-      className="flex justify-between items-center w-full h-full p-4 z-40 bg-stone-950"
+      className="flex justify-between items-center w-full h-full p-4 z-40 bg-stone-950 border-b border-stone-600"
     >
       <img
         src="img/headshot3.jpg"
