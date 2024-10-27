@@ -12,7 +12,7 @@ export function Leader() {
   };
 
   return (
-    <section className="leader h-[calc(100vh-192px)] pt-0 pb-8 bg-emerald-950">
+    <section className="leader min-h-[calc(100vh-192px)] pt-0 pb-8 bg-emerald-950">
       <p>
         <img
           src="img/alex.jpg"
@@ -20,7 +20,7 @@ export function Leader() {
           style={{ filter: 'hue-rotate(90deg) saturate(.25)' }}
         />
       </p>
-      <p className="text-base text-center text-stone-200 leading-5 mt-[6rem]">
+      <p className="text-base text-center text-stone-200 leading-5 mt-10 mb-4">
         Versatile and innovative <br /> <JobTitleRandomizer /> <br /> creating
         bespoke user interfaces <br /> using modern technologies <br />
         and best practices.

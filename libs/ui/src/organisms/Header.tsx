@@ -31,7 +31,7 @@ export function Header(props: HeaderProps) {
       <img
         src="img/alex.jpg"
         alt="Alex Crist logo"
-        className="hiddenx w-[38px] h-[44px] rounded-lg opacity-90 relative -top-[3px] left-[4px] filter"
+        className="hidden w-[38px] h-[44px] rounded-lg opacity-90 relative -top-[3px] left-[4px] filter"
         style={{ filter: 'hue-rotate(90deg) saturate(.33)' }}
       />
 
