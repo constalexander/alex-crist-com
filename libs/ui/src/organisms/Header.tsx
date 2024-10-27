@@ -35,11 +35,14 @@ export function Header(props: HeaderProps) {
       <img
         src="img/profile/mobile/square.jpg"
         alt="Alex Crist"
-        className={cn(
-          'w-[44px] h-[44px] rounded-full opacity-90 relative -top-[3px] left-[4px]',
-          { hidden: mainScrollValue < 295 }
-        )}
-        style={{ filter: 'xhue-rotate(90deg) xsaturate(.1)' }}
+        className={cn('rounded-full relative -top-[3px] left-[4px]', {
+          'w-0 h-0 opacity-0': mainScrollValue < 250,
+          'w-[44px] h-[44px] opacity-100': mainScrollValue >= 250,
+        })}
+        style={{
+          transition:
+            'width .33s ease-in-out, height .33s ease-in-out, opacity .33s ease-in-out',
+        }}
       />
 
       <div>
