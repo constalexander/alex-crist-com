@@ -12,9 +12,13 @@ export function Leader() {
   };
 
   return (
-    <section className="leader h-[calc(100vh-192px)] py-8 bg-emerald-950">
+    <section className="leader h-[calc(100vh-192px)] pt-0 pb-8 bg-emerald-950">
       <p>
-        <img src="img/alex.jpg" className="rounded-xl w-[200px] mx-auto" />
+        <img
+          src="img/alex.jpg"
+          className="rounded-xl !rounded-none w-[200px] !w-full mx-auto filter opacity-75"
+          style={{ filter: 'hue-rotate(90deg) saturate(.25)' }}
+        />
       </p>
       <p className="text-base text-center text-stone-200 leading-5 mt-[6rem]">
         Versatile and innovative <br /> <JobTitleRandomizer /> <br /> creating
