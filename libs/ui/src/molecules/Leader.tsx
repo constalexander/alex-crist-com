@@ -1,16 +1,15 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
+import { ArrowRight } from 'lucide-react';
 import { Button } from '../atoms/Button';
 import { JobTitleRandomizer } from '../organisms/JobTitleRandomizer';
-import { ArrowRight } from 'lucide-react';
 
 export function Leader() {
   const router = useRouter();
   const nav = (route: string) => {
     router.push(route);
   };
-
   return (
     <section className="leader min-h-[calc(100vh-192px)] pt-0 pb-8 bg-emerald-950">
       <p>

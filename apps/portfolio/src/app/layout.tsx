@@ -2,9 +2,7 @@ import type { Metadata } from 'next';
 import Script from 'next/script';
 import { Sarabun as FontSans } from 'next/font/google';
 import { cn } from '@alex/ui/utils';
-import { Header } from '@alex/ui/organisms/Header';
-import { Footer } from '@alex/ui/organisms/Footer';
-import MainScrollHandler from '@alex/effects/MainScrollHandler.effect';
+import MainTemplate from '@alex/ui/templates/Main.template';
 import './global.scss';
 
 export const metadata: Metadata = {
@@ -46,15 +44,8 @@ export default function RootLayout({
         )}
         style={{ fontFeatureSettings: "'rlig' 1, 'calt' 1" }}
       >
-        <Header />
-        <main className={`
-          overflow-x-hidden overflow-y-auto
-          w-full min-h-full 
-          p-0 m-0`}>
-          {children}
-          <Footer />
-        </main>
-        <MainScrollHandler />
+    
+        <MainTemplate>{children}</MainTemplate>
       </body>
     </html>
   );

@@ -2,6 +2,7 @@
 
 import { Hahmlet as FontSerif } from 'next/font/google';
 import { useRouter } from 'next/navigation';
+import { useMainScrollValue } from '@alex/contexts/MainScrollContext';
 import Menu from '../molecules/Menu';
 import { cn } from '../utils';
 import { Button } from '../atoms/Button';
@@ -24,6 +25,8 @@ export function Header(props: HeaderProps) {
     router.push(route);
   };
 
+  const mainScrollValue = useMainScrollValue();
+
   return (
     <div
       id="Header"
@@ -34,7 +37,7 @@ export function Header(props: HeaderProps) {
         alt="Alex Crist"
         className={cn(
           'w-[44px] h-[44px] rounded-full opacity-90 relative -top-[3px] left-[4px]',
-          { hidden: true }
+          { hidden: mainScrollValue < 295 }
         )}
         style={{ filter: 'xhue-rotate(90deg) xsaturate(.1)' }}
       />

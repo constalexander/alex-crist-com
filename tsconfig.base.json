@@ -26,8 +26,6 @@
       "@alex/hooks/*": ["libs/hooks/src/*"],
       "@alex/models": ["libs/models/src/index.ts"],
       "@alex/models/*": ["libs/models/src/*"],
-      "@alex/providers": ["libs/providers/src/index.ts"],
-      "@alex/providers/*": ["libs/providers/src/*"],
       "@alex/services": ["libs/services/src/index.ts"],
       "@alex/services/*": ["libs/services/src/*"],
       "@alex/stores": ["libs/stores/src/index.ts"],
