@@ -1,13 +1,16 @@
-import './global.scss';
+import type { Metadata } from 'next';
 import Script from 'next/script';
 import { Sarabun as FontSans } from 'next/font/google';
 import { cn } from '@alex/ui/utils';
 import { Header } from '@alex/ui/organisms/Header';
 import { Footer } from '@alex/ui/organisms/Footer';
+import MainScrollHandler from '@alex/effects/MainScrollHandler.effect';
+import './global.scss';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Alex Crist | Frontend Engineer',
   description: 'Frontend engineer in North Texas',
+  viewport: 'width=device-width, initial-scale=1',
 };
 
 const fontSans = FontSans({
@@ -26,7 +29,6 @@ export default function RootLayout({
       <head>
         <meta charSet="utf-8" />
         <base href="/" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" type="image/x-icon" href="/code.ico" />
         <Script src="/GoSquared-snippet.js" strategy="beforeInteractive" />
       </head>
@@ -52,7 +54,7 @@ export default function RootLayout({
           {children}
           <Footer />
         </main>
-       
+        <MainScrollHandler />
       </body>
     </html>
   );

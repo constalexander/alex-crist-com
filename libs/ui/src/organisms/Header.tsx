@@ -19,6 +19,7 @@ export interface HeaderProps {
 
 export function Header(props: HeaderProps) {
   const router = useRouter();
+
   const nav = (route: string) => {
     router.push(route);
   };
@@ -31,7 +32,10 @@ export function Header(props: HeaderProps) {
       <img
         src="img/profile/mobile/square.jpg"
         alt="Alex Crist"
-        className="hiddenx w-[44px] h-[44px] rounded-full opacity-90 relative -top-[3px] left-[4px]"
+        className={cn(
+          'w-[44px] h-[44px] rounded-full opacity-90 relative -top-[3px] left-[4px]',
+          { hidden: true }
+        )}
         style={{ filter: 'xhue-rotate(90deg) xsaturate(.1)' }}
       />
 
