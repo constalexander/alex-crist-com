@@ -41,7 +41,6 @@ export default function MainTemplate({
     p-0 m-0`}
       >
         {children}
-        {scrollValue}
         <Footer />
       </main>
     </MainScrollProvider>

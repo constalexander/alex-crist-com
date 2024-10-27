@@ -60,7 +60,7 @@ export function Header(props: HeaderProps) {
           Frontend Engineer
         </div>
       </div>
-      <div className="w-full">asdf</div>
+      <div className="w-full">&nbsp;</div>
       <Menu />
     </div>
   );
