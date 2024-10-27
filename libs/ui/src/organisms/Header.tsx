@@ -29,10 +29,10 @@ export function Header(props: HeaderProps) {
       className="flex justify-between items-center w-full h-full p-4 z-40 bg-stone-950 border-b border-stone-600"
     >
       <img
-        src="img/alex.jpg"
-        alt="Alex Crist logo"
-        className="hidden w-[38px] h-[44px] rounded-lg opacity-90 relative -top-[3px] left-[4px] filter"
-        style={{ filter: 'hue-rotate(90deg) saturate(.33)' }}
+        src="img/profile/mobile/square.jpg"
+        alt="Alex Crist"
+        className="hiddenx w-[44px] h-[44px] rounded-full opacity-90 relative -top-[3px] left-[4px]"
+        style={{ filter: 'xhue-rotate(90deg) xsaturate(.1)' }}
       />
 
       <div>

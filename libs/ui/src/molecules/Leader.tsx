@@ -15,9 +15,10 @@ export function Leader() {
     <section className="leader min-h-[calc(100vh-192px)] pt-0 pb-8 bg-emerald-950">
       <p>
         <img
-          src="img/alex.jpg"
-          className="rounded-xl !rounded-none w-[200px] !w-full mx-auto filter opacity-75"
-          style={{ filter: 'hue-rotate(90deg) saturate(.25)' }}
+          src="img/profile/mobile/large.jpg"
+          alt="Alex Crist"
+          className="w-full mx-auto filter opacity-90"
+          style={{ filter: 'hue-rotate(90deg) saturate(.1)' }}
         />
       </p>
       <p className="text-base text-center text-stone-200 leading-5 mt-10 mb-4">
