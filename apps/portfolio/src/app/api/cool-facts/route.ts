@@ -25,6 +25,10 @@ export async function GET() {
       title: 'GPT Engineer, OpenHands, Cursor',
       description: 'More details here',
     },
+    {
+      title: 'Bucket list items',
+      description: 'Ring Dinger',
+    },
   ];
 
   const response = NextResponse.json(coolFactsData);

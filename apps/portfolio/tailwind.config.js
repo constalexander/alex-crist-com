@@ -23,12 +23,13 @@ module.exports = {
       '2xl': '1536px',
     },
     colors: {
+      cyan: colors.cyan,
+      emerald: colors.emerald,
       stone: {
         ...colors.stone,
         750: '#363230',
       },
       teal: colors.teal,
-      emerald: colors.emerald,
       zinc: colors.zinc,
     },
     fontFamily: {
