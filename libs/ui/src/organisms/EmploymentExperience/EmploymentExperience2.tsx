@@ -43,14 +43,14 @@ const EmploymentExperience2: React.FC<PropType> = (props) => {
       </div>
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
-          {slides.map((slide) => (
+          {slides.map((slide, index) => (
             <div
               className={`embla__slide ${isFlipped ? 'flipped' : ''}`}
-              key={Number(0)}
+              key={slide.companyName}
             >
               <div className="embla__slide__content">
                 <EmploymentCard
-                  index={Number(0)}
+                  index={slide.companyName}
                   companyName={slide.companyName}
                   companyUrl={slide.companyUrl}
                   dateStarted={slide.dateStarted}

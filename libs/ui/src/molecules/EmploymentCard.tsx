@@ -6,7 +6,7 @@ import { Badge } from '../atoms/Badge';
 
 /* eslint-disable-next-line */
 export interface EmploymentCardProps {
-  index: number;
+  index: string;
   companyName: string;
   companyUrl: string;
   dateStarted: string;

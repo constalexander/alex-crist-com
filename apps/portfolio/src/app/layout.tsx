@@ -4,6 +4,7 @@ import { Sarabun as FontSans } from 'next/font/google';
 import { cn } from '@alex/ui/utils';
 import MainTemplate from '@alex/ui/templates/Main.template';
 import './global.scss';
+import Head from 'next/head';
 
 export const metadata: Metadata = {
   title: 'Alex Crist | Frontend Engineer',
@@ -24,12 +25,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning className="w-full h-full">
-      <head>
+      <Head>
         <meta charSet="utf-8" />
         <base href="/" />
         <link rel="icon" type="image/x-icon" href="/code.ico" />
-        <Script src="/GoSquared-snippet.js" strategy="beforeInteractive" />
-      </head>
+      </Head>
+      <Script src="/GoSquared-snippet.js" strategy="beforeInteractive" />
       {/* prettier-ignore */}
       <body
         className={cn(`
