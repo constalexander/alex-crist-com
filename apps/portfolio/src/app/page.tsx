@@ -3,10 +3,10 @@
 import { useEffect, useState } from 'react';
 import { EmblaOptionsType } from 'embla-carousel';
 import { Leader } from '@alex/ui/molecules/Leader';
-import EmploymentExperience2 from '@alex/ui/organisms/EmploymentExperience/EmploymentExperience2';
-import { EmploymentExperienceDTO } from '@alex/models/lib/dto/employment-experience.dto';
+import EmploymentExperience from '@alex/ui/organisms/EmploymentExperience/EmploymentExperience';
+import { EmploymentExperienceDTO } from '@alex/models/dto/employment-experience.dto';
 import CoolFacts from '@alex/ui/organisms/CoolFacts/CoolFacts';
-import { CoolFactsDTO } from '@alex/models/lib/dto/cool-facts.dto';
+import { CoolFactsDTO } from '@alex/models/dto/cool-facts.dto';
 
 export default function Page() {
   const carouselOptions: EmblaOptionsType = { loop: true };
@@ -38,10 +38,7 @@ export default function Page() {
   return (
     <>
       <Leader />
-      <EmploymentExperience2
-        slides={employmentData}
-        options={carouselOptions}
-      />
+      <EmploymentExperience slides={employmentData} options={carouselOptions} />
       <CoolFacts slides={coolFactsData} options={carouselOptions} />
     </>
   );

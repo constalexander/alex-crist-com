@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { EmploymentExperienceDTO } from '@alex/models/lib/dto/employment-experience.dto';
+import { EmploymentExperienceDTO } from '@alex/models/dto/employment-experience.dto';
 
 export async function GET() {
   const employmentData: EmploymentExperienceDTO[] = [

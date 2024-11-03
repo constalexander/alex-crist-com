@@ -1,19 +1,16 @@
 import React, { useState } from 'react';
 import { EmblaOptionsType } from 'embla-carousel';
 import useEmblaCarousel from 'embla-carousel-react';
+import { ExternalLink } from 'lucide-react';
+import { CoolFactsDTO } from '@alex/models/dto/cool-facts.dto';
 import { DotButton, useDotButton } from '../EmploymentExperience/DotButton';
 import {
   PrevButton,
   NextButton,
   usePrevNextButtons,
 } from '../EmploymentExperience/ArrowButtons';
-import EmploymentCard from '../../molecules/EmploymentCard';
-
-//import './CoolFacts.scss';
 import '../EmploymentExperience/EmploymentExperience.scss';
-import { CoolFactsDTO } from '@alex/models/lib/dto/cool-facts.dto';
-import { Button } from '@alex/ui/atoms/Button';
-import { ExternalLink } from 'lucide-react';
+import { Button } from '../../atoms/Button';
 
 type PropType = {
   slides: CoolFactsDTO[];

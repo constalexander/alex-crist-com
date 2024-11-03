@@ -27,7 +27,7 @@ export function Leader() {
         <p className="text-base text-center text-stone-200 leading-5 mt-10 mb-4 sm:basis-[800px]">
           Versatile and innovative <br /> <JobTitleRandomizer /> <br /> creating
           bespoke user interfaces <br /> using modern technologies <br />
-          and best practices.
+          and best practices. Truth seeker.
           <Button
             variant="ghost"
             className="block mx-auto mt-6 text-base text-emerald-400 shadow-[0_0_30px_rgba(52,211,153,0.33)]"

@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
 import { EmblaOptionsType } from 'embla-carousel';
 import useEmblaCarousel from 'embla-carousel-react';
+import { EmploymentExperienceDTO } from '@alex/models/dto/employment-experience.dto';
 import { DotButton, useDotButton } from './DotButton';
 import { PrevButton, NextButton, usePrevNextButtons } from './ArrowButtons';
 import EmploymentCard from '../../molecules/EmploymentCard';
 
 import './EmploymentExperience.scss';
-import { EmploymentExperienceDTO } from '@alex/models/lib/dto/employment-experience.dto';
 
 type PropType = {
   slides: EmploymentExperienceDTO[];
   options?: EmblaOptionsType;
 };
 
-const EmploymentExperience2: React.FC<PropType> = (props) => {
+const EmploymentExperience: React.FC<PropType> = (props) => {
   const { slides, options } = props;
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
 
@@ -90,4 +90,4 @@ const EmploymentExperience2: React.FC<PropType> = (props) => {
   );
 };
 
-export default EmploymentExperience2;
+export default EmploymentExperience;
