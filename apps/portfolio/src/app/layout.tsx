@@ -45,7 +45,7 @@ export default function RootLayout({
         )}
         style={{ fontFeatureSettings: "'rlig' 1, 'calt' 1" }}
       >
-        <MainTemplate>{children}</MainTemplate>{' '}
+        <MainTemplate>{children}</MainTemplate>
         <Script src="/GoSquared-snippet.js" strategy="beforeInteractive" />
       </body>
     </html>
