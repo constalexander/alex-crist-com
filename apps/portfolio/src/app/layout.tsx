@@ -4,6 +4,7 @@ import { Sarabun as FontSans } from 'next/font/google';
 import { cn } from '@alex/ui/utils';
 import MainTemplate from '@alex/ui/templates/Main.template';
 import './global.scss';
+import Head from 'next/head';
 
 export const metadata: Metadata = {
   title: 'Alex Crist | Frontend Engineer',
@@ -24,15 +25,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning className="w-full h-full">
-      <head>
+      <Head>
         <meta charSet="utf-8" />
         <base href="/" />
         <link rel="icon" type="image/x-icon" href="/code.ico" />
-        <Script src="/GoSquared-snippet.js" strategy="beforeInteractive" />
-      </head>
-      {/* prettier-ignore */}
+      </Head>
       <body
-        className={cn(`
+        //prettier-ignore
+        className={cn(` 
           grid 
           grid-cols-[1fr] 
           grid-rows-[100px_1fr] 
@@ -40,12 +40,13 @@ export default function RootLayout({
           overflow-auto
           text-foreground font-sans antialiased  
           bg-stone-800
-          `, fontSans.variable
+          `,
+          fontSans.variable
         )}
         style={{ fontFeatureSettings: "'rlig' 1, 'calt' 1" }}
       >
-    
         <MainTemplate>{children}</MainTemplate>
+        <Script src="/GoSquared-snippet.js" strategy="beforeInteractive" />
       </body>
     </html>
   );
