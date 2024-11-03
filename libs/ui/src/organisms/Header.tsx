@@ -32,7 +32,7 @@ export function Header(props: HeaderProps) {
       id="Header"
       className="w-full h-full z-40 bg-stone-950 border-b border-stone-600"
     >
-      <div className="header-content py-4 h-full flex justify-between items-center mx-auto bg-stone-800 sm:w-[600px]">
+      <div className="section-content py-4 h-full flex justify-between items-center mx-auto bg-stone-800 sm:w-[600px]">
         <img
           src="img/profile/mobile/square.jpg"
           alt="Alex Crist"

@@ -15,7 +15,7 @@ export function Leader() {
       id="Leader"
       className="min-h-[calc(100vh-192px)] sm:min-h-fit bg-emerald-950 "
     >
-      <div className="leader-content h-full flex flex-col mx-auto bg-emerald-900 sm:flex-row sm:w-[600px]">
+      <div className="section-content h-full flex flex-col mx-auto bg-emerald-900 sm:flex-row sm:w-[600px]">
         <p className="sm:flex-initial sm:max-w-[400px]">
           <img
             src="img/profile/mobile/large.jpg"
