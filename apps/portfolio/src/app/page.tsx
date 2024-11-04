@@ -9,7 +9,8 @@ import CoolFacts from '@alex/ui/organisms/CoolFacts/CoolFacts';
 import { CoolFactsDTO } from '@alex/models/dto/cool-facts.dto';
 
 export default function Page() {
-  const carouselOptions: EmblaOptionsType = { loop: true };
+  const [loop, setLoop] = useState(true);
+  const carouselOptions: EmblaOptionsType = { loop: loop };
 
   const [employmentData, setEmploymentData] = useState<
     EmploymentExperienceDTO[]
@@ -33,7 +34,21 @@ export default function Page() {
       setCoolFactsData(res);
     }
     getCoolFactsData();
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
+
+  const handleResize = () => {
+    if (window.innerWidth >= 640) {
+      setLoop(false);
+    } else {
+      setLoop(true);
+    }
+  };
 
   return (
     <>
