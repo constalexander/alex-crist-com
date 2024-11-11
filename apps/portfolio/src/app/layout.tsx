@@ -9,7 +9,11 @@ import Head from 'next/head';
 export const metadata: Metadata = {
   title: 'Alex Crist | Frontend Engineer',
   description: 'Frontend engineer in North Texas',
-  viewport: 'width=device-width, initial-scale=1',
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
 };
 
 const fontSans = FontSans({

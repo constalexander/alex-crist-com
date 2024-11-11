@@ -13,6 +13,11 @@
   @media (min-width: 440px) {
     --slide-size: 240px;
   }
+  @media (min-width: 640px) {
+    --slide-size: 340px;
+    --slide-height: 300px;
+    --slide-spacing: 2rem;
+  }
   --detail-medium-contrast: rgba(152, 180, 162, 0.515);
 }
 .embla__viewport {
@@ -40,13 +45,16 @@
   display: flex;
   touch-action: pan-y pinch-zoom;
   margin-left: calc(var(--slide-spacing) * -1);
+  @media (min-width: 640px) {
+    margin-left: calc(50% - var(--slide-size) / 2);
+    margin-right: 2rem;
+  }
 }
 .embla__slide {
   transform: translate3d(0, 0, 0);
   flex: 0 0 var(--slide-size);
   min-width: 0;
   padding-left: var(--slide-spacing);
-  // transition: transform 0.6s;
   transform-style: preserve-3d;
   &.flipped {
     transform: rotateY(180deg);

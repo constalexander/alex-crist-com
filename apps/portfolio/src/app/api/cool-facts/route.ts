@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { CoolFactsDTO } from '@alex/models/lib/dto/cool-facts.dto';
+import { CoolFactsDTO } from '@alex/models/dto/cool-facts.dto';
 
 export async function GET() {
   const coolFactsData: CoolFactsDTO[] = [
