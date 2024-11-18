@@ -1,7 +1,7 @@
 #!/bin/bash
 
-export WORKSPACE_BASE=~/Code/gh/alex-crist-com
-export CONTAINER_NAME=openhands_alex-crist-com-$(date +%Y%m%d%H%M%S)
+export WORKSPACE_BASE=~/Code/gh/alex-crist-portfolio
+export CONTAINER_NAME=openhands_alex-crist-portfolio-$(date +%Y%m%d%H%M%S)
 
 mkdir -p $WORKSPACE_BASE
 

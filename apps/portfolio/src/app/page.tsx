@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { EmblaOptionsType } from 'embla-carousel';
 import { Leader } from '@alex/ui/molecules/Leader';
+import { TechStack } from '@alex/ui/molecules/TechStack';
 import EmploymentExperience from '@alex/ui/organisms/EmploymentExperience/EmploymentExperience';
 import { EmploymentExperienceDTO } from '@alex/models/dto/employment-experience.dto';
 import CoolFacts from '@alex/ui/organisms/CoolFacts/CoolFacts';
@@ -53,6 +54,7 @@ export default function Page() {
   return (
     <>
       <Leader />
+      <TechStack />
       <EmploymentExperience slides={employmentData} options={carouselOptions} />
       <CoolFacts slides={coolFactsData} options={carouselOptions} />
     </>

@@ -1,6 +1,10 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
-import { Sarabun as FontSans } from 'next/font/google';
+import {
+  Sarabun as FontSans,
+  Hahmlet as FontSerif,
+  Farsan as FontHandwritten,
+} from 'next/font/google';
 import { cn } from '@alex/ui/utils';
 import MainTemplate from '@alex/ui/templates/Main.template';
 import './global.scss';
@@ -22,6 +26,18 @@ const fontSans = FontSans({
   variable: '--font-sans',
 });
 
+const fontSerif = FontSerif({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-serif',
+});
+
+const fontHandwritten = FontHandwritten({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-handwritten',
+});
+
 export default function RootLayout({
   children,
 }: {
@@ -35,8 +51,8 @@ export default function RootLayout({
         <link rel="icon" type="image/x-icon" href="/code.ico" />
       </Head>
       <body
-        //prettier-ignore
-        className={cn(` 
+        className={cn(
+          ` 
           grid 
           grid-cols-[1fr] 
           grid-rows-[100px_1fr] 
@@ -45,7 +61,9 @@ export default function RootLayout({
           text-foreground font-sans antialiased  
           bg-stone-800
           `,
-          fontSans.variable
+          fontSans.variable,
+          fontSerif.variable,
+          fontHandwritten.variable
         )}
         style={{ fontFeatureSettings: "'rlig' 1, 'calt' 1" }}
       >
