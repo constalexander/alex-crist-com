@@ -23,18 +23,35 @@ module.exports = {
       '2xl': '1536px',
     },
     colors: {
+      blue: colors.blue,
       cyan: colors.cyan,
-      emerald: colors.emerald,
+      emerald: {
+        ...colors.emerald,
+        650: '#059669',
+        750: '#047857',
+        850: '#065F46',
+        950: '#064E3B',
+      },
+      fuschia: colors.fuchsia,
+      green: colors.green,
+      orange: colors.orange,
+      red: colors.red,
       stone: {
         ...colors.stone,
+        650: '#57534E',
         750: '#363230',
+        850: '#292524',
+        950: '#1C1917',
       },
       teal: colors.teal,
+      violet: colors.violet,
+      yellow: colors.yellow,
       zinc: colors.zinc,
     },
     fontFamily: {
       sans: ['var(--font-sans)', ...fontFamily.sans],
       serif: ['var(--font-serif)', ...fontFamily.serif],
+      handwritten: ['var(--font-handwritten)', 'cursive'],
     },
     extend: {
       animation: {

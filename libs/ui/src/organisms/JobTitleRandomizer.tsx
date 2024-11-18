@@ -11,6 +11,8 @@ export function JobTitleRandomizer(props: JobTitleRandomizerProps) {
     'Frontend Developer',
     'UI/UX Expert',
     'Problem Solver',
+    'String Magician',
+    'Product Engineer',
   ];
   const [currentTitle, setCurrentTitle] = useState(jobTitles[0]);
   const [opacity, setOpacity] = useState(100);

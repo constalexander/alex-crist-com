@@ -5,8 +5,7 @@ import { EmploymentExperienceDTO } from '@alex/models/dto/employment-experience.
 import { DotButton, useDotButton } from './DotButton';
 import { PrevButton, NextButton, usePrevNextButtons } from './ArrowButtons';
 import EmploymentCard from '../../molecules/EmploymentCard';
-
-import './EmploymentExperience.scss';
+import '../shared/embla.scss';
 
 type PropType = {
   slides: EmploymentExperienceDTO[];
@@ -16,16 +15,10 @@ type PropType = {
 const EmploymentExperience: React.FC<PropType> = (props) => {
   const { slides, options } = props;
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
-
   const [isFlipped, setIsFlipped] = useState(false);
-
-  const handleFlip = () => {
-    setIsFlipped(!isFlipped);
-  };
 
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
     useDotButton(emblaApi);
-
   const {
     prevBtnDisabled,
     nextBtnDisabled,
@@ -34,8 +27,23 @@ const EmploymentExperience: React.FC<PropType> = (props) => {
   } = usePrevNextButtons(emblaApi);
 
   return (
-    <section id="EmploymentExperience" className="embla h-[calc(100vh-192px)]">
-      <div className="section-content bg-stone-700 mx-auto py-8 sm:w-[600px]">
+    <section id="EmploymentExperience" className="embla">
+      <div
+        className="pattern hidden absolute inset-0 w-full h-full z-0"
+        aria-hidden="true"
+      >
+        <img
+          src="/img/patterns/grey_wash_wall.webp"
+          alt="pattern"
+          className="w-full h-full object-fill opacity-full"
+          style={{
+            filter:
+              'grayscale(100%) sepia(100%) hue-rotate(-15deg) saturate(70%) brightness(67%)',
+          }}
+        />
+      </div>
+
+      <div className="section-content bg-stone-750 mx-auto py-8 sm:w-[600px]">
         <div className="text-2xl text-center text-stone-400 text-end pe-6">
           Employment experience
         </div>
@@ -44,14 +52,14 @@ const EmploymentExperience: React.FC<PropType> = (props) => {
         </div>
         <div className="embla__viewport" ref={emblaRef}>
           <div className="embla__container">
-            {slides.map((slide) => (
+            {slides.map((slide, index) => (
               <div
                 className={`embla__slide ${isFlipped ? 'flipped' : ''}`}
-                key={Number(0)}
+                key={index}
               >
                 <div className="embla__slide__content">
                   <EmploymentCard
-                    index={Number(0)}
+                    index={index}
                     companyName={slide.companyName}
                     companyUrl={slide.companyUrl}
                     dateStarted={slide.dateStarted}
@@ -60,9 +68,6 @@ const EmploymentExperience: React.FC<PropType> = (props) => {
                     responsibilities={slide.responsibilities}
                     technologies={slide.technologies}
                   />
-                  {/* <button onClick={handleFlip} className="flip-button text-white">
-                  Flip
-                </button> */}
                 </div>
               </div>
             ))}
@@ -70,17 +75,7 @@ const EmploymentExperience: React.FC<PropType> = (props) => {
         </div>
 
         <div className="embla__controls">
-          <div className="embla__buttons">
-            <PrevButton
-              onClick={onPrevButtonClick}
-              disabled={prevBtnDisabled}
-            />
-            <NextButton
-              onClick={onNextButtonClick}
-              disabled={nextBtnDisabled}
-            />
-          </div>
-
+          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
           <div className="embla__dots">
             {scrollSnaps.map((_, index) => (
               <DotButton
@@ -92,6 +87,7 @@ const EmploymentExperience: React.FC<PropType> = (props) => {
               />
             ))}
           </div>
+          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
         </div>
       </div>
     </section>
