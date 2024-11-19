@@ -10,14 +10,24 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/apps/portfolio"
+        "outputPath": "dist/apps/portfolio",
+        "postcssConfig": "apps/portfolio/postcss.config.js",
+        "generatePackageJson": true
       },
       "configurations": {
         "development": {
           "outputPath": "apps/portfolio/.next"
         },
         "production": {
-          "outputPath": "dist/apps/portfolio"
+          "outputPath": "dist/apps/portfolio",
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "extractCss": true,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false,
+          "buildOptimizer": true
         }
       }
     },
