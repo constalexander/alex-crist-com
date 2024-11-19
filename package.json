@@ -4,9 +4,10 @@
   "license": "MIT",
   "scripts": {
     "dev": "npx nx dev portfolio",
-    "build": "npx nx build portfolio --skip-nx-cache",
+    "build": "npm run rmrf && npx nx build portfolio --skip-nx-cache",
     "start": "npx nx start portfolio",
-    "oh": "bash .oh/oh.sh"
+    "oh": "bash .oh/oh.sh",
+    "rmrf":"rm -rf dist && rm -rf apps/portfolio/.next"
   },
   "private": true,
   "dependencies": {
