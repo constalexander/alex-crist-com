@@ -12,6 +12,11 @@ const nextConfig = {
     // See: https://github.com/gregberge/svgr
     svgr: false,
   },
+  output: 'standalone',
+  experimental: {
+    outputFileTracingRoot: require('path').join(__dirname, '../../'),
+  },
+  distDir: '../../dist/apps/portfolio/.next'
 };
 
 const plugins = [

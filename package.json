@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "npx nx dev portfolio",
-    "build": "npx nx build portfolio",
+    "build": "npx nx build portfolio --skip-nx-cache",
     "start": "npx nx start portfolio",
     "oh": "bash .oh/oh.sh"
   },

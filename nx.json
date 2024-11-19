@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "defaultBase": "master",
+  "defaultBase": "main",
   "namedInputs": {
     "default": ["{projectRoot}/**/*", "sharedGlobals"],
     "production": [
@@ -59,6 +59,20 @@
     },
     "@nx/react": {
       "library": {}
+    }
+  },
+  "affected": {
+    "defaultBase": "main"
+  },
+  "cli": {
+    "defaultCollection": "@nx/next"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "nx/tasks-runners/default",
+      "options": {
+        "cacheableOperations": ["build", "test", "lint"]
+      }
     }
   },
   "nxCloudAccessToken": "YjZjMWIxOGQtZTkwNC00YzJiLTgxOTQtYTZiYzk1Zjk5ZjkyfHJlYWQtd3JpdGU="
