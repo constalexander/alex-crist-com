@@ -16,7 +16,6 @@ const nextConfig = {
   experimental: {
     outputFileTracingRoot: require('path').join(__dirname, '../../'),
   },
-  distDir: '../../dist/apps/portfolio/.next'
 };
 
 const plugins = [
