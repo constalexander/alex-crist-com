@@ -55,7 +55,7 @@ export default function RootLayout({
           ` 
           grid 
           grid-cols-[1fr] 
-          grid-rows-[100px_1fr] 
+          grid-rows-[70px_1fr] 
           w-full h-full
           overflow-auto
           text-foreground font-sans antialiased  

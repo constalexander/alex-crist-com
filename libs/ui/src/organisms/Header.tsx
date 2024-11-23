@@ -24,32 +24,35 @@ export function Header(props: HeaderProps) {
       id="Header"
       className="w-full h-full z-40 bg-stone-950 border-b-2 border-stone-700 relative"
     >
-      <div className="section-content relative py-4 h-full flex items-center mx-auto sm:w-[600px]">
+      <div className="section-content relative h-full flex items-center mx-auto sm:w-[600px]">
         <div className="flex items-center flex-1">
           <img
             src="/img/profile/alex.png"
             alt="Alex Crist"
-            className={cn('rounded-full relative -top-[3px] left-[4px]', {
-              'w-0 h-0 opacity-0 mx-2 sm:mx-0': mainScrollValue < 250,
-              'w-[44px] h-[44px] opacity-100 mx-4 sm:ml-0 sm:mr-4':
-                mainScrollValue >= 250,
-            })}
+            className={cn(
+              'border-[2px] border-stone-400/80 shadow-lg rounded-full relative -top-[3px] left-[4px]',
+              {
+                'w-0 h-0 opacity-0 mx-2 sm:mx-0': mainScrollValue < 250,
+                'w-[44px] h-[44px] opacity-100 mx-4 sm:ml-0 sm:mr-4':
+                  mainScrollValue >= 250,
+              }
+            )}
             style={{
               transition:
                 'width .33s ease-in-out, height .33s ease-in-out, opacity .33s ease-in-out, margin .33s ease-in-out',
             }}
           />
 
-          <div>
+          <div className="h-[44px] flex flex-col justify-start align-start text-left">
             <Button
               variant="ghost"
-              className="text-[1.625rem] h-[28px] text-emerald-500 hover:text-emerald-600 tracking-normal font-serif font-bold py-0 pl-0 pr-8"
+              className="text-[1.25rem] h-[20px] text-emerald-500 hover:text-emerald-400 tracking-wide font-sans font-semibold p-0 pr-2 ml-0 justify-start w-fit relative -top-[1px]"
               onClick={() => nav('/')}
             >
               <span title="Alex Crist Home page">Alex Crist</span>
             </Button>
-            <div className="text-[1rem] text-stone-300 tracking-normal relative -top-[2px]">
-              Frontend Engineer
+            <div className="block h-[24px] text-[.85rem] font-normal text-stone-400 tracking-normal relative top-[1px]">
+              <span>Frontend Extraordinaire</span>
             </div>
           </div>
         </div>

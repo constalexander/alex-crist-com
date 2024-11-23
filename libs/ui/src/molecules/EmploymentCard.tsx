@@ -28,7 +28,7 @@ export function EmploymentCard({
     <div className="text-left text-stone-400 w-full h-full p-6 select-none flex flex-col justify-between">
       <div className="space-y-3">
         <div className="flex flex-col items-start justify-between">
-          <h3 className="text-xl sm:text-3xl font-bold tracking-tight text-stone-200">
+          <h3 className="text-xl font-bold tracking-tight text-stone-200">
             {position}
           </h3>
           <span className="text-base sm:text-lg text-emerald-400">

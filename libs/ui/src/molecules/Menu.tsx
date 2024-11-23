@@ -46,7 +46,7 @@ export function Menu() {
           <Button
             variant="ghost"
             size="icon"
-            className="text-2xl text-stone-300 relative right-3"
+            className="text-2xl text-stone-400 relative right-3"
           >
             <span className="sr-only">Open menu</span>
             <MenuIcon size={32} />
@@ -54,13 +54,27 @@ export function Menu() {
         </DropdownMenuTrigger>
 
         <DropdownMenuContent
-          className="fixed top-[-29px] left-[32px] right-[0px] w-[260px] h-[100vh] bg-stone-900 bg-opacity-70 backdrop-blur-sm border-emerald-950 transform -translate-x-full transition duration-300 ease-in-out shadow-2xl shadow-stone-400/40 z-50 flex flex-col"
-          sideOffset={-40}
+          className="fixed top-[-54px] left-[32px] right-[0px] bottom-[0px] w-[260px] h-[100vh] bg-stone-900 bg-opacity-70 backdrop-blur-sm border-emerald-950 transform -translate-x-full transition duration-300 ease-in-out shadow-2xl shadow-stone-400/40 z-50 flex flex-col"
+          sideOffset={0}
+          side="bottom"
           hideWhenDetached
           align="center"
         >
+          <div
+            className="pattern absolute inset-0 w-full h-full z-0"
+            aria-hidden="true"
+          >
+            <img
+              src="/img/patterns/vanishing-stripes.svg"
+              alt="pattern"
+              className="w-full h-full object-cover opacity-50"
+              style={{ filter: 'blur(4px)' }}
+            />
+
+            <div className="hidden absolute inset-0 bg-stone-800/80 mix-blend-screen" />
+          </div>
           <DropdownMenuItem
-            className="flex w-full justify-end h-[94px] rounded-none border-b-2 border-emerald-800 p-0 m-0 focus:bg-transparent"
+            className="flex w-full justify-end h-[64px] rounded-none border-b-2 border-emerald-800 p-0 m-0 focus:bg-transparent"
             onSelect={(e) => {
               e.preventDefault();
             }}
