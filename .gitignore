@@ -45,3 +45,6 @@ Thumbs.db
 out
 
 apps/portfolio/.env.local
+
+# PNPM specific
+.pnpm-store/

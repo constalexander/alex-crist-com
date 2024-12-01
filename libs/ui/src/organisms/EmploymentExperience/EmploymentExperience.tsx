@@ -16,7 +16,8 @@ const EmploymentExperience: React.FC<PropType> = (props) => {
   const { slides, options } = props;
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
 
-  const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(emblaApi);
+  const { selectedIndex, scrollSnaps, onDotButtonClick } =
+    useDotButton(emblaApi);
   const {
     prevBtnDisabled,
     nextBtnDisabled,
@@ -25,12 +26,15 @@ const EmploymentExperience: React.FC<PropType> = (props) => {
   } = usePrevNextButtons(emblaApi);
 
   return (
-    <section id="EmploymentExperience" className="embla relative min-h-[450px]">
+    <section
+      id="EmploymentExperience"
+      className="embla relative min-h-[450px] bg-stone-750 m-0 pt-[100px]"
+    >
       <div
-        className="pattern hidden absolute inset-0 w-full h-full z-0"
+        className="pattern absolute inset-0 w-full h-full z-[-1]"
         aria-hidden="true"
       >
-        <img
+        {/* <img
           src="/img/patterns/grey_wash_wall.webp"
           alt="pattern"
           className="w-full h-full object-fill opacity-full"
@@ -38,11 +42,18 @@ const EmploymentExperience: React.FC<PropType> = (props) => {
             filter:
               'grayscale(100%) sepia(100%) hue-rotate(-15deg) saturate(70%) brightness(67%)',
           }}
+        /> */}
+
+        <img
+          src="/img/patterns/sun-tornado1.svg"
+          alt="pattern"
+          className="w-full h-full object-fill opacity-70"
         />
+        <div className="hidden absolute inset-0 bg-stone-800/80 mix-blend-multiply" />
       </div>
 
-      <div className="section-content bg-stone-750 mx-auto py-8 w-full px-4 sm:px-0 sm:w-[600px]">
-        <div className="text-2xl text-center text-stone-400 text-end pe-6">
+      <div className="section-content mx-auto w-full py-8 px-0 sm:w-[600px]">
+        <div className="text-2xl text-stone-400 text-end pe-6">
           Employment experience
         </div>
         <div className="text-sm text-end text-stone-400 italic relative -left-[28px] top-[2px]">

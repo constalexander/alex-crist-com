@@ -16,8 +16,19 @@ export function Footer(props: FooterProps) {
   return (
     <div
       id="Footer"
-      className="flex justify-center items-end w-full h-[40px] bg-zinc-900 text-stone-300 text-center text-sm"
+      className="flex justify-center items-end w-full h-[40px] text-stone-300 text-center text-sm"
     >
+           <div
+        className="pattern absolute inset-0 w-full h-fit bg-stone-700 z-[-1] mb-0 mt-auto"
+        aria-hidden="true"
+      >
+        <img
+          src="/img/patterns/flat-mountains2.svg"
+          alt="pattern"
+          className="w-full h-full object-contain opacity-70"
+        />
+        <div className="hidden absolute inset-0 bg-stone-800/80 mix-blend-multiply" />
+      </div>
       <div className="block text-stone-400">
         &copy; 2024 &nbsp;
         <a href="mailto://alex@alex-crist.com">
