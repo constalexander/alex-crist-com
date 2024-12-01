@@ -6,9 +6,9 @@ export default defineConfig({
   e2e: {
     ...nxE2EPreset(__filename, {
       cypressDir: 'src',
-      webServerCommands: { default: 'nx run portfolio:start' },
-      ciWebServerCommand: 'nx run portfolio:serve-static',
+      webServerCommands: { default: 'npm run dev' },
+      ciWebServerCommand: 'npm run start',
     }),
-    baseUrl: 'http://localhost:3000',
+    baseUrl: 'http://localhost:4200',
   },
 });

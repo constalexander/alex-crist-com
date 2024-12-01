@@ -21,7 +21,8 @@ const CoolFacts: React.FC<PropType> = (props) => {
   const { slides, options } = props;
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
 
-  const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(emblaApi);
+  const { selectedIndex, scrollSnaps, onDotButtonClick } =
+    useDotButton(emblaApi);
   const {
     prevBtnDisabled,
     nextBtnDisabled,
@@ -31,8 +32,19 @@ const CoolFacts: React.FC<PropType> = (props) => {
 
   return (
     <section id="CoolFacts" className="embla min-h-[350px]">
-      <div className="section-content bg-stone-700 mx-auto py-8 sm:w-[600px]">
-        <div className="text-2xl text-start text-stone-400 ps-6">
+      <div
+        className="hidden pattern absolute inset-0 w-full h-fit bg-stone-700 z-[-1] mb-0 mt-auto"
+        aria-hidden="true"
+      >
+        <img
+          src="/img/patterns/flat-mountains2.svg"
+          alt="pattern"
+          className="w-full h-full object-contain opacity-70"
+        />
+        <div className="hidden absolute inset-0 bg-stone-800/80 mix-blend-multiply" />
+      </div>
+      <div className="section-content mx-auto py-8 sm:w-[600px]">
+        <div className="text-2xl text-start text-stone-400 ps-6 ">
           Get to know me
         </div>
         {slides.length === 0 ? (

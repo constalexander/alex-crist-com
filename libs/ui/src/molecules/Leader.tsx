@@ -13,10 +13,10 @@ export function Leader() {
   return (
     <section
       id="Leader"
-      className="min-h-[calc(100vh-100px)] sm:min-h-fit bg-stone-800 relative"
+      className="relative min-h-[calc(100vh-100px)] sm:min-h-fit bg-emerald-800 m-0 pb-20"
     >
       <div
-        className="pattern absolute inset-0 w-full h-full z-0"
+        className="pattern absolute inset-0 w-full sm:w-[600px] h-full z-0 mx-auto"
         aria-hidden="true"
       >
         <img
