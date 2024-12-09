@@ -18,7 +18,7 @@ export function Footer(props: FooterProps) {
       id="Footer"
       className="flex justify-center items-end w-full h-[40px] text-stone-300 text-center text-sm"
     >
-           <div
+      <div
         className="pattern absolute inset-0 w-full h-fit bg-stone-700 z-[-1] mb-0 mt-auto"
         aria-hidden="true"
       >

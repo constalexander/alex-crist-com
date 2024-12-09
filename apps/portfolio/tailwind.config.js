@@ -57,6 +57,7 @@ module.exports = {
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'fill-progress': 'fill-progress 0.4s ease-out forwards',
       },
       backgroundImage: {
         'gradlin-1': 'var(--gradlin-1)',
@@ -113,6 +114,15 @@ module.exports = {
           from: { height: 'var(--radix-accordion-content-height)' },
           to: { height: '0' },
         },
+        'fill-progress': {
+          from: { width: '0%' },
+          to: { width: '100%' },
+        },
+      },
+      boxShadow: {
+        'stone-light': '0 0 16px 4px rgba(168,162,158,0.5)',
+        'emerald-sm': '0 0 8px 2px rgba(52,211,153,0.5)',
+        'emerald-lg': '0 0 16px 4px rgba(52,211,153,0.5)',
       },
     },
   },

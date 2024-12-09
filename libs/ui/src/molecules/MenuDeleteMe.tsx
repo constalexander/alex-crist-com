@@ -46,7 +46,7 @@ export function Menu() {
           <Button
             variant="ghost"
             size="icon"
-            className="text-2xl text-stone-400 relative right-3"
+            className="text-2xl text-stone-400 relative"
           >
             <span className="sr-only">Open menu</span>
             <MenuIcon size={32} />
@@ -54,7 +54,7 @@ export function Menu() {
         </DropdownMenuTrigger>
 
         <DropdownMenuContent
-          className="fixed top-[-54px] left-[32px] right-[0px] bottom-[0px] w-[260px] h-[100vh] bg-stone-900 bg-opacity-70 backdrop-blur-sm border-emerald-950 transform -translate-x-full transition duration-300 ease-in-out shadow-2xl shadow-stone-400/40 z-50 flex flex-col"
+          className="fixed top-[-54px] left-[11vw] right-[0px] bottom-[0px] w-[260px] h-[100vh] bg-stone-900 bg-opacity-70 backdrop-blur-sm border-emerald-950 transform -translate-x-full transition duration-300 ease-in-out shadow-2xl shadow-stone-400/40 z-50 flex flex-col"
           sideOffset={0}
           side="bottom"
           hideWhenDetached
@@ -82,7 +82,7 @@ export function Menu() {
             <Button
               variant="ghost"
               size="icon"
-              className="inline-block w-8 h-8 text-stone-300 m-[12px]"
+              className="inline-block w-8 h-8 text-stone-300 m-3 mr-6"
               onClick={() => setIsMenuOpen(false)}
             >
               <span className="sr-only">Close menu</span>
@@ -119,6 +119,18 @@ export function Menu() {
                 label="Get to Know Me"
                 onClick={() => scrollToSection('cool-facts')}
               />
+            </DropdownMenuItem>
+
+            <DropdownMenuItem
+              className={
+                isMenuItemActive ? 'bg-emerald-800' : 'focus:bg-transparent'
+              }
+              onSelect={(e) => {
+                e.preventDefault();
+                window.open('/docs/resume.docx', '_blank');
+              }}
+            >
+              <MenuItem label="My Resume" />
             </DropdownMenuItem>
 
             <DropdownMenuItem

@@ -61,7 +61,7 @@ export const PrevButton: React.FC<PropType> = (props) => {
       type="button"
       {...restProps}
     >
-      <CircleArrowLeft className="h-7 w-7" />
+      <CircleArrowLeft className="h-10 w-10" />
       <span className="sr-only">Previous slide</span>
     </button>
   );
@@ -76,7 +76,7 @@ export const NextButton: React.FC<PropType> = (props) => {
       type="button"
       {...restProps}
     >
-      <CircleArrowRight className="h-7 w-7" />
+      <CircleArrowRight className="h-10 w-10" />
       <span className="sr-only">Next slide</span>
     </button>
   );
