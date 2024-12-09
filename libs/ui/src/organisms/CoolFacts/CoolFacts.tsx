@@ -44,9 +44,39 @@ const CoolFacts: React.FC<PropType> = (props) => {
         <div className="hidden absolute inset-0 bg-stone-800/80 mix-blend-multiply" />
       </div>
       <div className="section-content mx-auto py-8 sm:w-[600px]">
-        <div className="text-2xl text-start text-stone-400 ps-6 ">
+        <div className="text-2xl text-start text-stone-400 ps-6 mb-8">
           Get to know me
         </div>
+
+        <div className="px-6 mb-12 space-y-6 text-stone-300 prose prose-invert prose-elegant max-w-none">
+          <p className="first-letter:text-[3.3rem] first-letter:font-serif first-letter:mr-[.45rem] first-letter:leading-none first-letter:float-left first-letter:text-stone-400">
+            Ever curious and always learning, my journey into software started
+            at an early age. In middle school, I discovered that scientific
+            calculators were programmable and my new hobby began.
+          </p>
+
+          <p className="font-light leading-relaxed">
+            Still as a kid, I began learning Dreamweaver, Flash, Geocities, and
+            even Visual Basic. Eventually I even received a book on C++. Later
+            in life, I began to teach myself PHP and MySQL using frameworks like
+            CodeIgniter and Laravel.
+          </p>
+
+          <p className="font-light leading-relaxed">
+            Beyond the world of code, I am an ardent advocate for knowledge
+            sharing and community building. I believe that the best solutions
+            emerge from collaborative environments where ideas flow freely and
+            innovation is encouraged.
+          </p>
+
+          <p className="italic text-stone-400 border-l-4 border-stone-600 pl-4">
+            When not immersed in development, you might find me exploring new
+            technologies, contributing to open-source projects, or mentoring
+            aspiring developers who share my passion for this ever-evolving
+            craft.
+          </p>
+        </div>
+
         {slides.length === 0 ? (
           <div className="flex items-center justify-center h-[250px]">
             <div className="w-full max-w-[340px] h-full bg-stone-600/50 animate-pulse rounded-lg" />

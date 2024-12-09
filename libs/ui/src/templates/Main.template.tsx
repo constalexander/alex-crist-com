@@ -34,12 +34,7 @@ export default function MainTemplate({
   return (
     <MainScrollProvider value={scrollValue}>
       <Header />
-      <main
-        className={`
-    overflow-x-hidden overflow-y-auto
-    w-full min-h-full 
-    p-0 m-0`}
-      >
+      <main className="overflow-x-hidden overflow-y-auto w-full min-h-full p-0 m-0">
         {children}
         <Footer />
       </main>

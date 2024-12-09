@@ -28,22 +28,12 @@ const EmploymentExperience: React.FC<PropType> = (props) => {
   return (
     <section
       id="EmploymentExperience"
-      className="embla relative min-h-[450px] bg-stone-750 m-0 pt-[100px]"
+      className="embla relative min-h-[450px] bg-stone-750 m-0 pt-[110px]"
     >
       <div
         className="pattern absolute inset-0 w-full h-full z-[-1]"
         aria-hidden="true"
       >
-        {/* <img
-          src="/img/patterns/grey_wash_wall.webp"
-          alt="pattern"
-          className="w-full h-full object-fill opacity-full"
-          style={{
-            filter:
-              'grayscale(100%) sepia(100%) hue-rotate(-15deg) saturate(70%) brightness(67%)',
-          }}
-        /> */}
-
         <img
           src="/img/patterns/sun-tornado1.svg"
           alt="pattern"

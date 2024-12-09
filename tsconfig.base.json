@@ -15,11 +15,11 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@alex/effects": ["libs/effects/src/index.ts"],
-      "@alex/effects/*": ["libs/effects/src/*"],
       "@alex/analytics": ["libs/analytics/src/index.ts"],
       "@alex/contexts": ["libs/contexts/src/index.ts"],
       "@alex/contexts/*": ["libs/contexts/src/*"],
+      "@alex/effects": ["libs/effects/src/index.ts"],
+      "@alex/effects/*": ["libs/effects/src/*"],
       "@alex/guards": ["libs/guards/src/index.ts"],
       "@alex/guards/*": ["libs/guards/src/*"],
       "@alex/hooks": ["libs/hooks/src/index.ts"],
@@ -31,7 +31,10 @@
       "@alex/stores": ["libs/stores/src/index.ts"],
       "@alex/stores/*": ["libs/stores/src/*"],
       "@alex/ui": ["libs/ui/src/index.ts"],
-      "@alex/ui/*": ["libs/ui/src/*"]
+      "@alex/ui/*": ["libs/ui/src/*"],
+      "@alex/utils": ["libs/utils/src/index.ts"],
+      "@alex/utils/*": ["libs/utils/src/*"],
+      "@alex/utils/server": ["libs/utils/src/server.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
