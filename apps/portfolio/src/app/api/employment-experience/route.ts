@@ -8,9 +8,9 @@ export async function GET() {
       companyUrl: 'https://www.lpl.com',
       position: 'Sr. Software Engineer',
       dateStarted: '2021',
-      dateEnded: 'Present',
+      dateEnded: '2024',
       responsibilities: [
-        "Built frontend components and led other UI developers in the creation of new features for the company's core trading platform.",
+        'Lead Angular developer for Model Hub app. Built core features, did advanced refactoring, and onboarded new developers.',
       ],
       technologies: [
         'Angular',
@@ -35,7 +35,7 @@ export async function GET() {
       dateStarted: '2020',
       dateEnded: '2021',
       responsibilities: [
-        'Built two high-traffic websites in Banno CMS, and built a new auto loan application app that pre-filled data from TransUnion.',
+        'Built two high-traffic websites in Banno CMS, and built a new auto loan app that pre-filled data from TransUnion.',
       ],
       technologies: [
         'Node',

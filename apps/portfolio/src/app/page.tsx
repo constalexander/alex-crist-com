@@ -2,12 +2,18 @@
 
 import { useEffect, useState } from 'react';
 import { EmblaOptionsType } from 'embla-carousel';
-import { Leader } from '@alex/ui/molecules/Leader';
+import { Header } from '@alex/ui/organisms/Header';
+import { Leader, LeaderContent } from '@alex/ui/molecules/Leader';
 import { TechStack } from '@alex/ui/molecules/TechStack';
 import EmploymentExperience from '@alex/ui/organisms/EmploymentExperience/EmploymentExperience';
 import { EmploymentExperienceDTO } from '@alex/models/dto/employment-experience.dto';
-import CoolFacts from '@alex/ui/organisms/CoolFacts/CoolFacts';
-import { CoolFactsDTO } from '@alex/models/dto/cool-facts.dto';
+import { GetToKnowMeDTO } from '@alex/models/dto/get-to-know-me.dto';
+import {
+  GetToKnowMe,
+  GetToKnowMeContent,
+} from '@alex/ui/organisms/GetToKnowMe';
+import { Footer } from '@alex/ui/organisms/Footer';
+import { ProfilePhoto } from '@alex/ui/atoms/ProfilePhoto';
 
 export default function Page() {
   const [loop, setLoop] = useState(true);
@@ -17,7 +23,7 @@ export default function Page() {
     EmploymentExperienceDTO[]
   >([]);
 
-  const [coolFactsData, setCoolFactsData] = useState<CoolFactsDTO[]>([]);
+  const [getToKnowMeData, setGetToKnowMeData] = useState<GetToKnowMeDTO[]>([]);
 
   useEffect(() => {
     async function getEmploymentData() {
@@ -28,13 +34,13 @@ export default function Page() {
     }
     getEmploymentData();
 
-    async function getCoolFactsData() {
-      const url = '/api/cool-facts';
+    async function getGetToKnowMeData() {
+      const url = '/api/get-to-know-me';
       const response = await fetch(url, { method: 'GET', cache: 'no-store' });
       const res = await response.json();
-      setCoolFactsData(res);
+      setGetToKnowMeData(res);
     }
-    getCoolFactsData();
+    getGetToKnowMeData();
 
     handleResize();
     window.addEventListener('resize', handleResize);
@@ -53,10 +59,24 @@ export default function Page() {
 
   return (
     <>
-      <Leader />
-      <TechStack />
-      <EmploymentExperience slides={employmentData} options={carouselOptions} />
-      <CoolFacts slides={coolFactsData} options={carouselOptions} />
+      <Header />
+      <main className="overflow-x-hidden overflow-y-auto w-full min-h-full p-0 m-0">
+        <Leader>
+          <LeaderContent photo={<ProfilePhoto />} />
+        </Leader>
+        <TechStack />
+        <EmploymentExperience
+          slides={employmentData}
+          options={carouselOptions}
+        />
+        <GetToKnowMe>
+          <GetToKnowMeContent
+            slides={getToKnowMeData}
+            options={carouselOptions}
+          />
+        </GetToKnowMe>
+        <Footer />
+      </main>
     </>
   );
 }

@@ -3,7 +3,7 @@
 import React from 'react';
 import { useRouter } from 'next/navigation';
 import { useMainScrollValue } from '@alex/contexts/MainScrollContext';
-import Menu2 from '../molecules/Menu2';
+import Menu from '../molecules/Menu';
 import { cn } from '../utils';
 import { Button } from '../atoms/Button';
 
@@ -22,7 +22,7 @@ export function Header(props: HeaderProps) {
   return (
     <section
       id="Header"
-      className="w-full h-full z-40 bg-stone-950 border-stone-600 border-b-2 relative"
+      className="w-full h-full z-40 bg-stone-950 border-stone-700 border-b-2 relative"
     >
       <div className="section-content relative h-full flex items-center mx-auto sm:w-[600px] px-[5.5%] sm:px-0">
         <div className="flex items-center flex-1">
@@ -55,7 +55,7 @@ export function Header(props: HeaderProps) {
             </div>
           </div>
         </div>
-        <Menu2 />
+        <Menu />
       </div>
     </section>
   );

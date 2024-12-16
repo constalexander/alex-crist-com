@@ -10,12 +10,7 @@ export interface MenuItemProps extends React.HTMLAttributes<HTMLDivElement> {
   isActive?: boolean;
 }
 
-export function MenuItem({
-  label,
-  onClick,
-  isActive,
-  className,
-}: MenuItemProps) {
+export function MenuItem({ label, onClick, className }: MenuItemProps) {
   return (
     <Button
       variant="ghost"

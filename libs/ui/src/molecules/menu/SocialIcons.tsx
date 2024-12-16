@@ -39,12 +39,12 @@ export function SocialIcons() {
           className="scale-75 text-stone-300"
           onClick={() =>
             window.open(
-              'Alex Crist - Frontend Engineer resume web.docx',
+              'Alex Crist - Frontend Engineer 2412.14 web.docx',
               '_blank'
             )
           }
         >
-          <span title="Resume">
+          <span title="Resumé">
             <FileText />
           </span>
         </Button>

@@ -33,8 +33,7 @@
       "@alex/ui": ["libs/ui/src/index.ts"],
       "@alex/ui/*": ["libs/ui/src/*"],
       "@alex/utils": ["libs/utils/src/index.ts"],
-      "@alex/utils/*": ["libs/utils/src/*"],
-      "@alex/utils/server": ["libs/utils/src/server.ts"]
+      "@alex/utils/*": ["libs/utils/src/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]
