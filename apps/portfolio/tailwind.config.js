@@ -120,9 +120,10 @@ module.exports = {
         },
       },
       boxShadow: {
-        'stone-light': '0 0 16px 4px rgba(168,162,158,0.5)',
-        'emerald-sm': '0 0 8px 2px rgba(52,211,153,0.5)',
-        'emerald-lg': '0 0 16px 4px rgba(52,211,153,0.5)',
+        'stone-sm': '0 0 8px 2px rgba(168,162,158,0.33)',
+        'stone-lg': '0 0 16px 4px rgba(168,162,158,0.33)',
+        'emerald-sm': '0 0 8px 2px rgba(52,211,153,0.33)',
+        'emerald-lg': '0 0 16px 4px rgba(52,211,153,0.33)',
       },
     },
   },

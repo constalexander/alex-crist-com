@@ -50,10 +50,4 @@
     @apply border-border;
     box-sizing: border-box;
   }
-
-  // Radix UI Popover Override
-  [data-radix-popper-content-wrapper] {
-    // transform: none !important;
-    // transform: translate(80vw, 0) !important;
-  }
 }

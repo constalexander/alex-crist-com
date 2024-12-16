@@ -53,12 +53,12 @@ export function EmploymentCard({
 
       <div className="mt-auto pt-4">
         <a
-          href="/Alex Crist - Frontend Engineer resume web.docx"
+          href="/Alex Crist - Frontend Engineer 2412.14 web.docx"
           target="_blank"
           rel="noopener noreferrer"
           className="text-xs text-emerald-400 hover:text-emerald-300 transition-colors"
         >
-          Read More
+          Download full resumé
         </a>
       </div>
     </div>

@@ -4,6 +4,7 @@ import useEmblaCarousel from 'embla-carousel-react';
 import { EmploymentExperienceDTO } from '@alex/models/dto/employment-experience.dto';
 import { DotButton, useDotButton } from './DotButton';
 import { PrevButton, NextButton, usePrevNextButtons } from './ArrowButtons';
+import { EmploymentExperiencePattern } from '../../atoms/patterns/EmploymentExperiencePattern';
 import EmploymentCard from '../../molecules/EmploymentCard';
 import '../shared/embla.scss';
 
@@ -28,26 +29,12 @@ const EmploymentExperience: React.FC<PropType> = (props) => {
   return (
     <section
       id="EmploymentExperience"
-      className="embla relative min-h-[450px] bg-stone-750 m-0 pt-[110px]"
+      className="embla relative min-h-[450px] bg-stone-750 m-0 pt-0"
     >
-      <div
-        className="pattern absolute inset-0 w-full h-full z-[-1]"
-        aria-hidden="true"
-      >
-        <img
-          src="/img/patterns/sun-tornado1.svg"
-          alt="pattern"
-          className="w-full h-full object-fill opacity-70"
-        />
-        <div className="hidden absolute inset-0 bg-stone-800/80 mix-blend-multiply" />
-      </div>
-
-      <div className="section-content mx-auto w-full py-8 px-0 sm:w-[600px]">
-        <div className="text-2xl text-stone-400 text-end pe-6">
+      <EmploymentExperiencePattern />
+      <div className="section-content mx-auto w-full py-12 px-0 pt-52 sm:w-[600px]">
+        <div className="text-3xl text-stone-400 font-semibold italic text-start [text-shadow:4px_4px_2px_rgba(21,19,17,.5)] ps-6 ">
           Employment experience
-        </div>
-        <div className="text-sm text-end text-stone-400 italic relative -left-[28px] top-[2px]">
-          (so far)
         </div>
         {slides.length === 0 ? (
           <div className="flex items-center justify-center h-[350px]">
@@ -57,7 +44,12 @@ const EmploymentExperience: React.FC<PropType> = (props) => {
           <div className="embla__viewport" ref={emblaRef}>
             <div className="embla__container">
               {slides.map((slide, index) => (
-                <div className="embla__slide" key={index}>
+                <div
+                  className={`embla__slide${
+                    index === selectedIndex ? ' is-selected' : ''
+                  }`}
+                  key={index}
+                >
                   <div className="embla__slide__content">
                     <EmploymentCard
                       index={index}

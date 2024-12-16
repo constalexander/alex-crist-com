@@ -2,8 +2,6 @@
 
 import { useEffect, useState } from 'react';
 import { MainScrollProvider } from '@alex/contexts/MainScrollContext';
-import { Header } from '../organisms/Header';
-import { Footer } from '../organisms/Footer';
 
 export default function MainTemplate({
   children,
@@ -32,12 +30,6 @@ export default function MainTemplate({
   }, []);
 
   return (
-    <MainScrollProvider value={scrollValue}>
-      <Header />
-      <main className="overflow-x-hidden overflow-y-auto w-full min-h-full p-0 m-0">
-        {children}
-        <Footer />
-      </main>
-    </MainScrollProvider>
+    <MainScrollProvider value={scrollValue}>{children}</MainScrollProvider>
   );
 }
