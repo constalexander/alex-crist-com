@@ -54,7 +54,7 @@ export function GetToKnowMeContent({
 
   return (
     <>
-      <div className="text-3xl text-start font-semibold italic text-stone-400 [text-shadow:4px_4px_2px_rgba(21,19,17,.5)] ps-6 mb-8">
+      <div className="text-3xl text-center font-serif font-semibold italic text-stone-400 [text-shadow:4px_4px_2px_rgba(21,19,17,.5)] mb-8">
         Get to know me
       </div>
 
@@ -88,46 +88,46 @@ export function GetToKnowMeContent({
           <div className="embla__container">
             {slides.map((slide, index) => (
               <div
-                className={`embla__slide${
+                className={`embla__slide ${
                   index === selectedIndex ? ' is-selected' : ''
                 }`}
                 key={index}
               >
                 <div className="embla__slide__content relative">
                   <div
-                    className="absolute inset-0 bg-cover bg-center z-0 opacity-75"
+                    className="absolute inset-0 bg-cover bg-center z-0 opacity-80"
                     style={{ backgroundImage: `url(${slide.photo})` }}
                   />
                   <div className="absolute inset-0 bg-black/50 z-10" />
-                  <div className="text-left text-stone-400 w-full h-full p-6 select-none flex flex-col justify-between relative z-20">
+                  <div className="relative flex flex-col justify-between w-full h-full text-left text-stone-400 px-3 py-6 select-none z-20">
                     <div className="space-y-3">
                       <div className="flex flex-col items-start justify-between">
-                        <h3 className="text-xl font-bold tracking-tight text-emerald-200">
-                          <span className="bg-emerald-950/50 px-1 py-1 box-decoration-clone">
+                        <h3 className="text-xl font-bold tracking-tight text-emerald-400 h-8">
+                          <div className="inline-block font-serif bg-emerald-950/80 h-8 box-decoration-clone px-2 pt-[2px]">
                             {slide.title}
-                          </span>
+                          </div>
                           {slide.linkout && (
                             <a
                               href={slide.linkout}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="absolute bg-emerald-950/50 box-decoration-clone h-8 w-6 text-center translate-y-[-1px]"
+                              className="absolute text-center bg-emerald-950/80 box-decoration-clone h-8 w-6"
                             >
                               <Button
                                 variant="ghost"
-                                className="inline-block text-emerald-200 p-0 pr-2"
+                                className="inline-block text-emerald-300 h-8 p-0"
                               >
                                 <span className="sr-only">
                                   {slide.title} external link
                                 </span>
-                                <ExternalLink className="inline w-[16px] relative top-[-3px] left-[3px]" />
+                                <ExternalLink className="inline w-[14px] h-[14px] translate-x-[-6px] translate-y-[-2px]" />
                               </Button>
                             </a>
                           )}
                         </h3>
                       </div>
                       <div className="whitespace-pre-line">
-                        <span className="text-sm text-stone-300 leading-7 bg-stone-750/50 pb-1 px-1 box-decoration-clone">
+                        <span className="text-sm text-stone-200 font-normal leading-7 bg-stone-750/80 pt-[2px] pb-[5px] px-2 box-decoration-clone">
                           {slide.description}
                         </span>
                       </div>

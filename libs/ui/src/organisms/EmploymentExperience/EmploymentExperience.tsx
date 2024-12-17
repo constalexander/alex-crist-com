@@ -33,7 +33,7 @@ const EmploymentExperience: React.FC<PropType> = (props) => {
     >
       <EmploymentExperiencePattern />
       <div className="section-content mx-auto w-full py-12 px-0 pt-52 sm:w-[600px]">
-        <div className="text-3xl text-stone-400 font-semibold italic text-start [text-shadow:4px_4px_2px_rgba(21,19,17,.5)] ps-6 ">
+        <div className="text-3xl text-stone-400 font-serif font-semibold italic text-center [text-shadow:4px_4px_2px_rgba(21,19,17,.5)]">
           Employment experience
         </div>
         {slides.length === 0 ? (

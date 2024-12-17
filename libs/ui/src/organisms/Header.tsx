@@ -45,12 +45,17 @@ export function Header(props: HeaderProps) {
           <div className="h-[44px] flex flex-col justify-start align-start text-left">
             <Button
               variant="ghost"
-              className="text-[1.3rem] h-[20px] text-emerald-500 hover:text-emerald-400 tracking-wide font-sans font-semibold p-0 pr-2 ml-0 justify-start w-fit relative top-[2px]"
+              className="text-[1.5rem] h-[20px] text-emerald-500 hover:text-emerald-400 tracking-wide font-serif font-semibold p-0 pr-2 ml-0 justify-start w-fit relative top-[2px]"
               onClick={() => nav('/')}
             >
-              <span title="Alex Crist Home page">Alex Crist</span>
+              <span
+                title="Alex Crist Home page"
+                className="bg-gradient-to-r from-emerald-400 from-10% via-emerald-400 via-40% to-emerald-500 to-90% bg-clip-text text-stone-500/0"
+              >
+                Alex Crist
+              </span>
             </Button>
-            <div className="block h-[24px] text-[.85rem] font-normal text-stone-400 tracking-normal relative top-[2px]">
+            <div className="block h-[24px] text-[.85rem] font-semibold text-stone-400 tracking-normal relative top-[2px]">
               <span>Frontend Extraordinaire</span>
             </div>
           </div>

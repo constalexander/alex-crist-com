@@ -15,7 +15,7 @@ export function MenuItem({ label, onClick, className }: MenuItemProps) {
     <Button
       variant="ghost"
       className={cn(
-        'w-full h-12 text-lg text-left inline-block text-stone-300',
+        'w-full h-12 text-lg text-left inline-block text-stone-400',
         className
       )}
       onClick={onClick}

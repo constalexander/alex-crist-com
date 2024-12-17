@@ -28,8 +28,8 @@ export function TechStack() {
       transition={{ duration: 0.75 }}
       className="h-0 w-full relative -top-[180px] sm:-top-[30px] z-50 p-0 m-0"
     >
-      <div className="h-fit w-[90%] bg-stone-950 rounded-xl shadow-stone-lg border-2 border-stone-800 py-2 mx-auto">
-        <div className="text-2xl text-stone-400 text-center mt-2 italic">
+      <div className="h-fit w-[90%] max-w-[700px] bg-stone-950 rounded-xl shadow-stone-lg border-2 border-stone-800 py-2 mx-auto">
+        <div className="text-3xl  font-serif font-semibold italic text-stone-400 [text-shadow:4px_4px_2px_rgba(21,19,17,.5)] text-center mt-2">
           Tech stack
         </div>
         <div className="w-[70%] max-w-[300px] grid grid-cols-5 sm:grid-cols-10 gap-x-4 gap-y-6 mx-auto my-6">

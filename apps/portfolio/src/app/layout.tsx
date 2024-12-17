@@ -3,6 +3,10 @@ import Script from 'next/script';
 import {
   Sarabun as FontSans,
   Hahmlet as FontSerif,
+  Teko as FontSerif2,
+  Syncopate as FontSerif3,
+  Amarante as FontSerif4,
+  Eagle_Lake as FontSerif5,
   Farsan as FontHandwritten,
 } from 'next/font/google';
 import { cn } from '@alex/ui/utils';
@@ -11,7 +15,7 @@ import './global.scss';
 import Head from 'next/head';
 
 export const metadata: Metadata = {
-  title: 'Alex Crist | Frontend Engineer',
+  title: 'Alex Crist | Frontend Extraordinaire',
   description: 'Frontend engineer in North Texas',
 };
 
@@ -26,7 +30,7 @@ const fontSans = FontSans({
   variable: '--font-sans',
 });
 
-const fontSerif = FontSerif({
+const fontSerif = FontSerif4({
   weight: '400',
   subsets: ['latin'],
   variable: '--font-serif',

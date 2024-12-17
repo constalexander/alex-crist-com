@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 export function ProfilePhoto() {
   return (
-    <div className="my-8">
+    <div>
       <img
         src="/img/profile/alex.png"
         alt="Alex Crist"
