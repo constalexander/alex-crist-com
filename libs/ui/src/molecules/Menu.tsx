@@ -48,34 +48,37 @@ export function Menu() {
           translate-y-[12px] 
           bg-stone-750 border-2 border-stone-950
           flex flex-col 
-          p-0 m-0 z-50"
+          px-4 py-0 m-0 z-50"
           align="center"
         >
           <div className="flex-1 overflow-y-auto my-3">
             <MenuItem
-              label="Employment"
+              label="◆&nbsp;&nbsp;Employment"
               onClick={() => handleScroll('EmploymentExperience', -40)}
             />
             <MenuItem
-              label="Get to Know Me"
+              label="◆&nbsp;&nbsp;Get to Know Me"
               onClick={() => handleScroll('GetToKnowMe', -10)}
             />
             <MenuItem
-              label="My Resume"
+              label="◆&nbsp;&nbsp;My Resume"
               onClick={() => window.open('/docs/resume.docx', '_blank')}
             />
-            <MenuItem label="Projects" />
+            <MenuItem
+              label="◇&nbsp;&nbsp;Projects"
+              className="cursor-default !text-stone-400"
+            />
             <ul>
-              <li className="pl-1">
+              <li className="pl-6">
                 <MenuItem
-                  label="&diams;&nbsp;&nbsp;Boodi.ai"
+                  label="⬥&nbsp;&nbsp;Boodi.ai"
                   onClick={() => window.open('https://boodi.ai', '_blank')}
                   className="text-md"
                 />
               </li>
-              <li className="pl-1">
+              <li className="pl-6">
                 <MenuItem
-                  label="&diams;&nbsp;&nbsp;Growing Zone Finder"
+                  label="⬥&nbsp;&nbsp;Growing Zone Finder"
                   onClick={() =>
                     window.open('https://https://growzone.surge.sh/', '_blank')
                   }

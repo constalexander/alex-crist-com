@@ -4,15 +4,22 @@ import { GetToKnowMeDTO } from '@alex/models/dto/get-to-know-me.dto';
 export async function GET() {
   const data: GetToKnowMeDTO[] = [
     {
-      title: 'Most Memorable Hike',
-      description:
-        'Trampas Lakes in New Mexico is my favorite hiking spot. This challenging 11.6-mile out-and-back trail features two pristine alpine lakes nestled in the Sangre de Cristo Mountains.',
+      title: 'Most Legendary Hike',
+      description: `Trampas Lakes Trail
+        Sangre de Cristo Mountains
+        Carson National Forest, NM
+        Length: 11.7 miles out & back
+        Elevation Gain: 2,526 ft
+        Difficulty: Hard
+        Followed a rushing stream up
+        to two pristine alpine lakes.
+        `,
       linkout:
         'https://www.alltrails.com/trail/us/new-mexico/trampas-lakes-trail',
       photo: 'img/photos/trampas.jpg',
     },
     {
-      title: 'Greatest Kayak Trip',
+      title: 'Coolest Kayak Trip',
       description: `Brazos River - Graford, TX 
       Kayak: Eddyline Skylark
       Drop in: Hwy 16 Possum Kingdom Stone Arch Bridge
@@ -36,6 +43,12 @@ export async function GET() {
       photo: 'img/photos/greatexpectations4.jpg',
     },
     {
+      title: 'DIY Gardener',
+      description:
+        'Cultivating the art of growing vegetables, herbs, flowers, and other plants. Teaching myself organic gardening, soil composition and companion planting as I expand my botanical kingdom through the seasons and years.',
+      photo: 'img/photos/garden.jpg',
+    },
+    {
       title: 'Favorite Fiction Book',
       description: `Wizard's First Rule 
       by Terry Goodkind`,
@@ -47,30 +60,6 @@ export async function GET() {
       description: `Stranger Things`,
       linkout: '',
       photo: 'img/photos/strangerthings2.jpg',
-    },
-    {
-      title: 'Garden Enthusiast',
-      description:
-        'Maintaining a thriving vegetable garden with heirloom tomatoes, peppers, and herbs. Learning the art of companion planting and organic pest control.',
-      photo: 'img/photos/kayak.jpg',
-    },
-    {
-      title: 'Self-Taught Journey',
-      description:
-        'Started coding with Python scripts to automate daily tasks, which sparked a passion for development. Transitioned to web development through online resources and building projects.',
-      photo: 'img/photos/kayak.jpg',
-    },
-    {
-      title: 'AI Engineering',
-      description:
-        'Actively working with cutting-edge AI tools like GPT Engineer and Cursor to enhance development workflow and explore new possibilities in AI-assisted coding.',
-      photo: 'img/photos/kayak.jpg',
-    },
-    {
-      title: 'Bucket List Goals',
-      description:
-        'Planning to hike the entire Pacific Crest Trail, learn to play the piano, and visit every national park in the United States.',
-      photo: 'img/photos/kayak.jpg',
     },
   ];
 

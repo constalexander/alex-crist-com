@@ -125,6 +125,9 @@ module.exports = {
         'emerald-sm': '0 0 8px 2px rgba(52,211,153,0.33)',
         'emerald-lg': '0 0 16px 4px rgba(52,211,153,0.33)',
       },
+      transitionDuration: {
+        2000: '2000ms',
+      },
     },
   },
   plugins: [
