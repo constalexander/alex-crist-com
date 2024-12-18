@@ -2,11 +2,7 @@ import type { Metadata } from 'next';
 import Script from 'next/script';
 import {
   Sarabun as FontSans,
-  Hahmlet as FontSerif,
-  Teko as FontSerif2,
-  Syncopate as FontSerif3,
-  Amarante as FontSerif4,
-  Eagle_Lake as FontSerif5,
+  Amarante as FontSerif,
   Farsan as FontHandwritten,
 } from 'next/font/google';
 import { cn } from '@alex/ui/utils';
@@ -33,7 +29,7 @@ const fontSans = FontSans({
   variable: '--font-sans',
 });
 
-const fontSerif = FontSerif4({
+const fontSerif = FontSerif({
   weight: '400',
   subsets: ['latin'],
   variable: '--font-serif',
@@ -51,7 +47,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning className="w-full h-full">
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={cn(
+        'w-full h-full',
+        fontSans.variable,
+        fontSerif.variable,
+        fontHandwritten.variable
+      )}
+    >
       <body
         className={cn(
           ` 
@@ -62,10 +67,7 @@ export default function RootLayout({
           overflow-auto
           text-foreground font-sans antialiased  
           bg-stone-800
-          `,
-          fontSans.variable,
-          fontSerif.variable,
-          fontHandwritten.variable
+          `
         )}
         style={{ fontFeatureSettings: "'rlig' 1, 'calt' 1" }}
       >
