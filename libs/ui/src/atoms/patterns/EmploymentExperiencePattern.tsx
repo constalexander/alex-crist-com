@@ -7,7 +7,7 @@ export function EmploymentExperiencePattern() {
     <div
       className="pattern absolute inset-0 w-full h-full bg-contain bg-repeat z-[-2]"
       style={{
-        backgroundImage: 'url(/img/patterns/circle-scatter-haikei3.svg)',
+        backgroundImage: 'url(/img/patterns/circle-scatter-haikei.svg)',
       }}
       aria-hidden="true"
     >

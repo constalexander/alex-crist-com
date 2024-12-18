@@ -40,7 +40,7 @@ export async function GET() {
       Style: Two-pitch crack climb with fixed anchors`,
       linkout:
         'https://www.mountainproject.com/route/105883943/great-expectations',
-      photo: 'img/photos/greatexpectations4.jpg',
+      photo: 'img/photos/greatexpectations.jpg',
     },
     {
       title: 'DIY Gardener',
@@ -59,7 +59,7 @@ export async function GET() {
       title: 'Top TV Show',
       description: `Stranger Things`,
       linkout: '',
-      photo: 'img/photos/strangerthings2.jpg',
+      photo: 'img/photos/strangerthings.jpg',
     },
   ];
 
