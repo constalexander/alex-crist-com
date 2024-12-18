@@ -26,7 +26,7 @@ export function TechStack() {
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
       transition={{ duration: 0.75 }}
-      className="h-0 w-full relative -top-[180px] sm:-top-[140px] z-50 p-0 m-0"
+      className="h-0 w-full relative -top-[180px] sm:-top-[140px] z-10 p-0 m-0"
     >
       <div className="h-fit w-[90%] max-w-[700px] bg-stone-950 rounded-xl shadow-stone-lg border-2 border-stone-800 py-2 mx-auto">
         <div className="text-3xl  font-serif font-semibold italic text-stone-400 [text-shadow:4px_4px_2px_rgba(21,19,17,.5)] text-center mt-2">
