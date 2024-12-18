@@ -24,21 +24,24 @@ export const viewport = {
 };
 
 const fontSans = FontSans({
-  weight: '400',
+  weight: ['300', '400', '500', '600'],
   subsets: ['latin'],
   variable: '--font-sans',
+  preload: true,
 });
 
 const fontSerif = FontSerif({
   weight: '400',
   subsets: ['latin'],
   variable: '--font-serif',
+  preload: true,
 });
 
 const fontHandwritten = FontHandwritten({
   weight: '400',
   subsets: ['latin'],
   variable: '--font-handwritten',
+  preload: true,
 });
 
 export default function RootLayout({
