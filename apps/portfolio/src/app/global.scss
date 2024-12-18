@@ -49,5 +49,6 @@
   *:after {
     @apply border-border;
     box-sizing: border-box;
+    text-rendering: optimizeLegibility;
   }
 }
