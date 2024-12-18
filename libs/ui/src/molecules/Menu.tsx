@@ -46,15 +46,15 @@ export function Menu() {
           h-[calc(100vh-70px)] md:h-fit
           w-[100vw] md:w-[240px] 
           translate-y-[12px] 
-          bg-stone-750 border-2 border-stone-950
+          bg-stone-800 border-2 border-stone-950
           flex flex-col 
-          px-4 py-0 m-0 z-50"
+          px-4 sm:px-1 py-0 m-0 z-50"
           align="center"
         >
           <div className="flex-1 overflow-y-auto my-3">
             <MenuItem
               label="◆&nbsp;&nbsp;Employment"
-              onClick={() => handleScroll('EmploymentExperience', -40)}
+              onClick={() => handleScroll('EmploymentExperience', -190)}
             />
             <MenuItem
               label="◆&nbsp;&nbsp;Get to Know Me"
@@ -62,7 +62,12 @@ export function Menu() {
             />
             <MenuItem
               label="◆&nbsp;&nbsp;My Resume"
-              onClick={() => window.open('/docs/resume.docx', '_blank')}
+              onClick={() =>
+                window.open(
+                  '/Alex Crist - Frontend Engineer 2412.14 web.docx',
+                  '_blank'
+                )
+              }
             />
             <MenuItem
               label="◇&nbsp;&nbsp;Projects"
@@ -80,7 +85,7 @@ export function Menu() {
                 <MenuItem
                   label="⬥&nbsp;&nbsp;Growing Zone Finder"
                   onClick={() =>
-                    window.open('https://https://growzone.surge.sh/', '_blank')
+                    window.open('https://growzone.surge.sh/', '_blank')
                   }
                   className="text-md"
                 />
