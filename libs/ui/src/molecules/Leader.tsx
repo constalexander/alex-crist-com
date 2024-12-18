@@ -60,12 +60,13 @@ function LeaderButton() {
         <Button
           variant="outline"
           className="w-[200px] text-emerald-400 uppercase shadow-emerald-lg"
-          onClick={() =>
+          onClick={() => {
             window.open(
               'Alex Crist - Frontend Engineer 2412.14 web.docx',
               '_blank'
-            )
-          }
+            );
+            window._gs('event', 'Leader: Download resumé');
+          }}
         >
           <span className="sr-only">Download resumé</span>
           <span className="">DOWNLOAD RESUMÉ</span>

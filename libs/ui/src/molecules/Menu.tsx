@@ -77,16 +77,20 @@ export function Menu() {
               <li className="pl-6">
                 <MenuItem
                   label="⬥&nbsp;&nbsp;Boodi.ai"
-                  onClick={() => window.open('https://boodi.ai', '_blank')}
+                  onClick={() => {
+                    window.open('https://boodi.ai', '_blank');
+                    window._gs('event', 'Menu click: boodi.ai');
+                  }}
                   className="text-md"
                 />
               </li>
               <li className="pl-6">
                 <MenuItem
                   label="⬥&nbsp;&nbsp;Growing Zone Finder"
-                  onClick={() =>
-                    window.open('https://growzone.surge.sh/', '_blank')
-                  }
+                  onClick={() => {
+                    window.open('https://growzone.surge.sh/', '_blank');
+                    window._gs('event', 'Menu click: growzone.surge.sh');
+                  }}
                   className="text-md"
                 />
               </li>
