@@ -33,7 +33,18 @@ export function EmploymentCard({
           </h3>
           <span className="text-base sm:text-lg text-emerald-400">
             {companyName}
-            <a href={companyUrl} target="_blank" rel="noopener noreferrer">
+            <a
+              href={companyUrl}
+              onClick={() =>
+                window._gs(
+                  'event',
+                  'Employment card: Company URL external link',
+                  { url: companyUrl }
+                )
+              }
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button
                 variant="ghost"
                 className="inline-block text-lg text-emerald-400 p-0 ml-1"
@@ -54,6 +65,9 @@ export function EmploymentCard({
       <div className="mt-auto pt-4">
         <a
           href="/Alex Crist - Frontend Engineer 2412.14 web.docx"
+          onClick={() =>
+            window._gs('event', 'Employment card: Download full resumé')
+          }
           target="_blank"
           rel="noopener noreferrer"
           className="text-xs text-emerald-400 hover:text-emerald-300 transition-colors"

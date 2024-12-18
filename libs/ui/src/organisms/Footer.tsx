@@ -12,6 +12,9 @@ export function Footer() {
         <div className="mb-4">
           <a
             href="https://github.com/constalexander/alex-crist-com"
+            onClick={() =>
+              window._gs('event', 'Footer: View source code on GitHub')
+            }
             target="_blank"
           >
             <Button variant="ghost" className="p-0 text-sm h-fit">
@@ -21,7 +24,12 @@ export function Footer() {
         </div>
         <div>Designed and developed by</div>
         <div>
-          <a href="mailto://alex@alex-crist.com">
+          <a
+            href="mailto://alex@alex-crist.com"
+            onClick={() =>
+              window._gs('event', 'Footer: mailto://alex@alex-crist.com')
+            }
+          >
             <Button variant="ghost" className="p-0 text-sm h-fit">
               Alex Crist
             </Button>

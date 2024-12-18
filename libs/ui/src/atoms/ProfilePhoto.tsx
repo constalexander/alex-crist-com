@@ -18,9 +18,12 @@ export function ProfilePhoto() {
       >
         <a
           href="https://www.linkedin.com/in/alexcristdeveloper"
+          onClick={() =>
+            window._gs('event', 'Profile photo: LinkedIn external link')
+          }
           target="_blank"
           rel="noopener noreferrer"
-          className="absolute -translate-y-[2px] w-full text-center leading-[.8] bg-stone-900 px-0 pt-1 pb-1.5 rounded-full border-[3px] border-emerald-500/80 shadow-emerald-sm"
+          className="absolute -translate-y-[2px] w-full text-center leading-[.8] bg-stone-900 hover:bg-emerald-900 px-0 pt-1 pb-1.5 rounded-full border-[3px] border-emerald-500/80 shadow-emerald-sm"
         >
           <span className="text-emerald-400 text-[11px] leading-[1] font-semibold tracking-wide font-sans uppercase flex items-center justify-center gap-1 pt-[1px]">
             <span className="w-[10px] h-[10px] rounded-full bg-emerald-400 translate-x-[-2px] translate-y-[1px]"></span>

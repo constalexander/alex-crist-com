@@ -12,11 +12,14 @@ import {
 import { cn } from '@alex/ui/utils';
 import MainTemplate from '@alex/ui/templates/Main.template';
 import './global.scss';
-import Head from 'next/head';
 
 export const metadata: Metadata = {
   title: 'Alex Crist | Frontend Extraordinaire',
   description: 'Frontend engineer in North Texas',
+  icons: {
+    icon: '/code.ico',
+  },
+  metadataBase: new URL('https://alex-crist.com'),
 };
 
 export const viewport = {
@@ -49,11 +52,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning className="w-full h-full">
-      <Head>
-        <meta charSet="utf-8" />
-        <base href="/" />
-        <link rel="icon" type="image/x-icon" href="/code.ico" />
-      </Head>
       <body
         className={cn(
           ` 

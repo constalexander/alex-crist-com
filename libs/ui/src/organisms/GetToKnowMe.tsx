@@ -73,7 +73,12 @@ export function GetToKnowMeContent({
         <Button
           variant="ghost"
           className="text-emerald-400 hover:text-emerald-300"
-          onClick={() => setIsExpanded(!isExpanded)}
+          onClick={() => {
+            window._gs('event', 'Get to know me: Expand/Collapse', {
+              isExpanded: isExpanded,
+            });
+            setIsExpanded(!isExpanded);
+          }}
         >
           {isExpanded ? 'Collapse' : 'Expand'}
         </Button>
@@ -109,6 +114,15 @@ export function GetToKnowMeContent({
                           {slide.linkout && (
                             <a
                               href={slide.linkout}
+                              onClick={() =>
+                                window._gs(
+                                  'event',
+                                  'Get to know me card: External link',
+                                  {
+                                    url: slide.linkout,
+                                  }
+                                )
+                              }
                               target="_blank"
                               rel="noopener noreferrer"
                               className="absolute text-center bg-emerald-950/80 box-decoration-clone h-8 w-6"
