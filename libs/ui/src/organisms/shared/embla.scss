@@ -22,16 +22,10 @@
 }
 
 .embla__slide {
-  // transform: scale(0.75) !important;
   flex: 0 0 var(--slide-size);
-  min-width: 0;
+  min-width: 260px;
   padding-left: var(--slide-spacing);
   transform-style: preserve-3d;
-  // transition: transform 0.33s ease;
-
-  &.is-selected {
-    // transform: scale(1) !important;
-  }
 }
 
 .embla__slide__content {
