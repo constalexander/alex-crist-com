@@ -60,7 +60,9 @@ export function GetToKnowMeContent({
 
       <div
         className={`relative px-6 mb-12 mx-0 space-y-6 text-stone-300 prose prose-invert prose-elegant max-w-none ${
-          !isExpanded ? 'h-[200px] overflow-hidden' : ''
+          !isExpanded
+            ? 'h-[200px] sm:h-[170px] overflow-hidden rounded-xl sm:border-[3px] sm:border-stone-800/60 mx-2 sm:mx-0'
+            : ''
         }`}
       >
         {!isExpanded && (
@@ -72,7 +74,7 @@ export function GetToKnowMeContent({
       <div className="w-full translate-y-[-40px] text-center">
         <Button
           variant="ghost"
-          className="text-emerald-400 hover:text-emerald-300"
+          className="text-emerald-400 hover:text-emerald-300 py-0 my-0 h-4"
           onClick={() => {
             window._gs('event', 'Get to know me: Expand/Collapse', {
               isExpanded: isExpanded,
