@@ -94,8 +94,8 @@ export function Autobio() {
       <p className="font-light leading-relaxed">
         Today, I'm seeking new challenges to meet and problems to solve. I would
         like to lead or work with a team of UI developers to deliver the best
-        possible product, for a startup, "Small Tech" or any organization with a
-        product that I resonate with. Let's connect and make something happen!
+        possible product, for a startup, "Little Tech" or any organization with
+        a product that I resonate with. Let's connect and make something happen!
       </p>
     </>
   );
