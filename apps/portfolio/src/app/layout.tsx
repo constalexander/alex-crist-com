@@ -16,6 +16,23 @@ export const metadata: Metadata = {
     icon: '/code.ico',
   },
   metadataBase: new URL('https://alex-crist.com'),
+  openGraph: {
+    siteName: 'Alex Crist',
+    images: [
+      {
+        url: '/img/profile/alex.png',
+        width: 400,
+        height: 400,
+        alt: 'Alex Crist',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/img/profile/alex.png'],
+  },
 };
 
 export const viewport = {
