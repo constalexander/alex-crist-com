@@ -15,20 +15,51 @@ import {
 
 type ResumePopupProps = {
   children: React.ReactNode;
-  open: boolean;
-  onOpenChange: (open: boolean) => void;
+  open?: boolean;
+  onOpenChange?: (open: boolean) => void;
+  onDownloadWord?: () => void;
+  onDownloadPDF?: () => void;
 };
 
 export function ResumePopup({
   children,
-  open,
-  onOpenChange,
+  open: externalOpen,
+  onOpenChange: externalOnOpenChange,
+  onDownloadWord: externalOnDownloadWord,
+  onDownloadPDF: externalOnDownloadPDF,
 }: ResumePopupProps) {
+  const [internalOpen, setInternalOpen] = React.useState(false);
+
+  const open = externalOpen ?? internalOpen;
+  const onOpenChange = externalOnOpenChange ?? setInternalOpen;
+
+  const handleDownloadWord = () => {
+    if (externalOnDownloadWord) {
+      externalOnDownloadWord();
+    } else {
+      onOpenChange(false);
+      const url = 'resumes/Alex Crist - Fullstack Engineer.docx';
+      window.open(url, '_blank');
+      window._gs('event', 'Download Word resumé');
+    }
+  };
+
+  const handleDownloadPDF = () => {
+    if (externalOnDownloadPDF) {
+      externalOnDownloadPDF();
+    } else {
+      onOpenChange(false);
+      const url = 'resumes/Alex Crist - Fullstack Engineer.pdf';
+      window.open(url, '_blank');
+      window._gs('event', 'Download PDF resumé');
+    }
+  };
+
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogTrigger asChild>{children}</DialogTrigger>
       <DialogContent className="w-fit p-6 pt-6">
-        <DialogHeader>
+        <DialogHeader className="sr-only">
           <DialogTitle>Download resumé</DialogTitle>
           <DialogDescription>Choose your preferred format.</DialogDescription>
         </DialogHeader>
@@ -36,11 +67,7 @@ export function ResumePopup({
           <Button
             variant="ghost"
             className="w-full justify-start pl-0"
-            onClick={() => {
-              onOpenChange(false);
-              window.open('Alex Crist - Fullstack Engineer.docx', '_blank');
-              window._gs('event', 'Download Word resumé');
-            }}
+            onClick={handleDownloadWord}
           >
             <WordDocxIcon className="mr-2 h-4 w-4" />
             <span>Alex Crist - Fullstack Engineer.docx</span>
@@ -48,11 +75,7 @@ export function ResumePopup({
           <Button
             variant="ghost"
             className="w-full justify-start pl-0"
-            onClick={() => {
-              onOpenChange(false);
-              window.open('Alex Crist - Fullstack Engineer.pdf', '_blank');
-              window._gs('event', 'Download PDF resumé');
-            }}
+            onClick={handleDownloadPDF}
           >
             <PDFIcon className="mr-2 h-4 w-4" />
             <span>Alex Crist - Fullstack Engineer.pdf</span>

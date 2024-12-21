@@ -1,15 +1,16 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { FileText, Send } from 'lucide-react';
 import { Button } from '../../atoms/Button';
 import GithubIcon from '../../atoms/icons/Github';
 import LinkedinIcon from '../../atoms/icons/Linkedin';
-import { ResumePopup } from '../../organisms/popups/ResumePopup';
 
-export function SocialIcons() {
-  const [isResumeOpen, setIsResumeOpen] = useState(false);
+type SocialIconsProps = {
+  onResumeClick: (e: React.MouseEvent) => void;
+};
 
+export function SocialIcons({ onResumeClick }: SocialIconsProps) {
   return (
     <div className="mt-auto border-t-2 border-stone-600 py-4 bg-stone-800">
       <div className="flex justify-center space-x-2">
@@ -36,22 +37,20 @@ export function SocialIcons() {
         >
           <LinkedinIcon />
         </Button>
-        <ResumePopup open={isResumeOpen} onOpenChange={setIsResumeOpen}>
-          <Button
-            variant="ghost"
-            size="icon"
-            className="scale-75 text-stone-300"
-            onClick={(e) => {
-              e.stopPropagation();
-              window._gs('event', 'Social: Open resumé dialog');
-              setIsResumeOpen(true);
-            }}
-          >
-            <span title="Resumé">
-              <FileText />
-            </span>
-          </Button>
-        </ResumePopup>
+        <Button
+          variant="ghost"
+          size="icon"
+          className="scale-75 text-stone-300"
+          onClick={(e) => {
+            e.stopPropagation();
+            window._gs('event', 'Social: Open resumé dialog');
+            onResumeClick(e);
+          }}
+        >
+          <span title="Resumé">
+            <FileText />
+          </span>
+        </Button>
         <Button
           variant="ghost"
           size="icon"

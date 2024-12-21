@@ -66,7 +66,7 @@ export function EmploymentCard({
       <div className="mt-auto pt-4">
         <ResumePopup>
           <a
-            className="text-xs text-emerald-400 hover:text-emerald-300 transition-colors"
+            className="text-xs text-emerald-400 hover:text-emerald-300 transition-colors hover:cursor-pointer"
             onClick={() =>
               window._gs('event', 'Employment card: Open resumé dialog')
             }

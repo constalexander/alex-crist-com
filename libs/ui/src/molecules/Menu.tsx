@@ -25,6 +25,31 @@ export function Menu() {
     scrollIntoView(id, offset);
   };
 
+  const handleResumeClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    window._gs('event', 'Menu: Open resumé dialog');
+    setIsMenuOpen(false);
+    setIsResumeOpen(true);
+  };
+
+  const handleDownloadWord = () => {
+    console.log('downloading word');
+    setIsResumeOpen(false);
+    const url = 'resumes/Alex Crist - Fullstack Engineer.docx';
+    console.log('opening url:', url);
+    window.open(url, '_blank');
+    window._gs('event', 'Download Word resumé');
+  };
+
+  const handleDownloadPDF = () => {
+    console.log('downloading pdf');
+    setIsResumeOpen(false);
+    const url = 'resumes/Alex Crist - Fullstack Engineer.pdf';
+    console.log('opening url:', url);
+    window.open(url, '_blank');
+    window._gs('event', 'Download PDF resumé');
+  };
+
   return (
     <>
       {isMenuOpen && (
@@ -63,12 +88,7 @@ export function Menu() {
             />
             <MenuItem
               label="◆&nbsp;&nbsp;My Resume"
-              onClick={(e) => {
-                e.stopPropagation();
-                window._gs('event', 'Menu: Open resumé dialog');
-                setIsMenuOpen(false);
-                setIsResumeOpen(true);
-              }}
+              onClick={handleResumeClick}
             />
             <MenuItem
               label="◇&nbsp;&nbsp;Projects"
@@ -98,13 +118,20 @@ export function Menu() {
             </ul>
           </div>
 
-          <SocialIcons />
+          <SocialIcons onResumeClick={handleResumeClick} />
         </PopoverContent>
       </Popover>
 
-      <ResumePopup open={isResumeOpen} onOpenChange={setIsResumeOpen}>
-        <div />
-      </ResumePopup>
+      {isResumeOpen && (
+        <ResumePopup
+          open={isResumeOpen}
+          onOpenChange={setIsResumeOpen}
+          onDownloadWord={handleDownloadWord}
+          onDownloadPDF={handleDownloadPDF}
+        >
+          <div />
+        </ResumePopup>
+      )}
     </>
   );
 }
