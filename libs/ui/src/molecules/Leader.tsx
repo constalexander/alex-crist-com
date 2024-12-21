@@ -61,10 +61,7 @@ function LeaderButton() {
           variant="outline"
           className="w-[200px] text-emerald-400 uppercase shadow-emerald-lg"
           onClick={() => {
-            window.open(
-              'Alex Crist - Frontend Engineer 2412.14 web.docx',
-              '_blank'
-            );
+            window.open('Alex Crist - Fullstack Engineer.docx', '_blank');
             window._gs('event', 'Leader: Download resumé');
           }}
         >

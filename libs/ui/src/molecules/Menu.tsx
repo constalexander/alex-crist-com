@@ -63,10 +63,7 @@ export function Menu() {
             <MenuItem
               label="◆&nbsp;&nbsp;My Resume"
               onClick={() =>
-                window.open(
-                  '/Alex Crist - Frontend Engineer 2412.14 web.docx',
-                  '_blank'
-                )
+                window.open('/Alex Crist - Fullstack Engineer.docx', '_blank')
               }
             />
             <MenuItem

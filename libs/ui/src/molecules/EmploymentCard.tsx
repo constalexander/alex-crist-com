@@ -64,7 +64,7 @@ export function EmploymentCard({
 
       <div className="mt-auto pt-4">
         <a
-          href="/Alex Crist - Frontend Engineer 2412.14 web.docx"
+          href="/Alex Crist - Fullstack Engineer.docx"
           onClick={() =>
             window._gs('event', 'Employment card: Download full resumé')
           }
