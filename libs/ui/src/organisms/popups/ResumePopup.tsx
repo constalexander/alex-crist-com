@@ -16,13 +16,13 @@ import {
 const RESUME_BASE_PATH = 'resumes/Alex Crist - Fullstack Engineer';
 
 type ResumePopupProps = {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   open?: boolean;
   onOpenChange?: (open: boolean) => void;
 };
 
 export function ResumePopup({
-  children,
+  children = <></>,
   open: externalOpen,
   onOpenChange: externalOnOpenChange,
 }: ResumePopupProps) {
@@ -41,7 +41,7 @@ export function ResumePopup({
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogTrigger asChild>{children}</DialogTrigger>
       <DialogContent className="w-fit p-6 pt-6">
-        <DialogHeader className="sr-only">
+        <DialogHeader>
           <DialogTitle>Download resumé</DialogTitle>
           <DialogDescription>Choose your preferred format.</DialogDescription>
         </DialogHeader>
