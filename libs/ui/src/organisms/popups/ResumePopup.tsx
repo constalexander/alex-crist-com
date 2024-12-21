@@ -1,8 +1,9 @@
 'use client';
 
 import React from 'react';
-import { FileText, FileIcon } from 'lucide-react';
 import { Button } from '../../atoms/Button';
+import { WordDocxIcon } from '../../atoms/icons/WordDocx';
+import { PDFIcon } from '../../atoms/icons/PDF';
 import {
   Dialog,
   DialogContent,
@@ -28,7 +29,7 @@ export function ResumePopup({
       <DialogTrigger asChild>{children}</DialogTrigger>
       <DialogContent className="w-fit p-6 pt-6">
         <DialogHeader>
-          <DialogTitle>Download Alex's resumé</DialogTitle>
+          <DialogTitle>Download resumé</DialogTitle>
           <DialogDescription>Choose your preferred format.</DialogDescription>
         </DialogHeader>
         <div className="flex flex-col gap-2">
@@ -41,7 +42,7 @@ export function ResumePopup({
               window._gs('event', 'Download Word resumé');
             }}
           >
-            <FileText className="mr-2 h-4 w-4" />
+            <WordDocxIcon className="mr-2 h-4 w-4" />
             <span>Alex Crist - Fullstack Engineer.docx</span>
           </Button>
           <Button
@@ -53,7 +54,7 @@ export function ResumePopup({
               window._gs('event', 'Download PDF resumé');
             }}
           >
-            <FileIcon className="mr-2 h-4 w-4" />
+            <PDFIcon className="mr-2 h-4 w-4" />
             <span>Alex Crist - Fullstack Engineer.pdf</span>
           </Button>
         </div>

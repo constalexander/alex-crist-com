@@ -61,8 +61,9 @@ function LeaderText() {
     <div className="flex-1 text-center">
       <div className="inline-block text-stone-300 leading-7">
         Versatile and innovative <br />
-        frontend engineer creating <br />
+        fullstack engineer creating <br />
         bespoke user interfaces <br />
+        and brilliant backends <br />
         using modern technologies <br />
         and best practices.
       </div>
