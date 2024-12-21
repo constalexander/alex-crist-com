@@ -46,7 +46,7 @@ export function Menu() {
           h-[calc(100vh-70px)] md:h-fit
           w-[100vw] md:w-[240px] 
           translate-y-[12px] 
-          bg-stone-800 border-2 border-stone-950
+          bg-stone-800 border-2 border-stone-600
           flex flex-col 
           px-4 sm:px-1 py-0 m-0 z-50"
           align="center"
