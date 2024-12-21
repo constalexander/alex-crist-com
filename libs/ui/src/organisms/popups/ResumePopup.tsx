@@ -13,46 +13,28 @@ import {
   DialogHeader,
 } from '../../atoms/Dialog';
 
+const RESUME_BASE_PATH = 'resumes/Alex Crist - Fullstack Engineer';
+
 type ResumePopupProps = {
   children: React.ReactNode;
   open?: boolean;
   onOpenChange?: (open: boolean) => void;
-  onDownloadWord?: () => void;
-  onDownloadPDF?: () => void;
 };
 
 export function ResumePopup({
   children,
   open: externalOpen,
   onOpenChange: externalOnOpenChange,
-  onDownloadWord: externalOnDownloadWord,
-  onDownloadPDF: externalOnDownloadPDF,
 }: ResumePopupProps) {
   const [internalOpen, setInternalOpen] = React.useState(false);
-
   const open = externalOpen ?? internalOpen;
   const onOpenChange = externalOnOpenChange ?? setInternalOpen;
 
-  const handleDownloadWord = () => {
-    if (externalOnDownloadWord) {
-      externalOnDownloadWord();
-    } else {
-      onOpenChange(false);
-      const url = 'resumes/Alex Crist - Fullstack Engineer.docx';
-      window.open(url, '_blank');
-      window._gs('event', 'Download Word resumé');
-    }
-  };
-
-  const handleDownloadPDF = () => {
-    if (externalOnDownloadPDF) {
-      externalOnDownloadPDF();
-    } else {
-      onOpenChange(false);
-      const url = 'resumes/Alex Crist - Fullstack Engineer.pdf';
-      window.open(url, '_blank');
-      window._gs('event', 'Download PDF resumé');
-    }
+  const handleDownload = (type: 'Word' | 'PDF') => {
+    onOpenChange(false);
+    const extension = type === 'Word' ? '.docx' : '.pdf';
+    window.open(`${RESUME_BASE_PATH}${extension}`, '_blank');
+    window._gs('event', `Download ${type} resumé`);
   };
 
   return (
@@ -67,7 +49,7 @@ export function ResumePopup({
           <Button
             variant="ghost"
             className="w-full justify-start pl-0"
-            onClick={handleDownloadWord}
+            onClick={() => handleDownload('Word')}
           >
             <WordDocxIcon className="mr-2 h-4 w-4" />
             <span>Alex Crist - Fullstack Engineer.docx</span>
@@ -75,7 +57,7 @@ export function ResumePopup({
           <Button
             variant="ghost"
             className="w-full justify-start pl-0"
-            onClick={handleDownloadPDF}
+            onClick={() => handleDownload('PDF')}
           >
             <PDFIcon className="mr-2 h-4 w-4" />
             <span>Alex Crist - Fullstack Engineer.pdf</span>

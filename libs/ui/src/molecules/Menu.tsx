@@ -32,24 +32,6 @@ export function Menu() {
     setIsResumeOpen(true);
   };
 
-  const handleDownloadWord = () => {
-    console.log('downloading word');
-    setIsResumeOpen(false);
-    const url = 'resumes/Alex Crist - Fullstack Engineer.docx';
-    console.log('opening url:', url);
-    window.open(url, '_blank');
-    window._gs('event', 'Download Word resumé');
-  };
-
-  const handleDownloadPDF = () => {
-    console.log('downloading pdf');
-    setIsResumeOpen(false);
-    const url = 'resumes/Alex Crist - Fullstack Engineer.pdf';
-    console.log('opening url:', url);
-    window.open(url, '_blank');
-    window._gs('event', 'Download PDF resumé');
-  };
-
   return (
     <>
       {isMenuOpen && (
@@ -122,16 +104,7 @@ export function Menu() {
         </PopoverContent>
       </Popover>
 
-      {isResumeOpen && (
-        <ResumePopup
-          open={isResumeOpen}
-          onOpenChange={setIsResumeOpen}
-          onDownloadWord={handleDownloadWord}
-          onDownloadPDF={handleDownloadPDF}
-        >
-          <div />
-        </ResumePopup>
-      )}
+      <ResumePopup open={isResumeOpen} onOpenChange={setIsResumeOpen} />
     </>
   );
 }
