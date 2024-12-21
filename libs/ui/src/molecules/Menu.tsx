@@ -8,9 +8,11 @@ import { Button } from '../atoms/Button';
 import { Popover, PopoverTrigger, PopoverContent } from '../atoms/Popover';
 import MenuItem from './menu/MenuItem';
 import SocialIcons from './menu/SocialIcons';
+import { ResumePopup } from '../organisms/popups/ResumePopup';
 
 export function Menu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isResumeOpen, setIsResumeOpen] = useState(false);
   const router = useRouter();
 
   const nav = (route: string) => {
@@ -34,7 +36,6 @@ export function Menu() {
             variant="ghost"
             size="icon"
             className="text-2xl text-stone-400 relative"
-            onClick={() => setIsMenuOpen((prev) => !prev)}
           >
             <span className="sr-only">Open menu</span>
             {isMenuOpen ? <X size={32} /> : <MenuIcon size={32} />}
@@ -62,9 +63,12 @@ export function Menu() {
             />
             <MenuItem
               label="◆&nbsp;&nbsp;My Resume"
-              onClick={() =>
-                window.open('/Alex Crist - Fullstack Engineer.docx', '_blank')
-              }
+              onClick={(e) => {
+                e.stopPropagation();
+                window._gs('event', 'Menu: Open resumé dialog');
+                setIsMenuOpen(false);
+                setIsResumeOpen(true);
+              }}
             />
             <MenuItem
               label="◇&nbsp;&nbsp;Projects"
@@ -97,6 +101,10 @@ export function Menu() {
           <SocialIcons />
         </PopoverContent>
       </Popover>
+
+      <ResumePopup open={isResumeOpen} onOpenChange={setIsResumeOpen}>
+        <div />
+      </ResumePopup>
     </>
   );
 }

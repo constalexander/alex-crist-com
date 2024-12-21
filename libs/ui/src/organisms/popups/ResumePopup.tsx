@@ -3,22 +3,40 @@
 import React from 'react';
 import { FileText, FileIcon } from 'lucide-react';
 import { Button } from '../../atoms/Button';
-import { Dialog, DialogContent, DialogTrigger } from '../../atoms/Dialog';
+import {
+  Dialog,
+  DialogContent,
+  DialogTrigger,
+  DialogTitle,
+  DialogDescription,
+  DialogHeader,
+} from '../../atoms/Dialog';
 
 type ResumePopupProps = {
   children: React.ReactNode;
+  open: boolean;
+  onOpenChange: (open: boolean) => void;
 };
 
-export function ResumePopup({ children }: ResumePopupProps) {
+export function ResumePopup({
+  children,
+  open,
+  onOpenChange,
+}: ResumePopupProps) {
   return (
-    <Dialog>
+    <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogTrigger asChild>{children}</DialogTrigger>
-      <DialogContent className="w-fit p-8">
+      <DialogContent className="w-fit p-6 pt-12">
+        <DialogHeader className="sr-only">
+          <DialogTitle>Download Resumé</DialogTitle>
+          <DialogDescription>Choose your preferred format</DialogDescription>
+        </DialogHeader>
         <div className="flex flex-col gap-4">
           <Button
             variant="ghost"
             className="w-full justify-start"
             onClick={() => {
+              onOpenChange(false);
               window.open('Alex Crist - Fullstack Engineer.docx', '_blank');
               window._gs('event', 'Download Word resumé');
             }}
@@ -30,6 +48,7 @@ export function ResumePopup({ children }: ResumePopupProps) {
             variant="ghost"
             className="w-full justify-start"
             onClick={() => {
+              onOpenChange(false);
               window.open('Alex Crist - Fullstack Engineer.pdf', '_blank');
               window._gs('event', 'Download PDF resumé');
             }}

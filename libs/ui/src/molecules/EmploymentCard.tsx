@@ -2,6 +2,7 @@
 
 import { ExternalLink } from 'lucide-react';
 import { Button } from '../atoms/Button';
+import { ResumePopup } from '../organisms/popups/ResumePopup';
 
 export interface EmploymentCardProps {
   index: number;
@@ -63,17 +64,16 @@ export function EmploymentCard({
       </div>
 
       <div className="mt-auto pt-4">
-        <a
-          href="/Alex Crist - Fullstack Engineer.docx"
-          onClick={() =>
-            window._gs('event', 'Employment card: Download full resumé')
-          }
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-xs text-emerald-400 hover:text-emerald-300 transition-colors"
-        >
-          Download full resumé
-        </a>
+        <ResumePopup>
+          <a
+            className="text-xs text-emerald-400 hover:text-emerald-300 transition-colors"
+            onClick={() =>
+              window._gs('event', 'Employment card: Open resumé dialog')
+            }
+          >
+            Download full resumé
+          </a>
+        </ResumePopup>
       </div>
     </div>
   );
