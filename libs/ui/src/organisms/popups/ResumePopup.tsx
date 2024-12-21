@@ -26,15 +26,15 @@ export function ResumePopup({
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogTrigger asChild>{children}</DialogTrigger>
-      <DialogContent className="w-fit p-6 pt-12">
-        <DialogHeader className="sr-only">
-          <DialogTitle>Download Resumé</DialogTitle>
-          <DialogDescription>Choose your preferred format</DialogDescription>
+      <DialogContent className="w-fit p-6 pt-6">
+        <DialogHeader>
+          <DialogTitle>Download Alex's resumé</DialogTitle>
+          <DialogDescription>Choose your preferred format.</DialogDescription>
         </DialogHeader>
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-2">
           <Button
             variant="ghost"
-            className="w-full justify-start"
+            className="w-full justify-start pl-0"
             onClick={() => {
               onOpenChange(false);
               window.open('Alex Crist - Fullstack Engineer.docx', '_blank');
@@ -46,7 +46,7 @@ export function ResumePopup({
           </Button>
           <Button
             variant="ghost"
-            className="w-full justify-start"
+            className="w-full justify-start pl-0"
             onClick={() => {
               onOpenChange(false);
               window.open('Alex Crist - Fullstack Engineer.pdf', '_blank');
