@@ -10,6 +10,8 @@ import {
   SiNextdotjs,
   SiTailwindcss,
   SiGithub,
+  SiMongodb,
+  SiExpress,
 } from '@icons-pack/react-simple-icons';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
@@ -29,10 +31,10 @@ export function TechStack() {
       className="h-0 w-full relative -top-[180px] sm:-top-[140px] z-10 p-0 m-0"
     >
       <div className="h-fit w-[90%] max-w-[700px] bg-stone-950 rounded-xl shadow-stone-lg border-2 border-stone-800 py-2 mx-auto">
-        <div className="text-3xl  font-serif font-semibold italic text-stone-400 [text-shadow:4px_4px_2px_rgba(21,19,17,.5)] text-center mt-2">
+        <div className="text-3xl font-serif font-semibold italic text-stone-400 [text-shadow:4px_4px_2px_rgba(21,19,17,.5)] text-center mt-2">
           Tech stack
         </div>
-        <div className="w-[70%] max-w-[300px] grid grid-cols-5 sm:grid-cols-10 gap-x-4 gap-y-6 mx-auto my-6">
+        <div className="w-[70%] max-w-[300px] grid grid-cols-6 sm:grid-cols-10 gap-x-4 gap-y-6 mx-auto my-6">
           <SiJavascript
             className="w-6 h-6 text-stone-500 hover:text-yellow-400 transition-all transform hover:scale-[1.25] hover:rotate-[0deg] duration-75"
             title="JavaScript"
@@ -49,13 +51,21 @@ export function TechStack() {
             className="w-6 h-6 text-stone-500 hover:text-cyan-400 transition-all transform hover:scale-[1.25] hover:rotate-[0deg] duration-75"
             title="React"
           />
+          <SiNextdotjs
+            className="w-6 h-6 text-stone-500 hover:text-stone-300 transition-all transform hover:scale-[1.25] hover:rotate-[0deg] duration-75"
+            title="NextJS"
+          />
           <SiNodedotjs
             className="w-6 h-6 text-stone-500 hover:text-green-400 transition-all transform hover:scale-[1.25] hover:rotate-[0deg] duration-75"
             title="NodeJS"
           />
-          <SiNextdotjs
+          <SiMongodb
+            className="w-6 h-6 text-stone-500 hover:text-green-500 transition-all transform hover:scale-[1.25] hover:rotate-[0deg] duration-75"
+            title="MongoDB"
+          />
+          <SiExpress
             className="w-6 h-6 text-stone-500 hover:text-stone-300 transition-all transform hover:scale-[1.25] hover:rotate-[0deg] duration-75"
-            title="NextJS"
+            title="Express"
           />
           <SiHtml5
             className="w-6 h-6 text-stone-500 hover:text-orange-500 transition-all transform hover:scale-[1.25] hover:rotate-[0deg] duration-75"
