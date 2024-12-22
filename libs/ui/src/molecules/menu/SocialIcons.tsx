@@ -10,7 +10,7 @@ type SocialIconsProps = {
   onResumeClick: (e: React.MouseEvent) => void;
 };
 
-export function SocialIcons({ onResumeClick }: SocialIconsProps) {
+export function MenuFooter({ onResumeClick }: SocialIconsProps) {
   return (
     <div className="mt-auto border-t-2 border-stone-600 py-4 bg-stone-800">
       <div className="flex justify-center space-x-2">
@@ -66,4 +66,4 @@ export function SocialIcons({ onResumeClick }: SocialIconsProps) {
   );
 }
 
-export default SocialIcons;
+export default MenuFooter;

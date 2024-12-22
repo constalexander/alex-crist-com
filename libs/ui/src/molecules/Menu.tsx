@@ -1,24 +1,17 @@
 'use client';
 
 import React, { useState } from 'react';
-import { useRouter } from 'next/navigation';
 import { Menu as MenuIcon, X } from 'lucide-react';
 import { scrollIntoView } from '@alex/utils/scrollIntoView';
 import { Button } from '../atoms/Button';
 import { Popover, PopoverTrigger, PopoverContent } from '../atoms/Popover';
 import MenuItem from './menu/MenuItem';
-import SocialIcons from './menu/SocialIcons';
+import MenuFooter from './menu/SocialIcons';
 import { ResumePopup } from '../organisms/popups/ResumePopup';
 
 export function Menu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isResumeOpen, setIsResumeOpen] = useState(false);
-  const router = useRouter();
-
-  const nav = (route: string) => {
-    setIsMenuOpen(false);
-    router.push(route);
-  };
 
   const handleScroll = (id: string, offset = 0) => {
     setIsMenuOpen(false);
@@ -100,7 +93,7 @@ export function Menu() {
             </ul>
           </div>
 
-          <SocialIcons onResumeClick={handleResumeClick} />
+          <MenuFooter onResumeClick={handleResumeClick} />
         </PopoverContent>
       </Popover>
 
