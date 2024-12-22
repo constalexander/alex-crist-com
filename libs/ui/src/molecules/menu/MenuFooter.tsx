@@ -6,7 +6,11 @@ import { Button } from '../../atoms/Button';
 import GithubIcon from '../../atoms/icons/Github';
 import LinkedinIcon from '../../atoms/icons/Linkedin';
 
-export function SocialIcons() {
+type MenuFooterProps = {
+  onResumeClick: (e: React.MouseEvent) => void;
+};
+
+export function MenuFooter({ onResumeClick }: MenuFooterProps) {
   return (
     <div className="mt-auto border-t-2 border-stone-600 py-4 bg-stone-800">
       <div className="flex justify-center space-x-2">
@@ -37,12 +41,11 @@ export function SocialIcons() {
           variant="ghost"
           size="icon"
           className="scale-75 text-stone-300"
-          onClick={() =>
-            window.open(
-              'Alex Crist - Frontend Engineer 2412.14 web.docx',
-              '_blank'
-            )
-          }
+          onClick={(e) => {
+            e.stopPropagation();
+            window._gs('event', 'Social: Open resumé dialog');
+            onResumeClick(e);
+          }}
         >
           <span title="Resumé">
             <FileText />
@@ -63,4 +66,4 @@ export function SocialIcons() {
   );
 }
 
-export default SocialIcons;
+export default MenuFooter;

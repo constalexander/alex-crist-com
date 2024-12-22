@@ -1,26 +1,28 @@
 'use client';
 
 import React, { useState } from 'react';
-import { useRouter } from 'next/navigation';
 import { Menu as MenuIcon, X } from 'lucide-react';
 import { scrollIntoView } from '@alex/utils/scrollIntoView';
 import { Button } from '../atoms/Button';
 import { Popover, PopoverTrigger, PopoverContent } from '../atoms/Popover';
 import MenuItem from './menu/MenuItem';
-import SocialIcons from './menu/SocialIcons';
+import MenuFooter from './menu/MenuFooter';
+import { ResumePopup } from '../organisms/popups/ResumePopup';
 
 export function Menu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const router = useRouter();
-
-  const nav = (route: string) => {
-    setIsMenuOpen(false);
-    router.push(route);
-  };
+  const [isResumeOpen, setIsResumeOpen] = useState(false);
 
   const handleScroll = (id: string, offset = 0) => {
     setIsMenuOpen(false);
     scrollIntoView(id, offset);
+  };
+
+  const handleResumeClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    window._gs('event', 'Menu: Open resumé dialog');
+    setIsMenuOpen(false);
+    setIsResumeOpen(true);
   };
 
   return (
@@ -34,7 +36,6 @@ export function Menu() {
             variant="ghost"
             size="icon"
             className="text-2xl text-stone-400 relative"
-            onClick={() => setIsMenuOpen((prev) => !prev)}
           >
             <span className="sr-only">Open menu</span>
             {isMenuOpen ? <X size={32} /> : <MenuIcon size={32} />}
@@ -46,7 +47,7 @@ export function Menu() {
           h-[calc(100vh-70px)] md:h-fit
           w-[100vw] md:w-[240px] 
           translate-y-[12px] 
-          bg-stone-800 border-2 border-stone-950
+          bg-stone-800 border-2 border-stone-600
           flex flex-col 
           px-4 sm:px-1 py-0 m-0 z-50"
           align="center"
@@ -62,12 +63,7 @@ export function Menu() {
             />
             <MenuItem
               label="◆&nbsp;&nbsp;My Resume"
-              onClick={() =>
-                window.open(
-                  '/Alex Crist - Frontend Engineer 2412.14 web.docx',
-                  '_blank'
-                )
-              }
+              onClick={handleResumeClick}
             />
             <MenuItem
               label="◇&nbsp;&nbsp;Projects"
@@ -97,9 +93,11 @@ export function Menu() {
             </ul>
           </div>
 
-          <SocialIcons />
+          <MenuFooter onResumeClick={handleResumeClick} />
         </PopoverContent>
       </Popover>
+
+      <ResumePopup open={isResumeOpen} onOpenChange={setIsResumeOpen} />
     </>
   );
 }

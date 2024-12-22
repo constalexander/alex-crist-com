@@ -6,24 +6,32 @@ import { cn } from '../../utils';
 
 export interface MenuItemProps extends React.HTMLAttributes<HTMLDivElement> {
   label: string;
-  onClick?: () => void;
+  onClick?: (event: React.MouseEvent) => void;
   isActive?: boolean;
 }
 
-export function MenuItem({ label, onClick, className }: MenuItemProps) {
-  return (
-    <Button
-      variant="ghost"
-      className={cn(
-        'w-full h-12 text-lg text-left inline-block text-stone-400',
-        className
-      )}
-      onClick={onClick}
-    >
-      <span className="sr-only">{label} page</span>
-      {label}
-    </Button>
-  );
-}
+export const MenuItem = React.forwardRef<HTMLButtonElement, MenuItemProps>(
+  ({ label, onClick, className }, ref) => {
+    return (
+      <Button
+        ref={ref}
+        variant="ghost"
+        className={cn(
+          'w-full h-12 text-lg text-left inline-block text-stone-400',
+          className
+        )}
+        onClick={(e) => {
+          e.stopPropagation();
+          onClick?.(e);
+        }}
+      >
+        <span className="sr-only">{label} page</span>
+        {label}
+      </Button>
+    );
+  }
+);
+
+MenuItem.displayName = 'MenuItem';
 
 export default MenuItem;
