@@ -3,11 +3,11 @@
 import React, { useState } from 'react';
 import { Menu as MenuIcon, X } from 'lucide-react';
 import { scrollIntoView } from '@alex/utils/scrollIntoView';
-import { Button } from '../atoms/Button';
-import { Popover, PopoverTrigger, PopoverContent } from '../atoms/Popover';
-import MenuItem from './menu/MenuItem';
-import MenuFooter from './menu/MenuFooter';
-import { ResumePopup } from '../organisms/popups/ResumePopup';
+import { Button } from '../../atoms/Button';
+import { Popover, PopoverTrigger, PopoverContent } from '../../atoms/Popover';
+import MenuItem from './MenuItem';
+import MenuFooter from './MenuFooter';
+import { ResumePopup } from '../../organisms/popups/ResumePopup';
 
 export function Menu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -52,7 +52,7 @@ export function Menu() {
           px-4 sm:px-1 py-0 m-0 z-50"
           align="center"
         >
-          <div className="flex-1 overflow-y-auto my-3">
+          <div className="flex-1 overflow-y-auto my-3 min-h-0">
             <MenuItem
               label="◆&nbsp;&nbsp;Employment"
               onClick={() => handleScroll('EmploymentExperience', -190)}

@@ -3,7 +3,7 @@
 import React from 'react';
 import { useRouter } from 'next/navigation';
 import { useMainScrollValue } from '@alex/contexts/MainScrollContext';
-import Menu from '../molecules/Menu';
+import Menu from '../molecules/menu/Menu';
 import { cn } from '../utils';
 import { Button } from '../atoms/Button';
 
