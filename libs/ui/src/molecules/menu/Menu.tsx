@@ -44,7 +44,7 @@ export function Menu() {
 
         <PopoverContent
           className="
-          h-[calc(100vh-70px)] md:h-fit
+          h-[calc(100vh-152px)] md:h-fit
           w-[100vw] md:w-[240px] 
           translate-y-[12px] 
           bg-stone-800 border-2 border-stone-600
@@ -52,7 +52,7 @@ export function Menu() {
           px-4 sm:px-1 py-0 m-0 z-50"
           align="center"
         >
-          <div className="flex-1 overflow-y-auto my-3 min-h-0">
+          <div className="flex-1 overflow-y-auto my-3">
             <MenuItem
               label="◆&nbsp;&nbsp;Employment"
               onClick={() => handleScroll('EmploymentExperience', -190)}
