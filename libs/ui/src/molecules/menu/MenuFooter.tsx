@@ -12,7 +12,7 @@ type MenuFooterProps = {
 
 export function MenuFooter({ onResumeClick }: MenuFooterProps) {
   return (
-    <div className="mt-auto border-t-2 border-stone-600 py-4 bg-stone-800">
+    <div className="flex-shrink-0 border-t-2 border-stone-600 py-4 bg-stone-800">
       <div className="flex justify-center space-x-2">
         <Button
           variant="ghost"

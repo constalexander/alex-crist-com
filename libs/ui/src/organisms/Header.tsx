@@ -3,7 +3,7 @@
 import React from 'react';
 import { useRouter } from 'next/navigation';
 import { useMainScrollValue } from '@alex/contexts/MainScrollContext';
-import Menu from '../molecules/Menu';
+import Menu from '../molecules/menu/Menu';
 import { cn } from '../utils';
 import { Button } from '../atoms/Button';
 
@@ -56,7 +56,7 @@ export function Header(props: HeaderProps) {
               </span>
             </Button>
             <div className="block h-[24px] text-[.85rem] font-semibold text-stone-400 tracking-normal relative top-[2px]">
-              <span>Frontend Extraordinaire</span>
+              <span>Fullstack Extraordinaire</span>
             </div>
           </div>
         </div>

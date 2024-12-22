@@ -3,11 +3,11 @@
 import React, { useState } from 'react';
 import { Menu as MenuIcon, X } from 'lucide-react';
 import { scrollIntoView } from '@alex/utils/scrollIntoView';
-import { Button } from '../atoms/Button';
-import { Popover, PopoverTrigger, PopoverContent } from '../atoms/Popover';
-import MenuItem from './menu/MenuItem';
-import MenuFooter from './menu/MenuFooter';
-import { ResumePopup } from '../organisms/popups/ResumePopup';
+import { Button } from '../../atoms/Button';
+import { Popover, PopoverTrigger, PopoverContent } from '../../atoms/Popover';
+import MenuItem from './MenuItem';
+import MenuFooter from './MenuFooter';
+import { ResumePopup } from '../../organisms/popups/ResumePopup';
 
 export function Menu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -44,7 +44,7 @@ export function Menu() {
 
         <PopoverContent
           className="
-          h-[calc(100vh-70px)] md:h-fit
+          h-[calc(100vh-152px)] md:h-fit
           w-[100vw] md:w-[240px] 
           translate-y-[12px] 
           bg-stone-800 border-2 border-stone-600
@@ -58,11 +58,11 @@ export function Menu() {
               onClick={() => handleScroll('EmploymentExperience', -190)}
             />
             <MenuItem
-              label="◆&nbsp;&nbsp;Get to Know Me"
+              label="◆&nbsp;&nbsp;Get to know me"
               onClick={() => handleScroll('GetToKnowMe', -10)}
             />
             <MenuItem
-              label="◆&nbsp;&nbsp;My Resume"
+              label="◆&nbsp;&nbsp;My resumé"
               onClick={handleResumeClick}
             />
             <MenuItem

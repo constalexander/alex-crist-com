@@ -17,7 +17,7 @@ export const MenuItem = React.forwardRef<HTMLButtonElement, MenuItemProps>(
         ref={ref}
         variant="ghost"
         className={cn(
-          'w-full h-12 text-lg text-left inline-block text-stone-400',
+          'w-full h-12 text-lg text-left inline-block text-stone-400 rounded-none focus-visible:ring-0 focus-visible:ring-offset-0',
           className
         )}
         onClick={(e) => {
