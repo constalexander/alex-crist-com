@@ -58,11 +58,11 @@ export function Menu() {
               onClick={() => handleScroll('EmploymentExperience', -190)}
             />
             <MenuItem
-              label="◆&nbsp;&nbsp;Get to Know Me"
+              label="◆&nbsp;&nbsp;Get to know me"
               onClick={() => handleScroll('GetToKnowMe', -10)}
             />
             <MenuItem
-              label="◆&nbsp;&nbsp;My Resume"
+              label="◆&nbsp;&nbsp;My resumé"
               onClick={handleResumeClick}
             />
             <MenuItem
