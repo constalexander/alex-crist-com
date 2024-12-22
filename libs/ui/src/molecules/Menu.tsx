@@ -6,7 +6,7 @@ import { scrollIntoView } from '@alex/utils/scrollIntoView';
 import { Button } from '../atoms/Button';
 import { Popover, PopoverTrigger, PopoverContent } from '../atoms/Popover';
 import MenuItem from './menu/MenuItem';
-import MenuFooter from './menu/SocialIcons';
+import MenuFooter from './menu/MenuFooter';
 import { ResumePopup } from '../organisms/popups/ResumePopup';
 
 export function Menu() {
