@@ -34,7 +34,7 @@ export function TechStack() {
         <div className="text-3xl font-serif font-semibold italic text-stone-400 [text-shadow:4px_4px_2px_rgba(21,19,17,.5)] text-center mt-2">
           Tech stack
         </div>
-        <div className="w-[70%] max-w-[300px] grid grid-cols-6 sm:grid-cols-10 gap-x-4 gap-y-6 mx-auto my-6">
+        <div className="w-[70%] max-w-[600px] grid grid-cols-6 sm:grid-cols-12 gap-x-4 gap-y-6 mx-auto my-6">
           <SiJavascript
             className="w-6 h-6 text-stone-500 hover:text-yellow-400 transition-all transform hover:scale-[1.25] hover:rotate-[0deg] duration-75"
             title="JavaScript"
@@ -103,7 +103,7 @@ export function TechStack() {
             title="GitHub"
           />
         </div>
-        <div className="text-center text-stone-400 max-w-[90%] md:max-w-[50%] mx-auto mb-2">
+        <div className="text-center text-stone-400 max-w-[90%] md:max-w-[70%] mx-auto mb-2">
           <div className="mb-4">
             <span className="font-bold italic mr-2">Plus!</span>
             AI-literacy with&hellip;
