@@ -34,7 +34,7 @@ export function ResumePopup({
     onOpenChange(false);
     const extension = type === 'Word' ? '.docx' : '.pdf';
     window.open(`${RESUME_BASE_PATH}${extension}`, '_blank');
-    window._gs('event', `Download ${type} resumé`);
+    window._gs('event', `Download ${type} résumé`);
   };
 
   return (
@@ -42,7 +42,7 @@ export function ResumePopup({
       <DialogTrigger asChild>{children}</DialogTrigger>
       <DialogContent className="w-fit p-6 pt-6">
         <DialogHeader>
-          <DialogTitle>Download resumé</DialogTitle>
+          <DialogTitle>Download résumé</DialogTitle>
           <DialogDescription>Choose your preferred format.</DialogDescription>
         </DialogHeader>
         <div className="flex flex-col gap-2">

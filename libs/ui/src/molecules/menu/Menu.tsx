@@ -20,7 +20,7 @@ export function Menu() {
 
   const handleResumeClick = (e: React.MouseEvent) => {
     e.stopPropagation();
-    window._gs('event', 'Menu: Open resumé dialog');
+    window._gs('event', 'Menu: Open résumé dialog');
     setIsMenuOpen(false);
     setIsResumeOpen(true);
   };
@@ -62,7 +62,7 @@ export function Menu() {
               onClick={() => handleScroll('GetToKnowMe', -10)}
             />
             <MenuItem
-              label="◆&nbsp;&nbsp;My resumé"
+              label="◆&nbsp;&nbsp;My résumé"
               onClick={handleResumeClick}
             />
             <MenuItem
@@ -72,22 +72,22 @@ export function Menu() {
             <ul>
               <li className="pl-6">
                 <MenuItem
-                  label="⬥&nbsp;&nbsp;Boodi.ai"
-                  onClick={() => {
-                    window.open('https://boodi.ai', '_blank');
-                    window._gs('event', 'Menu click: boodi.ai');
-                  }}
+                  label="⬥&nbsp;&nbsp;Nsight.chat"
                   className="text-md"
+                  href="https://nsight.chat"
+                  onClick={() => {
+                    window._gs('event', 'Menu click: Nsight.chat');
+                  }}
                 />
               </li>
               <li className="pl-6">
                 <MenuItem
                   label="⬥&nbsp;&nbsp;Growing Zone Finder"
+                  className="text-md"
+                  href="https://growzone.surge.sh"
                   onClick={() => {
-                    window.open('https://growzone.surge.sh/', '_blank');
                     window._gs('event', 'Menu click: growzone.surge.sh');
                   }}
-                  className="text-md"
                 />
               </li>
             </ul>

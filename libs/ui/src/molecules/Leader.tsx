@@ -64,11 +64,11 @@ function LeaderButton() {
             variant="outline"
             className="w-[200px] text-emerald-400 uppercase shadow-emerald-lg"
             onClick={() => {
-              window._gs('event', 'Leader: Open resumé dialog');
+              window._gs('event', 'Leader: Open résumé dialog');
             }}
           >
-            <span className="sr-only">Download resumé</span>
-            <span className="">DOWNLOAD RESUMÉ</span>
+            <span className="sr-only">Download résumé</span>
+            <span className="">DOWNLOAD RÉSUMÉ</span>
             <Download className="inline-block h-[18px] relative -top-[1px] left-[8px]" />
           </Button>
         </motion.div>

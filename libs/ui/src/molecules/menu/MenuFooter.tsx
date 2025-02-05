@@ -43,11 +43,11 @@ export function MenuFooter({ onResumeClick }: MenuFooterProps) {
           className="scale-75 text-stone-300"
           onClick={(e) => {
             e.stopPropagation();
-            window._gs('event', 'Social: Open resumé dialog');
+            window._gs('event', 'Social: Open résumé dialog');
             onResumeClick(e);
           }}
         >
-          <span title="Resumé">
+          <span title="Résumé">
             <FileText />
           </span>
         </Button>

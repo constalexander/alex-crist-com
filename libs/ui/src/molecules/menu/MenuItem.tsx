@@ -8,11 +8,12 @@ export interface MenuItemProps extends React.HTMLAttributes<HTMLDivElement> {
   label: string;
   onClick?: (event: React.MouseEvent) => void;
   isActive?: boolean;
+  href?: string;
 }
 
 export const MenuItem = React.forwardRef<HTMLButtonElement, MenuItemProps>(
-  ({ label, onClick, className }, ref) => {
-    return (
+  ({ label, onClick, className, href }, ref) => {
+    const button = (
       <Button
         ref={ref}
         variant="ghost"
@@ -29,6 +30,16 @@ export const MenuItem = React.forwardRef<HTMLButtonElement, MenuItemProps>(
         {label}
       </Button>
     );
+
+    if (href) {
+      return (
+        <a href={href} className="block" target="_blank">
+          {button}
+        </a>
+      );
+    }
+
+    return button;
   }
 );
 

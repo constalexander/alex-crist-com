@@ -34,7 +34,9 @@ export function Footer() {
               Alex Crist
             </Button>
           </a>
-          <span className="text-sm">&nbsp; &copy; 2024</span>
+          <span className="text-sm">
+            &nbsp; &copy; {new Date().getFullYear()}
+          </span>
         </div>
       </div>
     </section>
