@@ -68,10 +68,10 @@ export function EmploymentCard({
           <a
             className="text-xs text-emerald-400 hover:text-emerald-300 transition-colors hover:cursor-pointer"
             onClick={() =>
-              window._gs('event', 'Employment card: Open resumé dialog')
+              window._gs('event', 'Employment card: Open résumé dialog')
             }
           >
-            Download full resumé
+            Download full résumé
           </a>
         </ResumePopup>
       </div>
