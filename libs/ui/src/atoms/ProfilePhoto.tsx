@@ -12,6 +12,7 @@ export function ProfilePhoto() {
         className="w-36 h-36 rounded-full mx-auto border-[3px] border-emerald-400/80 shadow-emerald-lg"
       />
       <motion.div
+        className="hidden"
         initial={{ opacity: 0, x: '-100vw' }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.75 }}
