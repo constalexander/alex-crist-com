@@ -70,6 +70,16 @@ export function Menu() {
               className="cursor-default !text-stone-400"
             />
             <ul>
+              {/* <li className="pl-6">
+                <MenuItem
+                  label="⬥&nbsp;&nbsp;LightningLearn.ai"
+                  className="text-md"
+                  href="https://lightninglearn.ai"
+                  onClick={() => {
+                    window._gs('event', 'Menu click: LightningLearn.ai');
+                  }}
+                />
+              </li> */}
               <li className="pl-6">
                 <MenuItem
                   label="⬥&nbsp;&nbsp;Nsight.chat"

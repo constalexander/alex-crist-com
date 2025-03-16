@@ -12,6 +12,7 @@ import {
   SiGithub,
   SiMongodb,
   SiExpress,
+  SiPostgresql,
 } from '@icons-pack/react-simple-icons';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
@@ -67,6 +68,10 @@ export function TechStack() {
             className="w-6 h-6 text-stone-500 hover:text-stone-300 transition-all transform hover:scale-[1.25] hover:rotate-[0deg] duration-75"
             title="Express"
           />
+          <SiPostgresql
+            className="w-6 h-6 text-stone-500 hover:text-blue-500 transition-all transform hover:scale-[1.25] hover:rotate-[0deg] duration-75"
+            title="PostgreSQL"
+          />
           <SiHtml5
             className="w-6 h-6 text-stone-500 hover:text-orange-500 transition-all transform hover:scale-[1.25] hover:rotate-[0deg] duration-75"
             title="HTML5"
@@ -98,10 +103,10 @@ export function TechStack() {
             className="w-6 h-6 text-stone-500 hover:text-cyan-400 transition-all transform hover:scale-[1.25] hover:rotate-[0deg] duration-75"
             title="TailwindCSS"
           />
-          <SiGithub
+          {/* <SiGithub
             className="w-6 h-6 text-stone-500 hover:text-stone-300 transition-all transform hover:scale-[1.25] hover:rotate-[0deg] duration-75"
             title="GitHub"
-          />
+          /> */}
         </div>
         <div className="text-center text-stone-400 max-w-[90%] md:max-w-[70%] mx-auto mb-2">
           <div className="mb-4">
@@ -110,11 +115,11 @@ export function TechStack() {
             <br />
           </div>
           <Pill>GitHub Copilot</Pill>
-          <Pill>Cursor IDE</Pill>
-          <Pill>ChatGPT</Pill>
+          <Pill>OpenAI ChatGPT</Pill>
           <Pill>Anthropic Claude</Pill>
-          <Pill>GPT Engineer/Lovable</Pill>
-          <Pill>OpenHands (OpenDevin)</Pill>
+          <Pill>Cline</Pill>
+          <Pill>Cursor</Pill>
+          <Pill>Ollama</Pill>
         </div>
       </div>
     </motion.section>
