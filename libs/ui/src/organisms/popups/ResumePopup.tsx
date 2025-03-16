@@ -33,8 +33,7 @@ export function ResumePopup({
   const handleDownload = (type: 'Word' | 'PDF') => {
     onOpenChange(false);
     const extension = type === 'Word' ? '.docx' : '.pdf';
-    const timestamp = Math.floor(Date.now());
-    window.open(`${RESUME_BASE_PATH}${extension}?t=${timestamp}`, '_blank');
+    window.open(`${RESUME_BASE_PATH}${extension}?t=${Date.now()}`, '_blank');
     window._gs('event', `Download ${type} résumé`);
   };
 
