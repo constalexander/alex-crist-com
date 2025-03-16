@@ -4,6 +4,27 @@ import { EmploymentExperienceDTO } from '@alex/models/dto/employment-experience.
 export async function GET() {
   const employmentData: EmploymentExperienceDTO[] = [
     {
+      companyName: 'InRhythm',
+      companyUrl: 'https://inrhythm.com',
+      position: 'Software Engineer',
+      dateStarted: '2025',
+      dateEnded: 'present',
+      responsibilities: [
+        'Consultant @ Fidelity. Building a shared component library central registry site for Fidelity Angular developers.',
+      ],
+      technologies: [
+        'Angular',
+        'TypeScript',
+        'Node',
+        'HTML5',
+        'SCSS',
+        'RXJS',
+        'NGRX',
+        'Git',
+        'Agile',
+      ],
+    },
+    {
       companyName: 'LPL Financial',
       companyUrl: 'https://www.lpl.com',
       position: 'Sr. Software Engineer',
