@@ -70,7 +70,7 @@ export function Menu() {
               className="cursor-default !text-stone-400"
             />
             <ul>
-              {/* <li className="pl-6">
+              <li className="pl-6">
                 <MenuItem
                   label="⬥&nbsp;&nbsp;LightningLearn.ai"
                   className="text-md"
@@ -79,7 +79,7 @@ export function Menu() {
                     window._gs('event', 'Menu click: LightningLearn.ai');
                   }}
                 />
-              </li> */}
+              </li>
               <li className="pl-6">
                 <MenuItem
                   label="⬥&nbsp;&nbsp;Nsight.chat"
