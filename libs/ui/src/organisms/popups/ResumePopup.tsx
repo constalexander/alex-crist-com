@@ -37,6 +37,8 @@ export function ResumePopup({
     window._gs('event', `Download ${type} résumé`);
   };
 
+  return <> </>;
+
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogTrigger asChild>{children}</DialogTrigger>
