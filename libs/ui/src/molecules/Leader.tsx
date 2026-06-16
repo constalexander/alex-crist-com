@@ -30,7 +30,7 @@ export function LeaderContent({ photo }: LeaderContentProps) {
       <div className="flex flex-col items-center justify-start sm:justify-center gap-8 mx-auto pt-10 pb-60">
         <div className="grow-0 shrink-0 relative h-36">{photo}</div>
         <LeaderText />
-        <LeaderButton />
+        {/* <LeaderButton /> */}
       </div>
     </div>
   );

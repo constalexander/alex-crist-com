@@ -6,23 +6,13 @@ export async function GET() {
     {
       companyName: 'InRhythm',
       companyUrl: 'https://inrhythm.com',
-      position: 'Software Engineer',
+      position: 'Sr. Software Engineer',
       dateStarted: '2025',
       dateEnded: 'present',
       responsibilities: [
-        'Consultant @ Fidelity. Building a shared component library central registry site for Fidelity Angular developers.',
+        'Consultant @ Undisclosed. Building AI-native workflows.',
       ],
-      technologies: [
-        'Angular',
-        'TypeScript',
-        'Node',
-        'HTML5',
-        'SCSS',
-        'RXJS',
-        'NGRX',
-        'Git',
-        'Agile',
-      ],
+      technologies: [],
     },
     {
       companyName: 'LPL Financial',

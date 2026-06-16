@@ -10,8 +10,8 @@ import MainTemplate from '@alex/ui/templates/Main.template';
 import './global.scss';
 
 export const metadata: Metadata = {
-  title: 'Alex Crist | Fullstack Extraordinaire',
-  description: 'Fullstack engineer in North Texas',
+  title: 'Alex Crist | AI-Native Engineer',
+  description: 'AI-Native Fullstack Engineer in North Texas',
   icons: {
     icon: '/code.ico',
   },

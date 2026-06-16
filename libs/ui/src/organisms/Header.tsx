@@ -56,7 +56,7 @@ export function Header(props: HeaderProps) {
               </span>
             </Button>
             <div className="block h-[24px] text-[.85rem] font-semibold text-stone-300 tracking-normal relative top-[2px]">
-              Fullstack Extraordinaire
+              AI-Native Fullstack Engineer
             </div>
           </div>
         </div>
